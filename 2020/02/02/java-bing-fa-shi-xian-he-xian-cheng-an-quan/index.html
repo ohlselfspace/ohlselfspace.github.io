@@ -4,11 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="线程机制, JAVA MATLAB 高等代数 数学分析 PYTHON">
+    <meta name="keywords" content="JAVA并发实现和线程安全, JAVA MATLAB 高等代数 数学分析 PYTHON">
     <meta name="baidu-site-verification" content="C4g8dF9DLA">
     <meta name="google-site-verification" content="C4g8dF9DLA">
     <meta name="360-site-verification" content="C4g8dF9DLA">
-    <meta name="description" content="线程机制 | Bouncy丶Knight">
+    <meta name="description" content="多线程线程（Thread），通常是指每一个任务。多线程就是指可以同时运行一个以上线程的程序。多线程执行时，在栈内存中，每一个执行的线程都有一片自己的栈内存空间。进行方法的压栈、弹栈。
+
+线程状态
+New（新创建）
+Runnable（可运行）">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>线程机制 | Bouncy丶Knight</title>
+    <title>JAVA并发实现和线程安全 | Bouncy丶Knight</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -290,13 +294,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        线程机制
+                        JAVA并发实现和线程安全
                     </div>
                 </div>
             </div>
@@ -415,8 +419,8 @@
                             <span class="chip bg-color">线程</span>
                         </a>
                         
-                        <a href="/tags/进程/" target="_blank">
-                            <span class="chip bg-color">进程</span>
+                        <a href="/tags/同步/" target="_blank">
+                            <span class="chip bg-color">同步</span>
                         </a>
                         
                     </div>
@@ -453,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
                 
@@ -476,7 +480,151 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h1><p>线程（<strong>Thread</strong>），通常是指每一个任务。多线程就是指可以同时运行一个以上线程的程序。多线程执行时，在栈内存中，每一个执行的线程都有一片自己的栈内存空间。进行方法的压栈、弹栈。</p>
+<hr>
+<h2 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h2><ul>
+<li><strong>New</strong>（新创建）</li>
+<li><strong>Runnable</strong>（可运行）</li>
+<li><strong>Blocked</strong>（被阻塞）</li>
+<li><strong>Waiting</strong>（等待）</li>
+<li><strong>Timed waiting</strong>（计时等待）</li>
+<li><strong>Terminated</strong>（被终止）</li>
+</ul>
+<h3 id="1-线程创建"><a href="#1-线程创建" class="headerlink" title="1.线程创建"></a>1.线程创建</h3><h4 id="1-1Thread类实现"><a href="#1-1Thread类实现" class="headerlink" title="1.1Thread类实现"></a>1.1Thread类实现</h4><p><strong>JAVA</strong>中使用<code>java.lang.Thread</code>类代表线程，所有的线程对象必须是<strong>Thread</strong>类或者其子类的实例。</p>
+<p>创建多线程步骤：</p>
+<ul>
+<li>1.定义<strong>Thread</strong>类的子类，重写<strong>run</strong>方法（线程执行体）</li>
+<li>2.创建<strong>Thread</strong>子类的实例，可运用多态来创建线程对象</li>
+<li>3.调用线程对象的<strong>start</strong>（）来启动线程</li>
+</ul>
+<blockquote>
+<p>注意：</p>
+<p>应该是调用start（）方法，而不是run（）方法。</p>
+<p>如果调用的是run（）方法，那么只会在main方法的栈空间运行run（）中的代码，而不会开辟新的栈空间。这就不是多线程</p>
+</blockquote>
+<p><code>java.lang.Thread</code>类<strong>API</strong>中的一些方法：</p>
+<p><strong>构造方法</strong>：</p>
+<ul>
+<li><code>public Thread()</code>:分配一个新的线程对象</li>
+<li><code>public Thread(String name)</code>:分配一个指定参数名的线程对象</li>
+<li><code>public Thread(Runnable target)</code>:分配一个带有指定目标新的线程对象</li>
+<li><code>public Thread(Runnable target,String name)</code>:分配一个带有指定目标新的线程对象并指定参数名</li>
+</ul>
+<p><strong>常用方法</strong>：</p>
+<ul>
+<li><code>public String getName()</code>:获取当前线程名称</li>
+<li><code>public void start()</code>:让此线程开始执行，<strong>JVM</strong>调用<strong>run（）</strong>方法</li>
+<li><code>public void run()</code>：此线程要执行的任务代码</li>
+<li><code>public static void sleep(long millis)</code>:使当前正在执行的线程暂停多少毫秒再执行</li>
+<li><code>public static Thread currentThread()</code>:返回当前正在执行的线程对象的引用</li>
+</ul>
+<hr>
+<h4 id="1-2Runnable接口实现"><a href="#1-2Runnable接口实现" class="headerlink" title="1.2Runnable接口实现"></a>1.2Runnable接口实现</h4><p>采用<code>java.lang.Runnable</code>接口，重写<strong>run（）</strong>方法</p>
+<p>创建多线程步骤：</p>
+<ul>
+<li>1.定义<strong>Runnable</strong>接口的实现类，重写<strong>run（）</strong>方法</li>
+<li>2.创建<strong>Runnable</strong>实现类的实例，并以实例作为<strong>Thread</strong>的<strong>target</strong>来穿件<strong>Thread</strong>对象，该<strong>Thread</strong>对象才是真正的线程对象</li>
+<li>调用线程对象的<strong>start（）</strong>方法来启动线程</li>
+</ul>
+<hr>
+<h4 id="1-3Thread和Runnable区别"><a href="#1-3Thread和Runnable区别" class="headerlink" title="1.3Thread和Runnable区别"></a>1.3Thread和Runnable区别</h4><ul>
+<li>使用<strong>Thread</strong>继承方法实现多线程不适合资源贡献</li>
+<li><strong>Runnable</strong>接口比<strong>Thread</strong>继承更有优势<ul>
+<li>适合多个相同的程序代码的线程去共享一个资源</li>
+<li>避免<strong>JAVA</strong>中单继承局限性</li>
+<li>有利于程序解耦，实现设置线程任务和开启线程分离</li>
+<li>线程池只能放入<strong>Runnable</strong>或<strong>Callable</strong>类线程，不能直接放入继承<strong>Thread</strong>类</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>注意：</p>
+<p>在JAVA中，每次程序运行至少启动两个线程。一个是main线程，一个是垃圾收集线程。</p>
+</blockquote>
+<h4 id="1-4匿名内部类实现线程创建"><a href="#1-4匿名内部类实现线程创建" class="headerlink" title="1.4匿名内部类实现线程创建"></a>1.4匿名内部类实现线程创建</h4><p>使用匿名内部类方式，可以方便实现每个线程任务操作。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
+    Runnable是函数式接口，可以使用lambda表达式建立一个实例
+    格式：
+        Runnable r = ()->{ code }
+*/</span>
+<span class="token number">1</span><span class="token punctuation">.</span>
+<span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        执行代码
+    <span class="token punctuation">}</span>    
+<span class="token punctuation">}</span>
+
+<span class="token number">2</span><span class="token punctuation">.</span>
+Runnable r <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        执行代码
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//执行线程</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="2-线程安全"><a href="#2-线程安全" class="headerlink" title="2.线程安全"></a>2.线程安全</h3><p>线程安全是由全局变量和静态变量引起，涉及到程序中共享资源的操作</p>
+<p><strong>线程同步机制</strong></p>
+<p><strong>JAVA</strong>中线程同步机制：</p>
+<ul>
+<li>同步代码块</li>
+<li>同步方法</li>
+<li>锁机制</li>
+</ul>
+<p><strong>JAVA</strong>中同步机制<code>synchronized</code>关键字</p>
+<hr>
+<h4 id="2-1同步代码块"><a href="#2-1同步代码块" class="headerlink" title="2.1同步代码块"></a>2.1同步代码块</h4><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">synchronized</span><span class="token punctuation">(</span>同步锁<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    同步操作代码
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>注意：</p>
+<p>对象的同步锁是在对象上标记了一个锁</p>
+<ul>
+<li>1.锁对象可以是任意类型</li>
+<li>2.多个线程对象要使用对一把锁，哪个线程拿到了锁就进入<strong>Runnable</strong>状态，没有得到锁的线程进入<strong>Blocked</strong>状态</li>
+</ul>
+</blockquote>
+<hr>
+<h4 id="2-2同步方法"><a href="#2-2同步方法" class="headerlink" title="2.2同步方法"></a>2.2同步方法</h4><p>同步方法是指，<code>synchronized</code>修饰的方法，保证只有一个线程使用同步方法</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">synchronized</span> <span class="token keyword">void</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    执行代码
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>注意：</p>
+<ul>
+<li>1.对于非<strong>static</strong>方法，同步锁就是<strong>this</strong></li>
+<li>2.对于<strong>static</strong>方法，同步锁就是当前当前方法所在来的字节码对象（类名.class)反射机制</li>
+</ul>
+</blockquote>
+<hr>
+<h4 id="2-3Lock锁"><a href="#2-3Lock锁" class="headerlink" title="2.3Lock锁"></a>2.3Lock锁</h4><p><code>ReentrantLock</code>类继承自<code>Lock</code>类，显式就行加锁。</p>
+<pre class="line-numbers language-java"><code class="language-java">Lock lock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ReentrantLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//多态</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    lock<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//加同步锁</span>
+    执行代码
+    lock<span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//释放同步锁</span>
+    <span class="token comment" spellcheck="true">/*
+        这里可以采用异常处理机制
+        lock.lock();
+        try{
+        执行代码
+        }finally{
+        lock.unlock();
+}
+    */</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>注意：</p>
+<ul>
+<li>1.如果使用锁，就不能使用带资源的<strong>try</strong>语句</li>
+<li>2.把解锁操作放在<strong>finally</strong>中至关重要。如果在临界区中的代码抛出异常，锁必须被释放。否则，其他线程将永远被阻塞</li>
+</ul>
+</blockquote>
+<hr>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li>《<strong>JAVA</strong>核心技术》</li>
+</ul>
+
             </div>
             <hr />
 
@@ -634,9 +782,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《线程机制》
+                    《JAVA并发实现和线程安全》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/02/xian-cheng-ji-zhi/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/02/java-bing-fa-shi-xian-he-xian-cheng-an-quan/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Bouncy丶Knight
             </a> 采用
@@ -677,7 +825,7 @@
         repo: 'ohlselfspace.github.io',
         owner: 'ohlselfspace',
         admin: "ohlselfspace",
-        id: '2020/02/02/xian-cheng-ji-zhi/',
+        id: '2020/02/02/java-bing-fa-shi-xian-he-xian-cheng-an-quan/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -965,19 +1113,19 @@
                 <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2020/02/02/xian-cheng-ji-zhi/">
+                <a href="/2020/02/02/java-bing-fa-shi-xian-he-xian-cheng-an-quan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="线程机制">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="JAVA并发实现和线程安全">
                         
-                        <span class="card-title">线程机制</span>
+                        <span class="card-title">JAVA并发实现和线程安全</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            分析JAVA并发实现，以及如何处理线程安全问题
                         
                     </div>
                     <div class="publish-info">
@@ -1008,8 +1156,8 @@
                         <span class="chip bg-color">线程</span>
                     </a>
                     
-                    <a href="/tags/进程/" target="_blank">
-                        <span class="chip bg-color">进程</span>
+                    <a href="/tags/同步/" target="_blank">
+                        <span class="chip bg-color">同步</span>
                     </a>
                     
                 </div>
@@ -1228,7 +1376,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">2.2k</span>
+            <span class="white-color">3.4k</span>
             
 
             <br>
