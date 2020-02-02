@@ -4,14 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="浅析Exception和Error, JAVA MATLAB 高等代数 数学分析 PYTHON">
+    <meta name="keywords" content="线程机制, JAVA MATLAB 高等代数 数学分析 PYTHON">
     <meta name="baidu-site-verification" content="C4g8dF9DLA">
     <meta name="google-site-verification" content="C4g8dF9DLA">
     <meta name="360-site-verification" content="C4g8dF9DLA">
-    <meta name="description" content="JAVA异常层次结构JAVA中所有异常都是由Throwable继承而来，异常层次结构可从Throwable超类向下分为Exception,Error两个子类。
-
-
-ExceptionException是程序正常运行中，可以预料的意外情况，可">
+    <meta name="description" content="线程机制 | Bouncy丶Knight">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +16,7 @@ ExceptionException是程序正常运行中，可以预料的意外情况，可">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>浅析Exception和Error | Bouncy丶Knight</title>
+    <title>线程机制 | Bouncy丶Knight</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -293,13 +290,13 @@ ExceptionException是程序正常运行中，可以预料的意外情况，可">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        浅析Exception和Error
+                        线程机制
                     </div>
                 </div>
             </div>
@@ -410,16 +407,16 @@ ExceptionException是程序正常运行中，可以预料的意外情况，可">
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/JAVA异常/" target="_blank">
-                            <span class="chip bg-color">JAVA异常</span>
+                        <a href="/tags/JAVA/" target="_blank">
+                            <span class="chip bg-color">JAVA</span>
                         </a>
                         
-                        <a href="/tags/捕获异常/" target="_blank">
-                            <span class="chip bg-color">捕获异常</span>
+                        <a href="/tags/线程/" target="_blank">
+                            <span class="chip bg-color">线程</span>
                         </a>
                         
-                        <a href="/tags/Throwable/" target="_blank">
-                            <span class="chip bg-color">Throwable</span>
+                        <a href="/tags/进程/" target="_blank">
+                            <span class="chip bg-color">进程</span>
                         </a>
                         
                     </div>
@@ -442,7 +439,7 @@ ExceptionException是程序正常运行中，可以预料的意外情况，可">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-01
+                    2020-02-02
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -456,14 +453,14 @@ ExceptionException是程序正常运行中，可以预料的意外情况，可">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    0
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    1 分
                 </div>
                 
                 
@@ -479,173 +476,7 @@ ExceptionException是程序正常运行中，可以预料的意外情况，可">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="JAVA异常层次结构"><a href="#JAVA异常层次结构" class="headerlink" title="JAVA异常层次结构"></a>JAVA异常层次结构</h1><p><code>JAVA</code>中所有异常都是由<code>Throwable</code>继承而来，异常层次结构可从<code>Throwable</code>超类向下分为<code>Exception</code>,<code>Error</code>两个子类。</p>
-<p><img src="0.png" alt></p>
-<hr>
-<h2 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h2><p><code>Exception</code>是程序正常运行中，可以预料的意外情况，可能并且应该被捕获，进行相应的处理。该层次结构分解为两个分支<code>IOException</code>,<code>RuntimeException</code>。划分这两个层次的规则是：由程序错误导致的异常属于<code>RuntimeException</code>;而程序本身没有问题，但由于像I/O错误这类问题导致的异常就属于<code>IOException</code>。</p>
-<p><code>RuntimeException</code>的异常通常包含以下方面：</p>
-<ul>
-<li><code>ClassCastException</code></li>
-<li><code>NullPointerException</code></li>
-<li><code>ArrayIndexOutOfBoundsException</code></li>
-<li><code>SecurityException</code></li>
-</ul>
-<p><code>IOException</code>的异常通常包含：</p>
-<ul>
-<li><code>Checked Exception</code>，就是必须显式地进行捕获处理，这是编译器检查的一部分。</li>
-<li>试图在文件的尾部读取数据</li>
-<li>试图打开一个不存在的文件</li>
-<li>试图根据给定的字符串查找Class对象，而这个字符串表示的类并不存在</li>
-</ul>
-<hr>
-<h2 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h2><p><code>Error</code>类层次结构描述了<code>JAVA</code>运行时系统内部错误和资源耗尽错误。绝大部分的<code>Error</code>都会导致程序（比如<code>JVM</code>自身）处于非正常的、不可恢复状态。常见比如：</p>
-<ul>
-<li><code>OutOfMemoryError</code></li>
-<li><code>NoClassDefFoundError</code></li>
-</ul>
-<hr>
-<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><p><code>java</code>异常处理五个关键字：<strong>try、catch、finally、throw、throws</strong></p>
-<h3 id="1-抛出异常throw"><a href="#1-抛出异常throw" class="headerlink" title="1.抛出异常throw"></a>1.抛出异常throw</h3><p><strong>throw</strong>：用来抛出一个指定的异常对象。<strong>throw</strong>用在方法中，用来抛出一个异常对象，将这个异常对象传递到调用者出，并结束当前方法的执行。</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">throw</span> <span class="token keyword">new</span> 异常类名（参数）：<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>注意：</p>
-<ul>
-<li>1.<strong>throw</strong>关键字必须写在方法的内部</li>
-<li>2.<strong>throw</strong>关键字后边<strong>new</strong>的对象必须是<strong>Exception</strong>或者<strong>Exception</strong>的子类对象</li>
-<li>3.<strong>throw</strong>关键字抛出指定的异常对象，就必须处理这个异常对象<ul>
-<li><strong>throw</strong>关键字后边创建的是<strong>RuntimeException</strong>或者是<strong>RuntimeException</strong>子类对象，可以不处理，默认交给<strong>JVM</strong>处理（打印异常对象，中断程序）</li>
-<li><strong>throw</strong>关键字后边创建的是编译异常，必须使用throws或者try…catch处理</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="2-声明异常throws"><a href="#2-声明异常throws" class="headerlink" title="2.声明异常throws"></a>2.声明异常throws</h3><p><strong>throws</strong>会把异常对象声明抛出给方法的调用者处理</p>
-<pre class="line-numbers language-java"><code class="language-java">修饰符 返回值类型 方法名（参数列表） <span class="token keyword">throws</span> AException，BException<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">{</span>
-    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">AException</span><span class="token punctuation">(</span><span class="token string">"原因1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">BException</span><span class="token punctuation">(</span><span class="token string">"原因2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>注意：</p>
-<ul>
-<li>1.<strong>throws</strong>关键字必须写在方法声明处</li>
-<li>2.<strong>throws</strong>关键字后边声明的异常必须是Exception或者是Exception的子类</li>
-<li>3.方法内部如果抛出了多个异常对象，那么throws后边也必须声明多个异常<ul>
-<li>如果抛出的多个异常对象有子父类关系，直接声明父类对象</li>
-</ul>
-</li>
-<li>4.调用了一个声明抛出异常的方法，就必须处理声明的异常<ul>
-<li>要么继续使用throws声明抛出，交给方法的调用者处理，最终交给JVM</li>
-<li>要么try…catch自己处理异常</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="3-try…catch"><a href="#3-try…catch" class="headerlink" title="3.try…catch"></a>3.try…catch</h3><p>捕获异常可设置<code>try/catch</code>语句</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
-    如果在try语句块中的代码没有抛出任何异常，那么程序将跳过catch字句
-*/</span>
-<span class="token keyword">try</span><span class="token punctuation">{</span>
-    编写可能会出现异常的代码
-<span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>异常类型 e<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    处理异常
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>注意：</p>
-<ul>
-<li>1.<strong>try</strong>中可能会抛出多个异常对象，那么就可以使用多个<strong>catch</strong>来处理这些异常</li>
-<li>2.如果<strong>try</strong>中产生了异常，那么就会执行catch中的异常处理语句，执行完毕后继续下面的代码；如果<strong>try</strong>中没有产生异常，那么就不会执行catch中处理异常的语句，继续执行<strong>try…catch</strong>之后的代码</li>
-</ul>
-<p>如何获取异常信息：</p>
-<p><strong>Throwable</strong>类中定义了一些查看方法:</p>
-<ul>
-<li><code>public String getMessage()</code>:获取异常的描述信息,原因(提示给用户的时候,就提示错误原因。</li>
-</ul>
-<ul>
-<li><code>public String toString()</code>:获取异常的类型和异常描述信息(不用)。</li>
-<li><code>public void printStackTrace()</code>:打印异常的跟踪栈信息并输出到控制台。</li>
-</ul>
-<hr>
-<h3 id="4-finally"><a href="#4-finally" class="headerlink" title="4.finally"></a>4.finally</h3><p><strong>finally</strong>：有一些代码无论异常是否发生，都需要执行。</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">try</span><span class="token punctuation">{</span>
-    执行代码
-<span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>E e<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    处理异常
-<span class="token punctuation">}</span><span class="token keyword">finally</span><span class="token punctuation">{</span>
-    无论程序怎样，最终执行代码
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li>主要在<strong>finally</strong>中处理<strong>return</strong>语句</li>
-<li>慎用<strong>return，break，continue</strong></li>
-<li>对于引用类型返回，要特别小心。如果在<strong>finally</strong>中改变了引用对象的成员属性，即使不显式地调用<strong>return</strong>语句，修改也会作用到返回值上</li>
-</ul>
-<h3 id="5-多异常处理"><a href="#5-多异常处理" class="headerlink" title="5.多异常处理"></a>5.多异常处理</h3><ul>
-<li>多个异常分别处理</li>
-<li>多个异常一次捕获，多次处理</li>
-<li>多个异常一次捕获一次处理</li>
-</ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
-    最常用的是一次捕获多次处理方式
-*/</span>
-<span class="token keyword">try</span><span class="token punctuation">{</span>
-     编写可能会出现异常的代码
-<span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>异常类型A  e<span class="token punctuation">)</span><span class="token punctuation">{</span>  当<span class="token keyword">try</span>中出现A类型异常<span class="token punctuation">,</span>就用该<span class="token keyword">catch</span>来捕获<span class="token punctuation">.</span>
-     处理异常的代码
-     <span class="token comment" spellcheck="true">//记录日志/打印异常信息/继续抛出异常</span>
-<span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>异常类型B  e<span class="token punctuation">)</span><span class="token punctuation">{</span>  当<span class="token keyword">try</span>中出现B类型异常<span class="token punctuation">,</span>就用该<span class="token keyword">catch</span>来捕获<span class="token punctuation">.</span>
-     处理异常的代码
-     <span class="token comment" spellcheck="true">//记录日志/打印异常信息/继续抛出异常</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>注意：</p>
-<ul>
-<li>运行时异常被抛出可以不处理，不捕获也不抛出</li>
-<li>如果父类抛出了多个异常,子类重写父类方法时,抛出和父类相同的异常或者是父类异常的子类或者不抛出异常</li>
-<li>父类方法没有抛出异常，子类重写父类该方法时也不可抛出异常。此时子类产生该异常，只能捕获处理，不能声明抛出</li>
-</ul>
-<hr>
-<h3 id="6-自定义异常类"><a href="#6-自定义异常类" class="headerlink" title="6.自定义异常类"></a>6.自定义异常类</h3><p>对于<strong>JAVA</strong>提供的异常类，不够使用，需要自己定义一些异常类</p>
-<pre class="line-numbers language-java"><code class="language-java">格式：
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">XXXException</span> <span class="token keyword">extends</span> <span class="token class-name">Exception</span><span class="token operator">/</span>RuntiimeException<span class="token punctuation">{</span>
-    添加一个空参数构造器
-    添加一个带异常信息的构造器
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>注意：</p>
-<ul>
-<li>自定义异常类一般都是<strong>Exception</strong>结尾，说明该类是一个异常类</li>
-<li>自定义异常类，必须继承<strong>Exception</strong>或者<strong>RuntimeException</strong><ul>
-<li>继承<strong>Exception</strong>：那么自定义异常类就是一个编译期异常，如果方法内部抛出了编译期异常，就必须处理异常，<strong>throws</strong>或者<strong>try…catch</strong></li>
-<li>继承<strong>RuntimeException</strong>：那么自定义异常类就是一个运行期异常，无需处理，交给<strong>JVM</strong>处理</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h1 id="异常机制的使用技巧"><a href="#异常机制的使用技巧" class="headerlink" title="异常机制的使用技巧"></a>异常机制的使用技巧</h1><ul>
-<li>异常处理不能代替简单的测试</li>
-<li>不要过分地细化异常</li>
-<li>尽量不要捕获类似<strong>Exception</strong>这样的通用异常，而是捕获特定异常</li>
-<li>不要生吞（swallow）异常</li>
-<li>利用异常层次结构<ul>
-<li>不要只抛出<strong>RuntimeException</strong>异常。应该寻找更加合适的子类或创建自己的异常类</li>
-<li>不要只捕获<strong>Thowable</strong>异常，否则会使程序代码更难维护</li>
-</ul>
-</li>
-<li>早抛出，晚捕获</li>
-</ul>
-<hr>
-<h1 id="性能角度分析"><a href="#性能角度分析" class="headerlink" title="性能角度分析"></a>性能角度分析</h1><ul>
-<li><strong>try…catch</strong>代码段会产生额外的性能开销，往往会影响<strong>JVM</strong>对代码的优化，所以建议只捕获有必要的代码段</li>
-<li>利用异常控制代码流程，效果也不是很好，通常比条件语句更加低效</li>
-</ul>
-<hr>
-<h1 id="NoClassDefFoundError，ClassNotFoundException辨析"><a href="#NoClassDefFoundError，ClassNotFoundException辨析" class="headerlink" title="NoClassDefFoundError，ClassNotFoundException辨析"></a>NoClassDefFoundError，ClassNotFoundException辨析</h1><p><code>ClassNotFoundException</code>产生的原因：</p>
-<p><strong>JAVA</strong>支持使用<strong>Class.forName</strong>方法动态加载类，任意一个类的类名如果被作为参数传递给这个方法都将导致该类被加载到<strong>JVM</strong>内存中，如果这个类在类路径中没有被找到，那么此时就会在运行时抛出<strong>ClassNotFoundException</strong>异常。</p>
-<p><code>NoClassDefFoundError</code>产生的原因：</p>
-<p>如果<strong>JVM</strong>或者<strong>ClassLoader</strong>实例尝试加载（可以通过正常的方法调用，也可能是使用<strong>new</strong>来创建新的对象）类的时候却找不到类的定义。要查找的类在编译的时候是存在的，运行的时候却找不到。</p>
-<hr>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
-<li><p>《<strong>JAVA</strong>核心技术》</p>
-</li>
-<li><p><a href="https://time.geekbang.org/column/intro/82" target="_blank" rel="noopener"><strong>JAVA</strong>核心技术36讲</a></p>
-</li>
-</ul>
-
+                
             </div>
             <hr />
 
@@ -803,9 +634,9 @@ ExceptionException是程序正常运行中，可以预料的意外情况，可">
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《浅析Exception和Error》
+                    《线程机制》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/01/qian-xi-exception-he-error/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/02/xian-cheng-ji-zhi/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Bouncy丶Knight
             </a> 采用
@@ -846,7 +677,7 @@ ExceptionException是程序正常运行中，可以预料的意外情况，可">
         repo: 'ohlselfspace.github.io',
         owner: 'ohlselfspace',
         admin: "ohlselfspace",
-        id: '2020/02/01/qian-xi-exception-he-error/',
+        id: '2020/02/02/xian-cheng-ji-zhi/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1129,9 +960,10 @@ ExceptionException是程序正常运行中，可以预料的意外情况，可">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/02/02/xian-cheng-ji-zhi/">
                     <div class="card-image">
@@ -1149,9 +981,9 @@ ExceptionException是程序正常运行中，可以预料的意外情况，可">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1164,6 +996,7 @@ ExceptionException是程序正常运行中，可以预料的意外情况，可">
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1190,31 +1023,31 @@ ExceptionException是程序正常运行中，可以预料的意外情况，可">
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/30/2019-nian-zong-jie/">
+                <a href="/2020/02/01/qian-xi-exception-he-error/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="2019年总结">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="浅析Exception和Error">
                         
-                        <span class="card-title">2019年总结</span>
+                        <span class="card-title">浅析Exception和Error</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            时至今日，你仍是我心中的光
+                            对JAVA异常捕获、处理的感悟和体会，以及一些调试技巧的总结。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-30
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-01
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/随笔/" class="post-category" target="_blank">
-                                    随笔
+                            <a href="/categories/JAVA/" class="post-category" target="_blank">
+                                    JAVA
                                 </a>
                             
                             
@@ -1224,16 +1057,16 @@ ExceptionException是程序正常运行中，可以预料的意外情况，可">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/爱情/" target="_blank">
-                        <span class="chip bg-color">爱情</span>
+                    <a href="/tags/JAVA异常/" target="_blank">
+                        <span class="chip bg-color">JAVA异常</span>
                     </a>
                     
-                    <a href="/tags/考研/" target="_blank">
-                        <span class="chip bg-color">考研</span>
+                    <a href="/tags/捕获异常/" target="_blank">
+                        <span class="chip bg-color">捕获异常</span>
                     </a>
                     
-                    <a href="/tags/总结/" target="_blank">
-                        <span class="chip bg-color">总结</span>
+                    <a href="/tags/Throwable/" target="_blank">
+                        <span class="chip bg-color">Throwable</span>
                     </a>
                     
                 </div>

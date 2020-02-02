@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ohlselfspace.github.io/"/>
-  <updated>2020-02-01T08:18:35.637Z</updated>
+  <updated>2020-02-02T02:14:16.961Z</updated>
   <id>http://ohlselfspace.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>线程机制</title>
+    <link href="http://ohlselfspace.github.io/2020/02/02/xian-cheng-ji-zhi/"/>
+    <id>http://ohlselfspace.github.io/2020/02/02/xian-cheng-ji-zhi/</id>
+    <published>2020-02-02T02:07:00.000Z</published>
+    <updated>2020-02-02T02:14:16.961Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="JAVA" scheme="http://ohlselfspace.github.io/categories/JAVA/"/>
+    
+    
+      <category term="JAVA" scheme="http://ohlselfspace.github.io/tags/JAVA/"/>
+    
+      <category term="线程" scheme="http://ohlselfspace.github.io/tags/%E7%BA%BF%E7%A8%8B/"/>
+    
+      <category term="进程" scheme="http://ohlselfspace.github.io/tags/%E8%BF%9B%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>浅析Exception和Error</title>

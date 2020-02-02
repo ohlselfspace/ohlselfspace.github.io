@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>线程机制</title>
+      <link href="/2020/02/02/xian-cheng-ji-zhi/"/>
+      <url>/2020/02/02/xian-cheng-ji-zhi/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> JAVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JAVA </tag>
+            
+            <tag> 线程 </tag>
+            
+            <tag> 进程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>浅析Exception和Error</title>
       <link href="/2020/02/01/qian-xi-exception-he-error/"/>
       <url>/2020/02/01/qian-xi-exception-he-error/</url>
