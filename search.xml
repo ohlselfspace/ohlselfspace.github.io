@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>网络编程</title>
+      <link href="/2020/02/06/wang-luo-bian-cheng/"/>
+      <url>/2020/02/06/wang-luo-bian-cheng/</url>
+      
+        <content type="html"><![CDATA[<h1 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h1><p>网络编程（<strong>Computer network programming</strong>）是指计算机网络编程涉及编写使程序能够跨计算机网络相互通信的计算机程序。</p><p>三要素：</p><ul><li>协议</li><li><strong>IP</strong>地址</li><li>端口号</li></ul><hr><h2 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h2><p>计算机使多台计算机实现连接通信，其连接和通行时需要遵守一定的规则。它对数据的传输格式、传输速率、传输步骤做了统一的规定，定义了实现的标准。</p><p><img src="tcp_ip.jpg" alt></p><p><code>java.net</code>包下提供了两种常见的网络协议：</p><ul><li><p><strong>TCP/IP</strong>: 传输控制协议/因特网互联协议( <strong>Transmission Control Protocol/Internet Protocol</strong>)，是<strong>Internet</strong>最基本、最广泛的协议。它定义了计算机如何连入因特网，以及数据如何在它们之间传输的标准。它的内部包含一系列的用于处理数据通信的协议，并采用了4层的分层模型，每一层都呼叫它的下一层所提供的协议来完成自己的需求。</p></li><li><p><strong>UDP</strong>:用户数据报协议(<strong>User Datagram Protocol</strong>)。<strong>UDP</strong>是无连接通信协议，即在数据传输时，数据的发送端和接收端不建立逻辑连接。简单来说，当一台计算机向另外一台计算机发送数据时，发送端不会确认接收端是否存在，就会发出数据，同样接收端在收到数据时，也不会向发送端反馈是否收到数据。</p></li></ul><hr><h2 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h2><p><strong>IP</strong>地址是指互联网协议地址（<strong>Internet Protocol Address</strong>），<strong>IP</strong>地址用来个网络中的计算机设备做唯一的编号。</p><p><strong>IP地址分类</strong></p><ul><li><strong>IPv4</strong>，是一个32位的二进制数，通常被分为4个字节。2019年11 月 25 日，全球五大区域互联网注册管理机构之一的欧洲网络协调中心（<strong>RIPE NCC</strong>）宣布 <strong>IPv4</strong> 地址已全部用完。</li><li><strong>IPv6</strong>，采用128位地址长度，每16个字节一组，分成8组十六进制数。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> JAVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 套接字 </tag>
+            
+            <tag> C/S </tag>
+            
+            <tag> TCP/IP </tag>
+            
+            <tag> UDP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git三剑客</title>
       <link href="/2020/02/02/git/"/>
       <url>/2020/02/02/git/</url>
