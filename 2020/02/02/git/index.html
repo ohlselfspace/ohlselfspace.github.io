@@ -8,7 +8,11 @@
     <meta name="baidu-site-verification" content="C4g8dF9DLA">
     <meta name="google-site-verification" content="C4g8dF9DLA">
     <meta name="360-site-verification" content="C4g8dF9DLA">
-    <meta name="description" content="Git">
+    <meta name="description" content="GitGit作为世界上最新进的分布式版本控制系统，用于高效处理任何项目。
+
+配置user信息
+$ git config –global user.name “your_name”
+$ git config –global user.emai">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -290,7 +294,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -453,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1
+                    485
                 </div>
                 
 
@@ -476,7 +480,54 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1>
+                <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><p><strong>Git</strong>作为世界上最新进的分布式版本控制系统，用于高效处理任何项目。</p>
+<hr>
+<h2 id="配置user信息"><a href="#配置user信息" class="headerlink" title="配置user信息"></a>配置user信息</h2><ul>
+<li>$ git config –global user.name “your_name”</li>
+<li>$ git config –global user.email “<a href="mailto:your_email@domain.com" target="_blank" rel="noopener">your_email@domain.com</a>“</li>
+</ul>
+<blockquote>
+<p>config的三个作用域</p>
+<ul>
+<li>git config –local （只对某个仓库有效）</li>
+<li>git config –global （对当前用户所有仓库有效）</li>
+<li>git config –system（对系统所有登录用户有效）</li>
+</ul>
+<p>显示config的配置，加  –list</p>
+<p>git config –list –XXX</p>
+</blockquote>
+<hr>
+<h2 id="建Git仓库"><a href="#建Git仓库" class="headerlink" title="建Git仓库"></a>建Git仓库</h2><p>两种场景：</p>
+<p>1.把已有的项目代码纳入<strong>Git</strong>管理</p>
+<pre class="line-numbers language-git"><code class="language-git">$ cd 项目代码所在文件夹
+<span class="token command">$ git init</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>2.新建的项目直接用<strong>Git</strong>管理</p>
+<pre class="line-numbers language-git"><code class="language-git">$ cd 某个文件夹
+<span class="token command">$ git init your_project  #会在当前路径下创建和项目名称相同的文件夹</span>
+$ cd your_project<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>注意：</p>
+<p>当设置global参数后，再设置local参数，local的优先级更高</p>
+</blockquote>
+<h2 id="往仓库里添加文件以及常用命令"><a href="#往仓库里添加文件以及常用命令" class="headerlink" title="往仓库里添加文件以及常用命令"></a>往仓库里添加文件以及常用命令</h2><p><img src="0.png" alt></p>
+<pre class="line-numbers language-git"><code class="language-git">Git常用命令
+<span class="token command">$ git add xxx #把xxx添加到仓库</span>
+<span class="token command">$ git commit<span class="token parameter"> -m</span> </span><span class="token string">"xxx"</span> #把文件提交到仓库，xxx表示此次提交的信息
+<span class="token command">$ git status #查看仓库当前状态</span>
+<span class="token command">$ git diff xxx #查看xxx修改内容</span>
+<span class="token command">$ git log #显示提交的日志</span>
+<span class="token command">$ git log<span class="token parameter"> --oneline</span> #查看简洁方式<span class="token parameter"> --n4</span> #所有分支最近4个<span class="token parameter"> --graph</span> #图形化</span>
+<span class="token command">$ git reflog #查看命令历史</span>
+<span class="token command">$ git reset<span class="token parameter"> --hard</span> commit_id #回退到某个版本</span>
+<span class="token command">$ git mv xxx xxx.md #把xxx变更xxx.md文件名</span>
+$ gitk #图形界面查看版本历史
+<span class="token command">$ git checkout #切换分支</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="commit，tree和blob三个对象之间的关系"><a href="#commit，tree和blob三个对象之间的关系" class="headerlink" title="commit，tree和blob三个对象之间的关系"></a>commit，tree和blob三个对象之间的关系</h2><p>在<strong>Git</strong>中根据哈希值，像commit—&gt;tree—&gt;blob这样的树形结构连接起来。</p>
+<p><strong>Git</strong>中不会因为文件名不同而创建不同的<strong>blob</strong>文件，而是根据哈希值来确定<strong>blob</strong>文件，这样就大大节省了<strong>Git</strong>仓库的空间大小。</p>
+<hr>
+<h2 id="分离头指针"><a href="#分离头指针" class="headerlink" title="分离头指针"></a>分离头指针</h2><p>如果进行了某些更改，而且十分重要，一定要和某个分支绑定在一起，<strong>Git</strong>才不会把它作为垃圾处理。</p>
+
             </div>
             <hr />
 
@@ -969,7 +1020,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Git三剑客">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Git三剑客">
                         
                         <span class="card-title">Git三剑客</span>
                     </div>
@@ -1027,7 +1078,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="JAVA并发实现和线程安全">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="JAVA并发实现和线程安全">
                         
                         <span class="card-title">JAVA并发实现和线程安全</span>
                     </div>
@@ -1228,7 +1279,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">3.5k</span>
+            <span class="white-color">4k</span>
             
 
             <br>

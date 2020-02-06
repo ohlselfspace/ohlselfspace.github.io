@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ohlselfspace.github.io/"/>
-  <updated>2020-02-02T14:36:33.145Z</updated>
+  <updated>2020-02-04T11:49:25.612Z</updated>
   <id>http://ohlselfspace.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://ohlselfspace.github.io/2020/02/02/git/"/>
     <id>http://ohlselfspace.github.io/2020/02/02/git/</id>
     <published>2020-02-02T14:30:09.000Z</published>
-    <updated>2020-02-02T14:36:33.145Z</updated>
+    <updated>2020-02-04T11:49:25.612Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,9 @@
       
         
         
-          &lt;h1 id=&quot;Git&quot;&gt;&lt;a href=&quot;#Git&quot; class=&quot;headerlink&quot;
+          &lt;h1 id=&quot;Git&quot;&gt;&lt;a href=&quot;#Git&quot; class=&quot;headerlink&quot; title=&quot;Git&quot;&gt;&lt;/a&gt;Git&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt;作为世界上最新进的分布式版本控制系统，用于高效处理任何项目。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2
         
       
     
