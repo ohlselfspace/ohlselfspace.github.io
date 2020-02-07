@@ -298,7 +298,7 @@ IP地址
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -465,14 +465,14 @@ IP地址
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    499
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    8 分
                 </div>
                 
                 
@@ -512,6 +512,169 @@ IP地址
 <li><strong>IPv4</strong>，是一个32位的二进制数，通常被分为4个字节。2019年11 月 25 日，全球五大区域互联网注册管理机构之一的欧洲网络协调中心（<strong>RIPE NCC</strong>）宣布 <strong>IPv4</strong> 地址已全部用完。</li>
 <li><strong>IPv6</strong>，采用128位地址长度，每16个字节一组，分成8组十六进制数。</li>
 </ul>
+<hr>
+<h2 id="端口号"><a href="#端口号" class="headerlink" title="端口号"></a>端口号</h2><p>网络的通信本质是两个进程进行通信，使用<strong>IP</strong>地址可以唯一标识网络中的设备，而<strong>端口号</strong>就可以唯一标识设备中的进程。</p>
+<p>端口号，是用两个字节表示的整数，它的取值范围为0<del>65535。其中，0</del>1023之间的端口号用于一些知名的网络服务和应用，普通的应用程序需要使用1024以上的端口号。如果端口号被另外一个服务或应用所占用，会导致当前程序启动失败。</p>
+<p>利用<code>协议</code>+<code>IP地址</code>+<code>端口号</code> 三元组合，就可以标识网络中的进程了，那么进程间的通信就可以利用这个标识与其它进程进行交互。</p>
+<hr>
+<h1 id="Socket编程"><a href="#Socket编程" class="headerlink" title="Socket编程"></a>Socket编程</h1><p>套接字使用<strong>TCP</strong>提供了两台计算机之间的通信机制。 客户端程序创建一个套接字，并尝试连接服务器的套接字。</p>
+<p>当连接建立时，服务器会创建一个<strong>Socket</strong> 对象。客户端和服务器现在可以通过对 <em><em>Socket </em></em>对象的写入和读取来进行通信。</p>
+<p><code>java.net.Socket</code> 类代表一个套接字，并且 <code>java.net.ServerSocket</code> 类为服务器程序提供了一种来监听客户端，并与他们建立连接的机制。</p>
+<p>以下步骤在两台计算机之间使用套接字建立<strong>TCP</strong>连接时会出现：</p>
+<ul>
+<li>服务器实例化一个<strong>SeverSocket</strong>对象，通过服务器上的端口通信</li>
+<li>服务器调用<strong>ServerSocket</strong>类的<strong>accept（）</strong>方法，该方法一直监听端口，直到客服端连接上服务器指定的端口</li>
+<li>服务器监听时，客户端实例化一个<strong>Socket</strong>对象，指定服务器名称和端口号来请求连接</li>
+<li><strong>Socket</strong>类的构造函数试图将客服端连接到指定的服务器和端口号</li>
+<li>在服务器端，<strong>accept（）</strong>方法返回服务器上一个新的<strong>Socket</strong>引用，该<strong>Socket</strong>连接到客服端的<strong>Socket</strong></li>
+</ul>
+<hr>
+<h2 id="TCP通信"><a href="#TCP通信" class="headerlink" title="TCP通信"></a>TCP通信</h2><ul>
+<li>客户端：<code>java.net.Socket</code> 类表示。创建<code>Socket</code>对象，向服务端发出连接请求，服务端响应请求，两者建立连接开始通信。</li>
+<li>服务端：<code>java.net.ServerSocket</code> 类表示。创建<code>ServerSocket</code>对象，相当于开启一个服务，并等待客户端的连接。</li>
+</ul>
+<p><img src="%E7%AE%80%E5%8D%95%E9%80%9A%E4%BF%A1.jpg" alt></p>
+<ul>
+<li>1.服务器启动，创建<strong>ServerSocket</strong>对象，等待连接</li>
+<li>2.客户端启动，创建<strong>Socket</strong>对象，请求连接</li>
+<li>3.服务器接收连接，调用<strong>accept</strong>方法，返回一个<strong>Socket</strong>对象</li>
+<li>4.客户端<strong>Socket</strong>对象，获取<strong>OutputStream</strong>，向服务器写出数据</li>
+<li>5.服务器<strong>Socket</strong>对象，获取<strong>InputStream</strong>，读取客户端发送的数据</li>
+<li>6.服务器<strong>Socket</strong>对象，获取<strong>OutputStream</strong>，向客户端回写数据</li>
+<li>7.客户端<strong>Socket</strong>对象，获取<strong>InputStream</strong>，解析回写数据</li>
+<li>8.客户端释放资源，断开连接</li>
+</ul>
+<hr>
+<h2 id="客户端向服务器发送数据"><a href="#客户端向服务器发送数据" class="headerlink" title="客户端向服务器发送数据"></a>客户端向服务器发送数据</h2><p><strong>客户端实现</strong>：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ServerTCP</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> IOException <span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"服务端启动 , 等待连接 .... "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 1.创建 ServerSocket对象，绑定端口，开始等待连接</span>
+        ServerSocket ss <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ServerSocket</span><span class="token punctuation">(</span><span class="token number">6666</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 2.接收连接 accept 方法, 返回 socket 对象.</span>
+        Socket server <span class="token operator">=</span> ss<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 3.通过socket 获取输入流</span>
+        InputStream is <span class="token operator">=</span> server<span class="token punctuation">.</span><span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 4.一次性读取数据</span>
+          <span class="token comment" spellcheck="true">// 4.1 创建字节数组</span>
+        <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token comment" spellcheck="true">// 4.2 据读取到字节数组中.</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> is<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>；
+        <span class="token comment" spellcheck="true">// 4.3 解析数组,打印字符串信息</span>
+        String msg <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//5.关闭资源.</span>
+        is<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        server<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>客户端实现</strong>：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ClientTCP</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"客户端发送数据"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 1.创建 Socket (ip,port),确定连接到哪里.</span>
+        Socket client <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Socket</span><span class="token punctuation">(</span><span class="token string">"localhost"</span><span class="token punctuation">,</span> <span class="token number">6666</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 2.获取流对象 . 输出流</span>
+        OutputStream os <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">getOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 3.写出数据.</span>
+        os<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"请求tcp"</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 4. 关闭资源 .</span>
+        os<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        client<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="服务器向客户端回写数据"><a href="#服务器向客户端回写数据" class="headerlink" title="服务器向客户端回写数据"></a>服务器向客户端回写数据</h2><p><strong>服务端实现：</strong></p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ServerTCP</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> IOException <span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"服务端启动,等待连接 ...."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 1.创建 ServerSocket对象，绑定端口，开始等待连接</span>
+        ServerSocket ss <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ServerSocket</span><span class="token punctuation">(</span><span class="token number">6666</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 2.接收连接 accept 方法, 返回 socket 对象.</span>
+        Socket server <span class="token operator">=</span> ss<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 3.通过socket 获取输入流</span>
+        InputStream is <span class="token operator">=</span> server<span class="token punctuation">.</span><span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 4.一次性读取数据</span>
+          <span class="token comment" spellcheck="true">// 4.1 创建字节数组</span>
+        <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token comment" spellcheck="true">// 4.2 据读取到字节数组中.</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> is<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>；
+        <span class="token comment" spellcheck="true">// 4.3 解析数组,打印字符串信息</span>
+        String msg <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token comment" spellcheck="true">// =================回写数据=======================</span>
+          <span class="token comment" spellcheck="true">// 5. 通过 socket 获取输出流</span>
+           OutputStream out <span class="token operator">=</span> server<span class="token punctuation">.</span><span class="token function">getOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token comment" spellcheck="true">// 6. 回写数据</span>
+           out<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"谢谢你"</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token comment" spellcheck="true">// 7.关闭资源.</span>
+          out<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        is<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        server<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>客户端实现：</strong></p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ClientTCP</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"客户端 发送数据"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 1.创建 Socket ( ip , port ) , 确定连接到哪里.</span>
+        Socket client <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Socket</span><span class="token punctuation">(</span><span class="token string">"localhost"</span><span class="token punctuation">,</span> <span class="token number">6666</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 2.通过Scoket,获取输出流对象 </span>
+        OutputStream os <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">getOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 3.写出数据.</span>
+        os<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"tcp我来了"</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token comment" spellcheck="true">// ==============解析回写=========================</span>
+          <span class="token comment" spellcheck="true">// 4. 通过Scoket,获取 输入流对象</span>
+          InputStream in <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token comment" spellcheck="true">// 5. 读取数据数据</span>
+          <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token keyword">int</span> len <span class="token operator">=</span> in<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> len<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 6. 关闭资源 .</span>
+          in<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        os<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        client<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="Socket类"><a href="#Socket类" class="headerlink" title="Socket类"></a>Socket类</h2><ul>
+<li><strong>public Socket(String host, int port)</strong> :创建套接字对象并将其连接到指定主机上的指定端口号。如果指定的host是null ，则相当于指定地址为回送地址。  </li>
+<li><strong>public InputStream getInputStream()</strong>：返回此套接字的输入流。</li>
+<li><strong>public OutputStream getOutputStream()</strong>:返回此套接字的输出流。</li>
+<li><strong>public void close()</strong>:关闭此套接字</li>
+<li><strong>public void shutdownOutput</strong>:禁用此套接字的输出流</li>
+</ul>
+<hr>
+<h2 id="ServerSocket类"><a href="#ServerSocket类" class="headerlink" title="ServerSocket类"></a>ServerSocket类</h2><ul>
+<li><strong>public ServerSocket(int port)</strong>:使用该构造方法在创建ServerSocket对象时，就可以将其绑定到一个指定的端口号上，参数port就是端口号。</li>
+<li><strong>public Socket accept()</strong>:侦听并接受连接，返回一个新的Socket对象，用于和客户端实现通信。该方法会一直阻塞直到建立连接。 </li>
+</ul>
+<hr>
+<h1 id="常用API"><a href="#常用API" class="headerlink" title="常用API"></a>常用API</h1><h2 id="InetAddress类"><a href="#InetAddress类" class="headerlink" title="InetAddress类"></a>InetAddress类</h2><p><strong>IP</strong>地址类：<strong>InetAddress</strong>类</p>
+<blockquote>
+<p><strong>InetAddress</strong>类没有构造方法</p>
+</blockquote>
+<ul>
+<li><strong>byte[] getAddress()</strong>：返回此<strong>INetAddress</strong> 对象的原始<strong>IP</strong>地址</li>
+<li><strong>static InetAddress getByName(String host)</strong>：在给定主机名的情况下确定主机的<strong>IP</strong>地址</li>
+<li><strong>String getHostAddress()</strong>:返回<strong>IP</strong>地址字符串</li>
+<li><strong>String getHostName()</strong>：获取此<strong>IP</strong>地址的主机名</li>
+<li><strong>static InetAddress getLocalHost()</strong>：返回本地主机</li>
+</ul>
+<blockquote>
+<p>127.0.01:本机地址，用于测试</p>
+</blockquote>
+<hr>
+<h2 id="InetSocketAddress类"><a href="#InetSocketAddress类" class="headerlink" title="InetSocketAddress类"></a>InetSocketAddress类</h2><p>端口类：<strong>InetSocketAddress</strong>类</p>
+<ul>
+<li><strong>InetSocketAddress（InetAddress addr, int port)</strong>:根据<strong>IP</strong>地址和端口号创建套接字地址</li>
+<li><strong>InetSocketAddress（int port)</strong>:创建套接字地址，其中<strong>IP</strong>地址为通配符，端口号为指定值</li>
+<li><strong>InetSocketAddress(String hostname, int port)</strong>:根据主机名和端口号创建套接字地址</li>
+<li><strong>InetAddress getAddress（）</strong>:获取<strong>InetAddress</strong></li>
+<li><strong>String getHostName()</strong>:获取<strong>hostname</strong></li>
+<li><strong>int getPort()</strong>:获取端口号</li>
+</ul>
+<hr>
 
             </div>
             <hr />
@@ -996,60 +1159,50 @@ IP地址
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/02/06/wang-luo-bian-cheng/">
+                <a href="/2020/02/07/leetcode-53-zui-da-zi-xu-he/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="网络编程">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="LeetCode-53.最大子序和">
                         
-                        <span class="card-title">网络编程</span>
+                        <span class="card-title">LeetCode-53.最大子序和</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            网络编程实践
+                            LeetCode-53.最大子序和解法总结，体会
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-07
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JAVA/" class="post-category" target="_blank">
-                                    JAVA
+                            <a href="/categories/算法/" class="post-category" target="_blank">
+                                    算法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/套接字/" target="_blank">
-                        <span class="chip bg-color">套接字</span>
+                    <a href="/tags/动态规划/" target="_blank">
+                        <span class="chip bg-color">动态规划</span>
                     </a>
                     
-                    <a href="/tags/C-S/" target="_blank">
-                        <span class="chip bg-color">C/S</span>
-                    </a>
-                    
-                    <a href="/tags/TCP-IP/" target="_blank">
-                        <span class="chip bg-color">TCP/IP</span>
-                    </a>
-                    
-                    <a href="/tags/UDP/" target="_blank">
-                        <span class="chip bg-color">UDP</span>
+                    <a href="/tags/贪心算法/" target="_blank">
+                        <span class="chip bg-color">贪心算法</span>
                     </a>
                     
                 </div>
@@ -1067,7 +1220,7 @@ IP地址
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Git三剑客">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Git三剑客">
                         
                         <span class="card-title">Git三剑客</span>
                     </div>
@@ -1268,7 +1421,7 @@ IP地址
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">4.5k</span>
+            <span class="white-color">6.9k</span>
             
 
             <br>
