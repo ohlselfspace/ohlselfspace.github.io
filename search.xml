@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>浅谈Java反射机制</title>
+      <link href="/2020/02/10/qian-tan-java-fan-she-ji-zhi/"/>
+      <url>/2020/02/10/qian-tan-java-fan-she-ji-zhi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h1><p>反射是指能够分析类能力的程序，就是把<strong>java</strong>类中的各种成分映射成<strong>java</strong>对象。反射被称为框架设计的灵魂，对于一个任意的类，能够知道这个类的所有<strong>Field，Method，Constructor</strong>。对于一个实例对象也是如此，动态获取信息以及动态调用对象的方法。</p><ul><li>在运行时分析类的能力</li><li>在运行是查看对象</li></ul><hr><h2 id="Class类"><a href="#Class类" class="headerlink" title="Class类"></a>Class类</h2><p>任何一个类都是<strong>Class</strong>类的实例对象，这个实例对象有三种表示方式：</p><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*    第一种表达方式， 类名 对象 = 类名.class    任何一个类都有一个隐含的静态成员变量class*/</span>Class <span class="token class-name">c1</span> <span class="token operator">=</span> Employee<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//已经定义了一个Employee类</span><span class="token comment" spellcheck="true">/*    第二种方式， 通过该类的对象调用getClass方法    那么首先需要创建一个Employee的实例对象*/</span>Employee e <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>Class <span class="token class-name">c2</span> <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*    c1,c2表示Employee类的类类型（class type）*/</span><span class="token comment" spellcheck="true">/*    第三种方式， Class c3 = Class.forName(String className)    此参数字符串必须是真实路径，就是带包名的类路径，包名.类名    Employee类code包下,需要注意的是该方法有异常ClassNotFoundException抛出，    需要声明该异常*/</span><span class="token keyword">class</span> <span class="token class-name">c3</span> <span class="token operator">=</span> Class<span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"code.Employee"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*    常用方法newInstance(),可以动态创建一个类的实例    查看源码发现newInstance()自Java9被标记不推荐使用    改为使用c1.getDeclaredConstructor().newInstance()，同样需要抛出异常*/</span>e<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>注意：</p><ul><li><strong>c1,c2,c3</strong>的内存地址是相同的，一个类只产生一个<strong>class</strong>对象，由<strong>jvm</strong>自动创建。</li></ul></blockquote><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 反射 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Leetcode-118.杨辉三角</title>
       <link href="/2020/02/09/leetcode-118-yang-hui-san-jiao/"/>
       <url>/2020/02/09/leetcode-118-yang-hui-san-jiao/</url>

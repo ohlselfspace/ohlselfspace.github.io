@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ohlselfspace.github.io/"/>
-  <updated>2020-02-09T06:57:29.886Z</updated>
+  <updated>2020-02-10T06:18:01.177Z</updated>
   <id>http://ohlselfspace.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>浅谈Java反射机制</title>
+    <link href="http://ohlselfspace.github.io/2020/02/10/qian-tan-java-fan-she-ji-zhi/"/>
+    <id>http://ohlselfspace.github.io/2020/02/10/qian-tan-java-fan-she-ji-zhi/</id>
+    <published>2020-02-10T02:19:37.000Z</published>
+    <updated>2020-02-10T06:18:01.177Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;反射&quot;&gt;&lt;a href=&quot;#反射&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://ohlselfspace.github.io/categories/Java/"/>
+    
+    
+      <category term="反射" scheme="http://ohlselfspace.github.io/tags/%E5%8F%8D%E5%B0%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Leetcode-118.杨辉三角</title>
     <link href="http://ohlselfspace.github.io/2020/02/09/leetcode-118-yang-hui-san-jiao/"/>
     <id>http://ohlselfspace.github.io/2020/02/09/leetcode-118-yang-hui-san-jiao/</id>
     <published>2020-02-09T03:10:29.000Z</published>
-    <updated>2020-02-09T06:57:29.886Z</updated>
+    <updated>2020-02-09T07:02:22.006Z</updated>
     
     <summary type="html">
     
