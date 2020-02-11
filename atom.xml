@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ohlselfspace.github.io/"/>
-  <updated>2020-02-11T02:55:13.217Z</updated>
+  <updated>2020-02-11T10:36:56.535Z</updated>
   <id>http://ohlselfspace.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java引用探析</title>
+    <link href="http://ohlselfspace.github.io/2020/02/11/java-yin-yong-tan-xi/"/>
+    <id>http://ohlselfspace.github.io/2020/02/11/java-yin-yong-tan-xi/</id>
+    <published>2020-02-11T09:05:55.000Z</published>
+    <updated>2020-02-11T10:36:56.535Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Java引用探析&quot;&gt;&lt;a href=&quot;#Java引用探析&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://ohlselfspace.github.io/categories/Java/"/>
+    
+    
+      <category term="Reference" scheme="http://ohlselfspace.github.io/tags/Reference/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot学习笔记</title>
+    <link href="http://ohlselfspace.github.io/2020/02/11/springboot-xue-xi-bi-ji/"/>
+    <id>http://ohlselfspace.github.io/2020/02/11/springboot-xue-xi-bi-ji/</id>
+    <published>2020-02-11T03:03:36.000Z</published>
+    <updated>2020-02-11T03:05:32.823Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Java" scheme="http://ohlselfspace.github.io/categories/Java/"/>
+    
+    
+      <category term="SpringBoot" scheme="http://ohlselfspace.github.io/tags/SpringBoot/"/>
+    
+  </entry>
   
   <entry>
     <title>Maven学习笔记</title>
@@ -253,7 +297,7 @@
     <link href="http://ohlselfspace.github.io/2020/01/30/2019-nian-zong-jie/"/>
     <id>http://ohlselfspace.github.io/2020/01/30/2019-nian-zong-jie/</id>
     <published>2020-01-30T09:59:28.000Z</published>
-    <updated>2020-01-30T13:40:57.790Z</updated>
+    <updated>2020-02-11T09:25:33.335Z</updated>
     
     <summary type="html">
     

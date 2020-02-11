@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>Java引用探析</title>
+      <link href="/2020/02/11/java-yin-yong-tan-xi/"/>
+      <url>/2020/02/11/java-yin-yong-tan-xi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Java引用探析"><a href="#Java引用探析" class="headerlink" title="Java引用探析"></a>Java引用探析</h1><p>在<strong>Java</strong>中除基本数据类型外，其他都是指向各类对象的引用。根据生命周期的长短，可将引用分为强引用，软引用，弱引用，幻象引用。不同的引用类型体现在对象不同的可达性和垃圾收集的影响。</p><h2 id="强引用"><a href="#强引用" class="headerlink" title="强引用"></a>强引用</h2><p>强引用就是我们通常创建对象实例的方式。通过<strong>new</strong>关键字创建对象的引用，当<strong>Jvm</strong>内存不足时，宁愿抛出<strong>OOM(OutOfMemoryError)</strong>，也不会强制通过回收强引用对象来解决内存不足的问题。对于一个普通对象而言，如果没有其他引用关系，只要超过了引用的作用域或者显式地将相应强引用赋值为<strong>null</strong>，这种情况下，就可以被<strong>GC</strong>处理(具体情况要看垃圾回收策略)。</p><pre class="line-numbers language-java"><code class="language-java">Object obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><hr><h2 id="软引用"><a href="#软引用" class="headerlink" title="软引用"></a>软引用</h2><p>软引用需要由<code>SoftReference</code>类实现，软引用相比于强引用较弱。当<strong>Jvm</strong>内存不足时，它就会试图回收软引用指向的对象。这种回收会在<strong>OOM</strong>之前发生。</p><p>软引用通常用来实现一些内存敏感的缓存，如果存在空闲内存，就可以暂时保留这些缓存。当内存</p><p>要溢出时就会试图回收这部分软引用对象。</p><pre class="line-numbers language-java"><code class="language-java">Object obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>SoftReference softobj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SoftReference</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>Object o <span class="token operator">=</span> softobj<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><hr><h2 id="弱引用"><a href="#弱引用" class="headerlink" title="弱引用"></a>弱引用</h2><p>弱引用通过<code>WeakReference</code>类实现。弱引用生命周期相较于软引用更短。在<strong>GC</strong>扫描管辖的内存区域时，一旦发现了具有弱引用的对象，无论内存空间是否足够，都会回收它的内存。</p><p>如果试图获取的对象还存在，就使用它，否则就重新实例化。</p><p>许多缓存技术的选择。</p><pre class="line-numbers language-java"><code class="language-java">Object obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>WeakReference Weakobj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WeakReference</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>Object o <span class="token operator">=</span> Weakobj<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><hr><h2 id="幻象引用"><a href="#幻象引用" class="headerlink" title="幻象引用"></a>幻象引用</h2><p>幻象引用通过<code>PhantomRerference</code>类实现。无法通过幻象引用访问对象的任何属性和方法。幻象引用仅仅是提供了一种确保对象被<strong>finalize</strong>之后，做某些事情的机制。</p><p>如果一个对象仅持有幻象引用，那么就等同于没有任何引用，在任何时候都可能被<strong>GC</strong>回收。</p><p>幻象引用可用来跟踪对象被<strong>GC</strong>回收的活动，当一个幻想引用被<strong>GC</strong>回收之前，系统会收到一条通知。</p><pre class="line-numbers language-java"><code class="language-java">Object obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>PhantomReference phantomobj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PhantomRerence</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>Object o <span class="token operator">=</span> phantomobj<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><hr><h2 id="对象可达性状态"><a href="#对象可达性状态" class="headerlink" title="对象可达性状态"></a>对象可达性状态</h2><p><img src="0.png" alt></p><hr><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><a href="https://time.geekbang.org/column/intro/82" target="_blank" rel="noopener">Java核心技术36讲</a></li><li><a href="https://www.cnblogs.com/huajiezh/p/5835618.html" target="_blank" rel="noopener">空谷幽澜</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Reference </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SpringBoot学习笔记</title>
+      <link href="/2020/02/11/springboot-xue-xi-bi-ji/"/>
+      <url>/2020/02/11/springboot-xue-xi-bi-ji/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SpringBoot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Maven学习笔记</title>
       <link href="/2020/02/10/maven-xue-xi-bi-ji/"/>
       <url>/2020/02/10/maven-xue-xi-bi-ji/</url>
