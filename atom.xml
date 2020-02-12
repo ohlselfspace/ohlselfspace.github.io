@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ohlselfspace.github.io/"/>
-  <updated>2020-02-11T10:36:56.535Z</updated>
+  <updated>2020-02-12T12:53:48.280Z</updated>
   <id>http://ohlselfspace.github.io/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Lambda学习笔记</title>
+    <link href="http://ohlselfspace.github.io/2020/02/12/lambda-biao-da-shi/"/>
+    <id>http://ohlselfspace.github.io/2020/02/12/lambda-biao-da-shi/</id>
+    <published>2020-02-12T05:09:55.000Z</published>
+    <updated>2020-02-12T12:53:48.280Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;函数式接口&quot;&gt;&lt;a href=&quot;#函数式接口&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://ohlselfspace.github.io/categories/Java/"/>
+    
+    
+      <category term="Lambda" scheme="http://ohlselfspace.github.io/tags/Lambda/"/>
+    
+      <category term="函数式接口" scheme="http://ohlselfspace.github.io/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java注解</title>
+    <link href="http://ohlselfspace.github.io/2020/02/11/java-zhu-jie/"/>
+    <id>http://ohlselfspace.github.io/2020/02/11/java-zhu-jie/</id>
+    <published>2020-02-11T12:20:21.000Z</published>
+    <updated>2020-02-11T12:31:38.737Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Java注解&quot;&gt;&lt;a href=&quot;#Java注解&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://ohlselfspace.github.io/categories/Java/"/>
+    
+    
+      <category term="注解" scheme="http://ohlselfspace.github.io/tags/%E6%B3%A8%E8%A7%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>Java引用探析</title>
@@ -173,7 +227,7 @@
     <link href="http://ohlselfspace.github.io/2020/02/06/wang-luo-bian-cheng/"/>
     <id>http://ohlselfspace.github.io/2020/02/06/wang-luo-bian-cheng/</id>
     <published>2020-02-06T02:47:34.000Z</published>
-    <updated>2020-02-06T13:28:10.130Z</updated>
+    <updated>2020-02-12T05:11:35.619Z</updated>
     
     <summary type="html">
     
@@ -187,7 +241,7 @@
     
     </summary>
     
-      <category term="JAVA" scheme="http://ohlselfspace.github.io/categories/JAVA/"/>
+      <category term="Java" scheme="http://ohlselfspace.github.io/categories/Java/"/>
     
     
       <category term="套接字" scheme="http://ohlselfspace.github.io/tags/%E5%A5%97%E6%8E%A5%E5%AD%97/"/>
@@ -237,7 +291,7 @@
     <link href="http://ohlselfspace.github.io/2020/02/02/java-bing-fa-shi-xian-he-xian-cheng-an-quan/"/>
     <id>http://ohlselfspace.github.io/2020/02/02/java-bing-fa-shi-xian-he-xian-cheng-an-quan/</id>
     <published>2020-02-02T02:07:00.000Z</published>
-    <updated>2020-02-03T03:24:28.945Z</updated>
+    <updated>2020-02-12T05:11:13.465Z</updated>
     
     <summary type="html">
     
@@ -251,7 +305,7 @@
     
     </summary>
     
-      <category term="JAVA" scheme="http://ohlselfspace.github.io/categories/JAVA/"/>
+      <category term="Java" scheme="http://ohlselfspace.github.io/categories/Java/"/>
     
     
       <category term="JAVA" scheme="http://ohlselfspace.github.io/tags/JAVA/"/>
@@ -267,7 +321,7 @@
     <link href="http://ohlselfspace.github.io/2020/02/01/qian-xi-exception-he-error/"/>
     <id>http://ohlselfspace.github.io/2020/02/01/qian-xi-exception-he-error/</id>
     <published>2020-02-01T03:33:27.000Z</published>
-    <updated>2020-02-01T08:18:35.637Z</updated>
+    <updated>2020-02-12T05:11:49.141Z</updated>
     
     <summary type="html">
     
@@ -281,7 +335,7 @@
     
     </summary>
     
-      <category term="JAVA" scheme="http://ohlselfspace.github.io/categories/JAVA/"/>
+      <category term="Java" scheme="http://ohlselfspace.github.io/categories/Java/"/>
     
     
       <category term="JAVA异常" scheme="http://ohlselfspace.github.io/tags/JAVA%E5%BC%82%E5%B8%B8/"/>

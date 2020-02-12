@@ -1,3 +1,5 @@
+http://ohlselfspace.github.io/2020/02/12/lambda-biao-da-shi/
+http://ohlselfspace.github.io/2020/02/11/java-zhu-jie/
 http://ohlselfspace.github.io/2020/02/11/java-yin-yong-tan-xi/
 http://ohlselfspace.github.io/2020/02/11/springboot-xue-xi-bi-ji/
 http://ohlselfspace.github.io/2020/02/10/maven-xue-xi-bi-ji/
