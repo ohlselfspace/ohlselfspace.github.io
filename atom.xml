@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ohlselfspace.github.io/"/>
-  <updated>2020-02-12T12:53:48.280Z</updated>
+  <updated>2020-02-14T14:05:52.129Z</updated>
   <id>http://ohlselfspace.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaWeb笔记</title>
+    <link href="http://ohlselfspace.github.io/2020/02/14/javaweb-bi-ji/"/>
+    <id>http://ohlselfspace.github.io/2020/02/14/javaweb-bi-ji/</id>
+    <published>2020-02-14T07:45:18.000Z</published>
+    <updated>2020-02-14T14:05:52.129Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;JavaWeb学习笔记&quot;&gt;&lt;a href=&quot;#JavaWeb学习笔记&quot; class=&quot;headerlink&quot; title=&quot;JavaWeb学习笔记&quot;&gt;&lt;/a&gt;JavaWeb学习笔记&lt;/h1&gt;&lt;h2 id=&quot;1-html&quot;&gt;&lt;a href=&quot;#1-html&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="JavaWeb" scheme="http://ohlselfspace.github.io/categories/JavaWeb/"/>
+    
+    
+      <category term="JavaWeb" scheme="http://ohlselfspace.github.io/tags/JavaWeb/"/>
+    
+      <category term="html" scheme="http://ohlselfspace.github.io/tags/html/"/>
+    
+      <category term="css" scheme="http://ohlselfspace.github.io/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>Lambda学习笔记</title>
