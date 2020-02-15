@@ -48,8 +48,8 @@ HTML属性：
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/blog/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/blog/css/prism-line-numbers.css" type="text/css"></head>
 
 <body>
 
@@ -57,7 +57,7 @@ HTML属性：
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
+                <a href="/blog/" class="waves-effect waves-light">
                     
                     <img src="/medias/logo.jpg" class="logo-img" alt="LOGO">
                     
@@ -288,7 +288,7 @@ HTML属性：
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
-                location.href = '/';
+                location.href = '/blog/';
             }
         }
     })();
@@ -414,15 +414,15 @@ HTML属性：
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/JavaWeb/" target="_blank">
+                        <a href="/blog/tags/JavaWeb/" target="_blank">
                             <span class="chip bg-color">JavaWeb</span>
                         </a>
                         
-                        <a href="/tags/html/" target="_blank">
+                        <a href="/blog/tags/html/" target="_blank">
                             <span class="chip bg-color">html</span>
                         </a>
                         
-                        <a href="/tags/css/" target="_blank">
+                        <a href="/blog/tags/css/" target="_blank">
                             <span class="chip bg-color">css</span>
                         </a>
                         
@@ -434,7 +434,7 @@ HTML属性：
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/JavaWeb/" class="post-category" target="_blank">
+                        <a href="/blog/categories/JavaWeb/" class="post-category" target="_blank">
                             JavaWeb
                         </a>
                         
@@ -952,7 +952,7 @@ HTML属性：
                   property="dct:title" rel="dct:type">
                     《JavaWeb笔记》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/14/javaweb-bi-ji/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/blog/2020/02/14/javaweb-bi-ji/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Bouncy丶Knight
             </a> 采用
@@ -1281,7 +1281,7 @@ HTML属性：
                 <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2020/02/14/javaweb-bi-ji/">
+                <a href="/blog/2020/02/14/javaweb-bi-ji/">
                     <div class="card-image">
                         
                         
@@ -1304,7 +1304,7 @@ HTML属性：
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JavaWeb/" class="post-category" target="_blank">
+                            <a href="/blog/categories/JavaWeb/" class="post-category" target="_blank">
                                     JavaWeb
                                 </a>
                             
@@ -1316,15 +1316,15 @@ HTML属性：
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaWeb/" target="_blank">
+                    <a href="/blog/tags/JavaWeb/" target="_blank">
                         <span class="chip bg-color">JavaWeb</span>
                     </a>
                     
-                    <a href="/tags/html/" target="_blank">
+                    <a href="/blog/tags/html/" target="_blank">
                         <span class="chip bg-color">html</span>
                     </a>
                     
-                    <a href="/tags/css/" target="_blank">
+                    <a href="/blog/tags/css/" target="_blank">
                         <span class="chip bg-color">css</span>
                     </a>
                     
@@ -1339,7 +1339,7 @@ HTML属性：
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/12/lambda-biao-da-shi/">
+                <a href="/blog/2020/02/12/lambda-biao-da-shi/">
                     <div class="card-image">
                         
                         
@@ -1362,7 +1362,7 @@ HTML属性：
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category" target="_blank">
+                            <a href="/blog/categories/Java/" class="post-category" target="_blank">
                                     Java
                                 </a>
                             
@@ -1373,11 +1373,11 @@ HTML属性：
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Lambda/" target="_blank">
+                    <a href="/blog/tags/Lambda/" target="_blank">
                         <span class="chip bg-color">Lambda</span>
                     </a>
                     
-                    <a href="/tags/函数式接口/" target="_blank">
+                    <a href="/blog/tags/函数式接口/" target="_blank">
                         <span class="chip bg-color">函数式接口</span>
                     </a>
                     
@@ -1585,7 +1585,7 @@ HTML属性：
 
 
 
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="/blog/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fa fa-rss"></i>
     </a>
 </div>
@@ -1666,7 +1666,7 @@ HTML属性：
 <script src="/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
-    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+    searchFunc("/blog/" + "search.xml", 'searchInput', 'searchResult');
 });
 </script>
     <!-- 回到顶部按钮 -->
@@ -1722,6 +1722,6 @@ WIDGET = {FID: '9mHTjxjnzO'}
 
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+<script src="/blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/blog/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
 
 </html>
