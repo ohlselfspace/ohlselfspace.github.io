@@ -8,7 +8,7 @@
     <meta name="baidu-site-verification" content="C4g8dF9DLA">
     <meta name="google-site-verification" content="C4g8dF9DLA">
     <meta name="360-site-verification" content="C4g8dF9DLA">
-    <meta name="description" content="遇见MySQL1.MySQL相关操作配置好系统变量后，进入cmd
+    <meta name="description" content="遇见MySQL1.MySQL数据类型1.1MySQL相关操作配置好系统变量后，进入cmd
 
 登录:
 mysql -uroot(用户) -p
@@ -21,7 +21,7 @@ quit
 \q
 
 
-登陆的同时打开指定数据库:m">
+登陆">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -303,7 +303,7 @@ quit
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -436,15 +436,11 @@ quit
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Java/" class="post-category" target="_blank">
-                            Java
-                        </a>
-                        
-                        <a href="/categories/Java/MySQL/" class="post-category" target="_blank">
+                        <a href="/categories/MySQL/" class="post-category" target="_blank">
                             MySQL
                         </a>
                         
-                        <a href="/categories/Java/MySQL/数据库/" class="post-category" target="_blank">
+                        <a href="/categories/MySQL/数据库/" class="post-category" target="_blank">
                             数据库
                         </a>
                         
@@ -470,14 +466,14 @@ quit
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    643
+                    3.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    17 分
                 </div>
                 
                 
@@ -493,7 +489,7 @@ quit
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="遇见MySQL"><a href="#遇见MySQL" class="headerlink" title="遇见MySQL"></a>遇见MySQL</h1><h2 id="1-MySQL相关操作"><a href="#1-MySQL相关操作" class="headerlink" title="1.MySQL相关操作"></a>1.MySQL相关操作</h2><p>配置好系统变量后，进入<strong>cmd</strong></p>
+                <h1 id="遇见MySQL"><a href="#遇见MySQL" class="headerlink" title="遇见MySQL"></a>遇见MySQL</h1><h2 id="1-MySQL数据类型"><a href="#1-MySQL数据类型" class="headerlink" title="1.MySQL数据类型"></a>1.MySQL数据类型</h2><h3 id="1-1MySQL相关操作"><a href="#1-1MySQL相关操作" class="headerlink" title="1.1MySQL相关操作"></a>1.1MySQL相关操作</h3><p>配置好系统变量后，进入<strong>cmd</strong></p>
 <ul>
 <li>登录:<ul>
 <li><strong>mysql -uroot(用户) -p</strong></li>
@@ -539,7 +535,7 @@ quit
 </ul>
 </blockquote>
 <hr>
-<h2 id="2-数据库相关操作"><a href="#2-数据库相关操作" class="headerlink" title="2.数据库相关操作"></a>2.数据库相关操作</h2><ul>
+<h3 id="1-2-数据库相关操作"><a href="#1-2-数据库相关操作" class="headerlink" title="1.2.数据库相关操作"></a>1.2.数据库相关操作</h3><ul>
 <li><p><strong>CREATE DATABASE|SCHEMA [IF NOT EXISTS]db_name [DEFAULT] CHARACTER SET [=] charset</strong>:创建数据库</p>
 <ul>
 <li><p>[IF NOT EXISTS]表示检查数据库名称是否存在  </p>
@@ -567,24 +563,28 @@ quit
 </li>
 </ul>
 <hr>
-<h2 id="3-数据表相关操作"><a href="#3-数据表相关操作" class="headerlink" title="3.数据表相关操作"></a>3.数据表相关操作</h2><p>数据表是由行(row)和列(column)组成。每个数据表至少有一列，行可以有零行，一行或者多行组成。表名要求唯一，不要包含特殊字符，定义明确。</p>
+<h3 id="1-3-数据表相关操作"><a href="#1-3-数据表相关操作" class="headerlink" title="1.3.数据表相关操作"></a>1.3.数据表相关操作</h3><p>数据表是由行(row)和列(column)组成。每个数据表至少有一列，行可以有零行，一行或者多行组成。表名要求唯一，不要包含特殊字符，定义明确。</p>
 <pre class="line-numbers language-mysql"><code class="language-mysql">CREATE TABLE [IF NOT EXISTS]tbl_name(
     字段名称 字段类型 [完整性约束条件]
     字段名称 字段类型 [完整性约束条件]
     ...
 )ENGINE=存储引擎 CHARset=编码方式;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
-<h2 id="4-MySQL中的数据类型"><a href="#4-MySQL中的数据类型" class="headerlink" title="4.MySQL中的数据类型"></a>4.MySQL中的数据类型</h2><p>数值型：</p>
+<h3 id="1-4-MySQL中的数据类型"><a href="#1-4-MySQL中的数据类型" class="headerlink" title="1.4.MySQL中的数据类型"></a>1.4.MySQL中的数据类型</h3><p>数值型：</p>
 <ul>
 <li>整数型</li>
 <li>浮点数</li>
 <li>定点数</li>
 </ul>
 <p>字符串类型</p>
+<blockquote>
+<p>CHAR效率高于VARCHAR，CHAR相当于空间换时间，VARCHAR时间换空间</p>
+<p>CHAR默存储数据时，后面会用空格填充到指定长度；而在检索的时候回去掉后面的空格，VARCHAR检索的时候不进行填充，尾部的空格会留下</p>
+</blockquote>
 <p>日期时间类型</p>
 <p><img src="0.png" alt></p>
 <hr>
-<h2 id="5-创建用户数据表"><a href="#5-创建用户数据表" class="headerlink" title="5.创建用户数据表"></a>5.创建用户数据表</h2><pre class="line-numbers language-mysql"><code class="language-mysql"># 创建数据库test
+<h3 id="1-5-创建用户数据表"><a href="#1-5-创建用户数据表" class="headerlink" title="1.5.创建用户数据表"></a>1.5.创建用户数据表</h3><pre class="line-numbers language-mysql"><code class="language-mysql"># 创建数据库test
 CREATE DATABASE IF NOT EXISTS test DEFAULT CHARCTER SET 'UTF-8';
 
 # 打开test
@@ -603,14 +603,801 @@ CREATE TABLE IF NOT EXISTS user(
     married TINYINT(1),
     addr VARCHAR(100),
     sex ENUM('男','女','保密')
-)ENGINE=INNODB CHARSET=UTF-8;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+)ENGINE=INNODB CHARSET=UTF8;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><strong>SHOW TABLES</strong>:查看当前数据库下已有数据表</li>
 <li><strong>SHOW CREATE TABLE tbl_name</strong>:查看指定数据表的详细信息</li>
 <li><strong>DESCRIBE tbl_name| DESCRIBE  tbl_name|SHOW COLUMNS FROM tbl_name</strong>:查看表结构</li>
 <li><strong>DROP TABLE [IF EXISTS] db_name</strong>:删除数据表</li>
+<li><strong>INSERT db_name(字段名称…) VALUES(对应的值…)</strong>:在数据表的指定字段插入值</li>
 </ul>
+<hr>
+<h3 id="1-6-完整性约束条件"><a href="#1-6-完整性约束条件" class="headerlink" title="1.6.完整性约束条件"></a>1.6.完整性约束条件</h3><ul>
+<li><strong>unsigned</strong>:无符号，没有负数，从0开始</li>
+<li><strong>zerofill</strong>:零填充，当显示长度不够的时候可以使用前补0的效果填充至指定长度</li>
+<li><strong>NOT NULL</strong>:非空约束，插入值的时候必须给字段赋值</li>
+<li><strong>DEFAULT</strong>:默认值，如果插入记录没有赋值，就使用默认值</li>
+<li><strong>PRIMARY KEY</strong>:主键，标识记录的唯一性。一个表只能有一个主键，自动停止为空</li>
+<li><strong>UNIQUE KEY</strong>:唯一性，一个表可以有多个字段是唯一索引，值不能重复，但是NULL除外</li>
+<li><strong>AUTO_INCREMENT</strong>:自动增长，只能用于数值列，而且配合索引所有</li>
+<li><strong>FOREIGN KEY</strong>:外键约束</li>
+</ul>
+<p>完整的用户表创建</p>
+<pre class="line-numbers language-mysql"><code class="language-mysql">-- 用户表user
+CREATE TABLE IF NOT EXISTS `user`(
+`id` INT UNSIGNED AUTO_INCREMENT KEY COMMENT '用户编号',
+`username` VARCHAR(20) NOT NULL UNIQUE COMMENT '用户名',
+`password` CHAR(32) NOT NULL COMMENT '密码',
+`email` VARCHAR(50) NOT NULL UNIQUE COMMENT '邮箱',
+`age` TINYINT UNSIGNED NOT NULL DEFAULT 18 COMMENT '年龄',
+`sex` ENUM('男','女','保密') NOT NULL DEFAULT '保密' COMMENT '性别',
+`tel` CHAR(11) NOT NULL UNIQUE COMMENT '电话',
+`addr` VARCHAR(50) NOT NULL DEFAULT '北京' COMMENT '地址',
+`card` CHAR(18) NOT NULL UNIQUE COMMENT '身份证号',
+`married` TINYINT(1) NOT NULL DEFAULT 0 COMMENT '0代表未结婚，1代表已结婚',
+`salary` FLOAT(8,2) NOT NULL DEFAULT 0 COMMENT '薪水'
+)ENGINE=INNODB DEFAULT CHARSET=UTF8;
 
+-- 测试布尔类型
+CREATE TABLE test_bool(
+id int,
+married BOOL
+);
+CREATE TABLE test_bool1(
+id int,
+married BOOLEAN
+);
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="2-MySQL表的管理"><a href="#2-MySQL表的管理" class="headerlink" title="2.MySQL表的管理"></a>2.MySQL表的管理</h2><h3 id="2-1-添加和删除字段操作"><a href="#2-1-添加和删除字段操作" class="headerlink" title="2.1.添加和删除字段操作"></a>2.1.添加和删除字段操作</h3><ul>
+<li><strong>ALTER TABLE tbl_name ADD 字段名称 字段属性[完整性约束条件][FIRST|AFTER 字段名称]</strong>: 添加字段</li>
+<li><strong>ALTER TABLE  tbl_name DROP 字段名称</strong>:删除字段</li>
+</ul>
+<hr>
+<h3 id="2-2-添加和删除默认值操作"><a href="#2-2-添加和删除默认值操作" class="headerlink" title="2.2.添加和删除默认值操作"></a>2.2.添加和删除默认值操作</h3><ul>
+<li><strong>ALTER TABLE tbl_name ALTER 字段名称 SET  DEFAULT 默认值</strong>:添加默认值</li>
+<li><strong>ALTER TABLE tbl_name ALTER 字段名称 DROP DEFAULT</strong>:删除默认值</li>
+</ul>
+<hr>
+<h3 id="2-3-MODIEY和CHANGE关键字使用"><a href="#2-3-MODIEY和CHANGE关键字使用" class="headerlink" title="2.3.MODIEY和CHANGE关键字使用"></a>2.3.MODIEY和CHANGE关键字使用</h3><ul>
+<li><strong>ALTER TABLE tbl_name MODIEY 字段名称 字段类型 [字段属性] [FIRST|AFTER 字段名称]</strong>:修改字段类型、字段属性</li>
+<li><strong>ALTER TABLE tbl_name CHANGE 原字段名称 新字段名称 字段类型 字段属性 [FIRST|AFTER 字段名称]</strong>:修改字段名称、字段类型、字段属性</li>
+</ul>
+<hr>
+<h3 id="2-4-主键和唯一索引操作"><a href="#2-4-主键和唯一索引操作" class="headerlink" title="2.4.主键和唯一索引操作"></a>2.4.主键和唯一索引操作</h3><ul>
+<li><strong>ALTER TABLE tbl_name ADD PRIMARY KEY(字段名称)</strong>:添加主键</li>
+<li><strong>ALTER TABLE tbl_name DROP PRIMARY KEY</strong>:删除主键</li>
+</ul>
+<blockquote>
+<p>如果有自增的话，要MODIEY之后才能删除主键</p>
+</blockquote>
+<ul>
+<li><strong>ALTER TABLE tbl_name ADD UNIQUE KEY|INDEX index_name(字段名称)</strong>:添加唯一</li>
+<li><strong>ALTER TABLE tbl_name DROP index_name</strong>:删除唯一</li>
+</ul>
+<hr>
+<h3 id="2-5-重命名表的操作"><a href="#2-5-重命名表的操作" class="headerlink" title="2.5.重命名表的操作"></a>2.5.重命名表的操作</h3><ul>
+<li><strong>ALTER TABLE tbl_name RENAME [TO|AS] new_tbl_name</strong>:修改数据表名称</li>
+<li><strong>RENAME TABLE tbl_name TO new_tbl_name</strong>:修改数据表名称</li>
+</ul>
+<hr>
+<h3 id="2-6MyISAM存储引擎"><a href="#2-6MyISAM存储引擎" class="headerlink" title="2.6MyISAM存储引擎"></a>2.6MyISAM存储引擎</h3><p>默认<strong>MyISAM</strong>的表会在磁盘中产生3个文件：</p>
+<ul>
+<li>.frm:表结构</li>
+<li>.MYD:数据文件</li>
+<li>.MYI:索引文件</li>
+</ul>
+<p>可以在创建表的时候指定数据文件和索引文件的存储位置，只有<strong>MyISAM</strong>表支持</p>
+<ul>
+<li><strong>DATA DIRECTORY  [=]</strong>: 数据保存的绝对路径</li>
+<li><strong>INDEX DIRECTORY [=]</strong>:索引文件保存的绝对路径</li>
+</ul>
+<p><strong>MyISAM</strong>单表最大支持的数据量为$2^{64}$次方条记录，每个表最多可以建立64个索引</p>
+<p>如果是复合索引，每个复合索引最多包含16个列，索引值最大长度是1000B</p>
+<p><strong>MyISAM</strong>引擎的储存格式：</p>
+<ul>
+<li>定长(FIXED静态)，是指字段中不包含VARCHAR/TEXT/BLOB</li>
+<li>动态(DYNAMIC),  只要字段中包含VARCHAR/TEXT/BLOB</li>
+<li>压缩(COMPRESSED)，mysampack创建</li>
+</ul>
+<hr>
+<h3 id="2-7InnoDB储存引擎"><a href="#2-7InnoDB储存引擎" class="headerlink" title="2.7InnoDB储存引擎"></a>2.7InnoDB储存引擎</h3><p>设计遵循<strong>ACID</strong>模型，支持事务，具有从服务崩溃中恢复的能力，能够最大限度保护用户数据：</p>
+<ul>
+<li>原子性(Aromiocity)</li>
+<li>一致性(Consistency)</li>
+<li>隔离性(Isolation)</li>
+<li>持久性(Durability)</li>
+</ul>
+<p>支持行级锁，可以提升多用户并发时的读写性能</p>
+<p>支持外键，保证数据的一致性和完整性</p>
+<p><strong>InnoDB</strong>拥有自己独立的缓冲池，常用的数据和索引都在缓存中</p>
+<p>对于<strong>INSERT,UPDATE,DELETE</strong>操作，<strong>InnoDB</strong>会使用一种<strong>change buffering</strong>的机制来自动优化，还可以提供一致性的读，并且还能够缓存变更的数据，减少磁盘<strong>I/O</strong>，提高读写性能</p>
+<p>创建<strong>InnoDB</strong>表之后会产生两个文件：</p>
+<ul>
+<li>.frm:表结构文件</li>
+<li>.ibd:数据和索引储存表空间</li>
+</ul>
+<blockquote>
+<p>所有的表都需要创建主键，最后是配合AUTO_INCREMENT，也可以设置经常查询的列作为主键</p>
+</blockquote>
+<hr>
+<h2 id="3-MySQL数据管理"><a href="#3-MySQL数据管理" class="headerlink" title="3.MySQL数据管理"></a>3.MySQL数据管理</h2><h3 id="3-1MySQL数据操作"><a href="#3-1MySQL数据操作" class="headerlink" title="3.1MySQL数据操作"></a>3.1MySQL数据操作</h3><p>添加记录</p>
+<ul>
+<li><strong>INSERT [INTO] tbl_name[(col_name,…)] {VALUE|VALUES}(VALUES…)</strong>:添加记录</li>
+<li><strong>INSERT tbl_name VAULE(value…)</strong>:不指定字段名称添加记录</li>
+</ul>
+<pre class="line-numbers language-mysql"><code class="language-mysql">-- 测试添加记录
+CREATE DATABASE IF NOT EXISTS king DEFAULT CHARACTER SET 'UTF8';
+USE king;
+CREATE TABLE IF NOT EXISTS user(
+    id INT UNSIGNED AUTO_INCREMENT KEY COMMENT '编号',
+    username VARCHAR(20) NOT NULL UNIQUE COMMENT '用户名',
+    age TINYINT UNSIGNED DEFAULT 18 COMMENT '年龄',
+    email VARCHAR(50) NOT NULL DEFAULT 'imooc@qq.com' COMMENT '邮箱'
+)ENGINE=INNODB CHARSET=UTF8;
+
+-- 不指定字段名称
+INSERT user VALUE(1,'king',24,'382771946@qq.com');
+INSERT user VALUES(NULL,'queen',25,'queen@qq.com');
+INSERT user VALUES(DEFAULT,'lily',26,'lily@qq.com');
+
+-- 列出指定字段的形式
+INSERT user(username,email) VALUES('rose','rose@qq.com');
+INSERT user(age,email,id,username) VALUES(34,'imooc@qq.com',5,'imooc');
+
+-- 一次插入3条记录
+INSERT user VALUES(NULL,'a',DEFAULT,DEFAULT),
+(NULL,'b',56,'b@qq.com'),
+(NULL,'c',14,'c@qq.com');
+
+-- INSERT ...SET 的形式
+INSERT user SET username='d',age=45,email='d@qq.com';
+
+-- INSERT SELECT
+INSERT user(username) SELECT a FROM test;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>修改记录</p>
+<ul>
+<li><strong>UPDATE tbl_name SET字段名称=值… [WHERE 条件]</strong>:修改记录，如果不添加条件，整个表中的记录都会被更新</li>
+</ul>
+<p>删除记录</p>
+<ul>
+<li><strong>DELETE FROM tbl_name [WHERE 条件]</strong>:如果不添加条件，表中所有记录都被删除。不会重置AUTO_INCREMENT的值，可以通过ALTER语句将其重置为1</li>
+<li><strong>TRUNCATE [TABLE] tbl_name</strong>:彻底清空数据表，会重置AUTO_INCREMENT的值</li>
+</ul>
+<pre class="line-numbers language-mysql"><code class="language-mysql">-- 测试更新语句
+-- 修改第一个用户的信息 id=1
+UPDATE user SET age=29 WHERE id=1;
+
+-- 修改id=3的用户，username age email
+UPDATE user SET age=47,email='lilys@qq.com',username='lilys' WHERE id=3;
+
+-- 所有用户年龄+10
+UPDATE user SET age=age+10;
+
+-- 将id<=5的用户年龄改为-20，将邮箱改为默认值
+UPDATE user SET age=age-20,email=DEFAULT WHERE id<=5;
+
+-- 测试删除语句
+-- 删除用户名为king
+DELETE FROM user WHERE username='king';
+
+-- 删除年龄为24的用户
+DELETE FROM user WHERE age=24;
+
+-- 删除表中所有记录
+DELETE FROM user;
+
+INSERT user VALUES(NULL,'queen',25,'queen@qq.com');
+INSERT user VALUES(DEFAULT,'lily',26,'lily@qq.com');
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>查询记录</p>
+<ul>
+<li><strong>SELECT select_expr,… FROM tbl_name [WHERE 条件] [GROUP BY {col_name|position} HAVING 二次筛选] [ORDER BY {col_name|position|expr}] [ASC|DESC] [LIMIT 限制结果集的显示条数]</strong></li>
+<li><strong>SELECT  * FROM tbl_name</strong>:查询表中所有记录</li>
+<li><strong>SELECT 字段名称… FROM tbl_name</strong>:指定字段信息</li>
+<li><strong>SELECT 字段名称… FROM db_name.tbl_name</strong>:库名.表名</li>
+<li><strong>SELECT 字段名称 [AS] 别名名称,… FROM db_name.tbl_name</strong>:给字段起别名</li>
+</ul>
+<pre class="line-numbers language-mysql"><code class="language-mysql">-- 测试查询操作
+CREATE TABLE user1(
+id INT UNSIGNED AUTO_INCREMENT KEY,
+username VARCHAR(20) NOT NULL UNIQUE COMMENT '编号',
+age TINYINT UNSIGNED NOT NULL DEFAULT 18  COMMENT '年龄',
+sex ENUM('男','女','保密') NOT NULL DEFAULT '保密' COMMENT '性别',
+addr VARCHAR(20) NOT NULL DEFAULT '北京',
+married TINYINT(1) NOT NULL DEFAULT 0 COMMENT '0代表未结婚，1代表已婚',
+salary FLOAT(8,2) NOT NULL DEFAULT 0 COMMENT '薪水'
+)ENGINE=INNODB CHARSET=UTF8;
+INSERT user1 VALUES(1,'king',23,'男','北京',1,50000);
+INSERT user1(username,age,sex,addr,married,salary) VALUES('queen',27,'女','上海',0,25000);
+INSERT user1 SET username='imooc',age=31,sex='女',addr='北京',salary=40000;
+INSERT user1 VALUES(NULL,'张三',38,'男','上海',0,15000),
+(NULL,'张三风',38,'男','上海',0,15000),
+(NULL,'张子怡',39,'女','北京',1,85000),
+(NULL,'汪峰',42,'男','深圳',1,95000),
+(NULL,'刘德华',58,'男','广州',0,115000),
+(NULL,'吴亦凡',28,'男','北京',0,75000),
+(NULL,'奶茶妹',18,'女','北京',1,65000),
+(NULL,'刘嘉玲',36,'女','广州',0,15000);
+
+-- 查询表中所有记录
+SELECT * FROM user1;
+
+-- username,addr,age
+SELECT username,addr,age FROM user1;
+
+-- 查询king数据库下user1表中的所有记录
+SELECT * FROM king.user1;
+
+-- 查询user1表中的id 编号 username 用户名 sex 性别
+SELECT id AS '编号',username AS '用户名', sex AS '性别'
+FROM user1;
+
+SELECT id age,age id,username FROM user1;
+
+-- 给表起别名
+SELECT id,username FROM user1 AS u;
+
+-- 测试表名.字段名
+SELECT user1.id,user1.username,user1.age FROM user1 ;
+
+SELECT u.id,u.username,u.addr,u.sex FROM user1 AS u;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>WHERE</strong>条件筛选</p>
+<ul>
+<li>比较运算符: &gt; &gt;= &lt; &lt;= != &lt;&gt; &lt;=&gt;</li>
+<li><strong>IS [NOT] NULL</strong>: 检测值是否为NULL或者NOT NULL</li>
+<li>指定范围：[NOT] BETWEEN …AND</li>
+<li>指定集合:  [NOT]IN(值…)</li>
+<li>逻辑运算符: AND  OR</li>
+<li>匹配字符: [NOT] LIKE   %(任意长度的字符串)   _(任意一个字符)</li>
+</ul>
+<pre class="line-numbers language-mysql"><code class="language-mysql">-- 测试WHERE 条件的比较运算符
+-- 查询id,username,age id=5的用户
+SELECT id,username,age FROM user1
+WHERE id=5;
+
+SELECT id,username,age FROM user1
+WHERE id=50;
+
+-- 添加desc字段 VARCHAR(100)
+ALTER TABLE user1
+ADD userDesc VARCHAR(100);
+
+-- 更新id<=9的用户 userDesc='this is a test'
+
+UPDATE user1 SET userDesc='this is a test'
+WHERE id<=9;
+
+-- 查询用户userDesc 为NULL的用户
+SELECT id,username,age,userDesc FROM user1
+WHERE userDesc=NULL;
+
+-- 检测NULL值
+SELECT id,username,age,userDesc FROM user1
+WHERE userDesc<=>NULL;
+
+-- IS [NOT] NULL检测NULL值
+SELECT id,username,age,userDesc FROM user1
+WHERE userDesc IS NULL;
+
+-- 测试范围BETWEEN AND
+-- 查询年龄在18~30之间的用户
+SELECT id,username,age,sex FROM user1
+WHERE age BETWEEN 18 AND 30;
+
+-- 查询薪水在10000~50000之间的用户
+SELECT id,username,age,salary FROM user1
+WHERE salary BETWEEN 10000 AND 50000;
+
+SELECT id,username,age,salary FROM user1
+WHERE salary NOT BETWEEN 10000 AND 50000;
+
+-- 测试指定集合 IN
+
+-- 查询编号为1,3,5,7,9
+SELECT id,username,age FROM user1
+WHERE id IN(1,3,5,7,9,29,45,78);
+
+SELECT id,username,age FROM user1
+WHERE username IN('king','queen','lily','rose');
+
+-- 测试逻辑运算符
+-- 查询性别为男并且年龄>=20的用户
+SELECT id,username,age,sex FROM user1
+WHERE sex='男' AND age>=20;
+
+-- id>=5 && age<=30
+SELECT id,username,age,sex FROM user1
+WHERE id>=5 AND age<=30;
+
+SELECT id,username,age,sex FROM user1
+WHERE id>=5 AND age<=30 AND sex='男';
+
+-- 要求sex='女' 并且 addr='北京'
+SELECT id,username,age,sex,addr FROM user1
+WHERE sex='女' AND addr='北京';
+
+-- 查询薪水范围在60000~10000并且性别为男 addr='北京'
+SELECT id,username,age,sex,salary,addr FROM user1
+WHERE salary BETWEEN 60000 AND 100000 AND sex='男' AND addr='北京';
+
+-- 查询id=1 或者 用户名为queen
+
+SELECT id,username,age FROM user1
+WHERE id=1 OR username='queen';
+
+-- 测试模糊查询
+SELECT id,username,age FROM user1
+WHERE username='king';
+
+SELECT id,username,age FROM user1
+WHERE username LIKE 'king';
+
+-- 要求用户名中包含三
+SELECT id,username,age,sex FROM user1
+WHERE username LIKE '%三%';
+
+-- 用户名中包含n
+SELECT id,username,age FROM user1
+WHERE username LIKE '%in%';
+
+-- 要求查询出姓张的用户
+SELECT id,username,age FROM user1
+WHERE username LIKE '张%';
+
+-- 查询以风结尾的用户
+SELECT id,username,age FROM user1
+WHERE username LIKE '%风';
+
+
+-- 用户名长度为三位的用户
+SELECT id,username,age,sex FROM user1
+WHERE username LIKE '___';
+
+SELECT id,username,age,sex FROM user1
+WHERE username LIKE '张_';
+
+SELECT id,username,age,sex FROM user1
+WHERE username LIKE '张_%';<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="3-2GROUP-BY-对记录进行分组"><a href="#3-2GROUP-BY-对记录进行分组" class="headerlink" title="3.2GROUP BY 对记录进行分组"></a>3.2GROUP BY 对记录进行分组</h3><p><strong>GROUP BY</strong>把值相同放到一个组中，最终查询出的结果只会显示组中一条记录</p>
+<p>分组配合GROUP _CONCAT()查看组中某个字段的详细信息</p>
+<p>配合聚合函数使用：</p>
+<ul>
+<li>COUNT():统计记录总数<ul>
+<li>COUNT(字段名称)，字段中的值为NULL，不统计进来</li>
+<li>COUNT(*)会统计NULL值</li>
+</ul>
+</li>
+<li>SUM():求和</li>
+<li>MAX():求最大值</li>
+<li>MIN():求最小值</li>
+<li>AVG():求平均值</li>
+</ul>
+<p>配合WITH ROLLUP关键使用，会在记录末尾添加一条记录，是上面所有记录总和</p>
+<p>HAVING字句对分组结果进行二次筛选</p>
+<pre class="line-numbers language-mysql"><code class="language-mysql">-- 测试分组
+-- 按照性别分组sex
+SELECT id,username,age,sex FROM user1
+GROUP BY sex;
+
+-- 按照addr分组
+SELECT username,age,sex,addr FROM user1
+GROUP BY addr;
+
+-- 按照性别分组，查询组中的用户名有哪些
+SELECT GROUP_CONCAT(username),age,sex,addr FROM user1
+GROUP BY sex;
+
+SELECT GROUP_CONCAT(username),age,sex,GROUP_CONCAT(addr) FROM user1
+GROUP BY sex;
+
+-- 测试COUNT()
+SELECT COUNT(*) FROM user1;
+
+SELECT COUNT(id) FROM user1;
+
+-- 按照sex分组，得到用户名详情，并且分别组中的总人数
+SELECT sex,GROUP_CONCAT(username) AS usersDetail,COUNT(*) AS totalUsers FROM user1
+GROUP BY sex;
+
+-- 按照addr分组，得到用户名的详情，总人数，得到组中年龄的总和，年龄的最大值、最小值、平均值和
+SELECT addr,
+GROUP_CONCAT(username) AS usersDetail,
+COUNT(*) AS totalUsers,
+SUM(age) AS sum_age,
+MAX(age) AS max_age,
+MIN(age) AS min_age,
+AVG(age) AS avg_age
+FROM user1
+GROUP BY addr;
+
+-- 按照sex分组，统计组中总人数、用户名详情，得到薪水总和，薪水最大值、最小值、平均值
+SELECT sex,
+GROUP_CONCAT(username) AS usersDetail,
+COUNT(*) AS totalUsers,
+SUM(salary) AS sum_salary,
+MAX(salary) AS max_salary,
+MIN(salary) AS min_salary,
+AVG(salary) AS avg_salary
+FROM user1
+GROUP BY sex;
+
+SELECT GROUP_CONCAT(username) AS usersDetail,
+COUNT(*) AS totalUsers
+FROM user1
+GROUP BY sex
+WITH ROLLUP;
+
+-- 按照字段的位置来分组
+SELECT id,sex,
+GROUP_CONCAT(username) AS usersDetail,
+COUNT(*) AS totalUsers,
+SUM(salary) AS sum_salary,
+MAX(salary) AS max_salary,
+MIN(salary) AS min_salary,
+AVG(salary) AS avg_salary
+FROM user1
+GROUP BY 2;
+
+-- 查询age>=30的用户并且按照sex分组
+SELECT sex,GROUP_CONCAT(username) AS usersDetail,
+COUNT(*) AS totalUsers
+FROM user1
+WHERE age>=30
+GROUP BY sex;
+
+-- 按照addr分组，统计总人数
+SELECT addr,
+GROUP_CONCAT(username) AS usersDetail,
+COUNT(*) AS totalUsers
+FROM user1
+GROUP BY addr;
+
+-- 对于分组结果进行二次筛选，条件是组中总人数>=3
+SELECT addr,
+GROUP_CONCAT(username) AS usersDetail,
+COUNT(*) AS totalUsers
+FROM user1
+GROUP BY addr
+HAVING COUNT(*)>=3;
+
+SELECT addr,
+GROUP_CONCAT(username) AS usersDetail,
+COUNT(*) AS totalUsers
+FROM user1
+GROUP BY addr
+HAVING totalUsers>=3;
+
+-- 按照addr分组，
+SELECT addr,
+GROUP_CONCAT(username) AS usersDetail,
+COUNT(*) AS totalUsers,
+SUM(salary) AS sum_salary,
+MAX(salary) AS max_salary,
+MIN(salary) AS min_salary,
+AVG(salary) AS avg_salary
+FROM user1
+GROUP BY addr;
+
+-- 要求平均薪水>=40000
+SELECT addr,
+GROUP_CONCAT(username) AS usersDetail,
+COUNT(*) AS totalUsers,
+SUM(salary) AS sum_salary,
+MAX(salary) AS max_salary,
+MIN(salary) AS min_salary,
+AVG(salary) AS avg_salary
+FROM user1
+GROUP BY addr
+HAVING avg_salary>=40000;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="3-3ORDER-BY实现排序"><a href="#3-3ORDER-BY实现排序" class="headerlink" title="3.3ORDER BY实现排序"></a>3.3ORDER BY实现排序</h3><p><strong>ORDER BY</strong>排序：</p>
+<ul>
+<li><strong>ORDER BY字段名称 ASC|DESC</strong></li>
+</ul>
+<pre class="line-numbers language-mysql"><code class="language-mysql">-- 测试排序
+-- 按照id降序排列
+SELECT id,username,age
+FROM user1
+ORDER BY id DESC;
+
+-- 按照age升序
+SELECT id,username,age
+FROM user1
+ORDER BY age ;
+
+-- 按照多个字段排序
+SELECT id,username,age
+FROM user1
+ORDER BY age ASC,id ASC;
+
+-- 测试条件+排序
+SELECT id,username,age
+FROM user1
+WHERE age>=30;
+
+SELECT id,username,age
+FROM user1
+WHERE age>=30
+ORDER BY age DESC;
+
+-- 实现随机记录
+SELECT id,username,age
+FROM user1
+ORDER BY RAND();
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="3-4LIMIT限制结果集的显示条数"><a href="#3-4LIMIT限制结果集的显示条数" class="headerlink" title="3.4LIMIT限制结果集的显示条数"></a>3.4LIMIT限制结果集的显示条数</h3><p><strong>LIMIT</strong>限制结果集显示条数：</p>
+<ul>
+<li><strong>LIMIT</strong>值: 显示结果集的前几条记录</li>
+<li><strong>LIMIT offset,row_count</strong>: 从offset，显示几条记录</li>
+</ul>
+<pre class="line-numbers language-mysql"><code class="language-mysql">-- 测试LIMIT语句
+-- 显示结果集的前5条记录
+SELECT id,username,age,sex
+FROM user1
+LIMIT 5;
+
+SELECT id,username,age,sex
+FROM user1
+LIMIT 0,5;
+
+-- 显示前3条记录
+SELECT id,username,age,sex
+FROM user1
+LIMIT 0,3;
+
+SELECT id,username,age,sex
+FROM user1
+LIMIT 3,3;
+
+-- 更新前3条记录，将age+5
+UPDATE user1 SET age=age+5 LIMIT 3;
+
+-- 按照id降序排列，更新前三条记录，将age-10
+UPDATE user1 SET age=age-10 ORDER BY id DESC LIMIT 3;
+
+-- 删除前三条记录
+
+DELETE FROM user1
+LIMIT 3;
+
+DELETE FROM user1
+ORDER BY id DESC
+LIMIT 3;
+
+-- 测试完整SELECT 语句的形式
+SELECT addr,
+GROUP_CONCAT(username) AS usersDetail,
+COUNT(*) AS totalUsers,
+SUM(age) AS sum_age,
+MAX(age) AS max_age,
+MIN(age) AS min_age,
+AVG(age) AS avg_age
+FROM user1
+WHERE id>=2
+GROUP BY addr;
+
+SELECT addr,
+GROUP_CONCAT(username) AS usersDetail,
+COUNT(*) AS totalUsers,
+SUM(age) AS sum_age,
+MAX(age) AS max_age,
+MIN(age) AS min_age,
+AVG(age) AS avg_age
+FROM user1
+WHERE id>=2
+GROUP BY addr
+HAVING totalUsers>=2;
+
+
+SELECT addr,
+GROUP_CONCAT(username) AS usersDetail,
+COUNT(*) AS totalUsers,
+SUM(age) AS sum_age,
+MAX(age) AS max_age,
+MIN(age) AS min_age,
+AVG(age) AS avg_age
+FROM user1
+WHERE id>=2
+GROUP BY addr
+HAVING totalUsers>=2
+ORDER BY totalUsers ASC;
+
+SELECT addr,
+GROUP_CONCAT(username) AS usersDetail,
+COUNT(*) AS totalUsers,
+SUM(age) AS sum_age,
+MAX(age) AS max_age,
+MIN(age) AS min_age,
+AVG(age) AS avg_age
+FROM user1
+WHERE id>=2
+GROUP BY addr
+HAVING totalUsers>=2
+ORDER BY totalUsers ASC
+LIMIT 0,2;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="3-5多表联查"><a href="#3-5多表联查" class="headerlink" title="3.5多表联查"></a>3.5多表联查</h3><p>多表查询：</p>
+<ul>
+<li>笛卡尔积的形式</li>
+<li>内连接的形式：<strong>SELECT 字段名称,… FROM tbl_name1 INNER JOIN tbl_name2 ON 链接条件</strong>，查询两个表中符合连接条件的记录</li>
+<li>外连接的形式:<ul>
+<li>左外连接：<strong>SELECT 字段名称,… FROM tbl_name1  LEFT [OUTER] JOIN tbl_name2 ON 条件</strong>，先显示左表中的全部记录，再去右表中查询复合记录，不符合的用NULL代替</li>
+<li>右外连接：<strong>SELECT 字段名称,… FROM tbl_name1 RIGHT [OUTER] JOIN tbl_name2 ON 条件</strong>，先显示右表中的全部记录，再去左表中查询复合记录，不符合的用NULL代替</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-mysql"><code class="language-mysql">CREATE DATABASE IF NOT EXISTS test2 DEFAULT CHARACTER SET 'UTF8';
+USE test2;
+CREATE TABLE emp(
+id INT UNSIGNED AUTO_INCREMENT KEY,
+username VARCHAR(20) NOT NULL UNIQUE COMMENT '编号',
+age TINYINT UNSIGNED NOT NULL DEFAULT 18  COMMENT '年龄',
+sex ENUM('男','女','保密') NOT NULL DEFAULT '保密' COMMENT '性别',
+addr VARCHAR(20) NOT NULL DEFAULT '北京',
+depId TINYINT UNSIGNED NOT NULL COMMENT '部门对应的编号'
+)ENGINE=INNODB CHARSET=UTF8;
+
+INSERT emp(username,age,depId) VALUES('king',24,1),
+('queen',25,2),
+('imooc',26,1),
+('lily',27,1),
+('rose',28,3),
+('john',29,3);
+
+INSERT emp(username,age,depId)  VALUES('测试用户',39,6);
+
+CREATE TABLE dep(
+id TINYINT UNSIGNED AUTO_INCREMENT KEY,
+depName VARCHAR(50) NOT NULL UNIQUE,
+depDesc VARCHAR(100) NOT NULL DEFAULT ''
+)ENGINE=INNODB CHARSET=UTF8;
+INSERT dep(depName,depDesc) VALUES('PHP教学部','研发PHP课件'),
+('JAVA教学部','研发JAVA课件'),
+('WEB前端教学部','研发WEB前端课件'),
+('IOS教学部','研发IOS课件');
+
+
+-- 查询 emp id username age  部门名称 dep depName
+
+SELECT emp.id,emp.username,emp.age,dep.depName FROM emp,dep;
+
+SELECT e.id,e.username,e.age,d.depName
+FROM emp AS e
+INNER JOIN dep AS d
+ON e.depId=d.id;
+
+-- 查询emp id username age addr dep id depName depDesc
+SELECT e.id,e.username,e.age,e.addr,
+d.id,d.depName,d.depDesc
+FROM dep AS d
+JOIN emp AS e
+ON d.id=e.depId;
+
+-- 测试左外连接
+SELECT e.id,e.username,e.age,d.depName,d.depDesc
+FROM emp AS e
+LEFT OUTER JOIN dep AS d
+ON e.depId=d.id;
+
+-- 测试右外连接
+SELECT e.id,e.username,e.age,d.depName,d.depDesc
+FROM emp AS e
+RIGHT JOIN dep AS d
+ON e.depId=d.id;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>复合查询操作案例：</p>
+<pre class="line-numbers language-mysql"><code class="language-mysql">-- 创建管理员表
+CREATE TABLE user(
+id TINYINT UNSIGNED AUTO_INCREMENT KEY,
+username VARCHAR(20) NOT NULL UNIQUE,
+email VARCHAR(50) NOT NULL DEFAULT '382771946@qq.com',
+proName VARCHAR(10) NOT NULL DEFAULT '北京'
+);
+INSERT user(username,proName) VALUES('a','北京'),
+('b','哈尔滨'),
+('c','上海'),
+('d','深圳'),
+('e','广州'),
+('f','重启');
+
+-- 创建省份表
+CREATE TABLE provinces(
+id TINYINT UNSIGNED AUTO_INCREMENT KEY,
+proName VARCHAR(10) NOT NULL UNIQUE
+);
+INSERT provinces(proName) VALUES('北京'),
+('上海'),
+('深圳');
+--
+CREATE TABLE user(
+id TINYINT UNSIGNED AUTO_INCREMENT KEY,
+username VARCHAR(20) NOT NULL UNIQUE,
+email VARCHAR(50) NOT NULL DEFAULT '382771946@qq.com',
+proId TINYINT UNSIGNED NOT NULL
+);
+INSERT user(username,proId) VALUES('a',1);
+INSERT user(username,proId) VALUES('b',1);
+INSERT user(username,proId) VALUES('c',1);
+INSERT user(username,proId) VALUES('d',2);
+INSERT user(username,proId) VALUES('e',3);
+INSERT user(username,proId) VALUES('f',1);
+INSERT user(username,proId) VALUES('g',1);
+
+-- 查询user id ,username provinces proName
+SELECT u.id,u.username,p.proName
+FROM user AS u
+JOIN provinces AS p
+ON u.proId=p.id;
+
+-- 创建省份表
+CREATE TABLE provinces(
+id TINYINT UNSIGNED AUTO_INCREMENT KEY,
+proName VARCHAR(10) NOT NULL UNIQUE
+);
+
+-- 管理员admin id username email proId
+CREATE TABLE admin(
+id TINYINT UNSIGNED AUTO_INCREMENT KEY,
+username VARCHAR(20) NOT NULL UNIQUE,
+email VARCHAR(50) NOT NULL DEFAULT '382771946@qq.com',
+proId TINYINT UNSIGNED NOT NULL
+);
+INSERT admin(username,proId) VALUES('king',1);
+INSERT admin(username,proId) VALUES('queen',2);
+-- 商品分类cate id cateName cateDesc
+CREATE TABLE cate(
+id TINYINT UNSIGNED AUTO_INCREMENT KEY,
+cateName VARCHAR(50) NOT NULL UNIQUE,
+cateDesc VARCHAR(100) NOT NULL DEFAULT ''
+);
+INSERT cate(cateName) VALUES('母婴');
+INSERT cate(cateName) VALUES('服装');
+INSERT cate(cateName) VALUES('电子');
+
+-- 商品表products id productName, price,cateId
+CREATE TABLE products(
+id INT UNSIGNED AUTO_INCREMENT KEY,
+productName VARCHAR(50) NOT NULL UNIQUE,
+price FLOAT(8,2) NOT NULL DEFAULT 0,
+cateId TINYINT UNSIGNED NOT NULL,
+adminId TINYINT UNSIGNED NOT NULL
+);
+INSERT products(productName,price,cateId,adminId)
+VALUES('iphone9',9888,3,1),
+('adidas',388,2,2),
+('nike',888,2,2),
+('奶瓶',288,1,1);
+
+-- 查询products id productName price --- cate cateName
+SELECT p.id,p.productName,p.price,c.cateName
+FROM products AS p
+JOIN cate AS c
+ON p.cateId=c.id;
+
+-- 查询管理员 id username email -- provinces proName
+
+SELECT a.id,a.username,a.email,p.proName
+FROM admin AS a
+JOIN provinces AS p
+ON a.proId=p.id;
+-- 查询 products id productName price
+-- cate cateName
+-- admin username email
+
+SELECT p.id,p.productName,p.price,c.cateName,a.username,a.email
+FROM products AS p
+JOIN admin AS a
+ON p.adminId=a.id
+JOIN cate AS c
+ON p.cateId=c.id
+WHERE p.price<1000
+ORDER BY p.price DESC
+LIMIT 0,2;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="3-6"><a href="#3-6" class="headerlink" title="3.6"></a>3.6</h3>
             </div>
             <hr />
 
@@ -1103,7 +1890,7 @@ CREATE TABLE IF NOT EXISTS user(
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="遇见MySQL">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="遇见MySQL">
                         
                         <span class="card-title">遇见MySQL</span>
                     </div>
@@ -1122,15 +1909,11 @@ CREATE TABLE IF NOT EXISTS user(
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category" target="_blank">
-                                    Java
-                                </a>
-                            
-                            <a href="/categories/Java/MySQL/" class="post-category" target="_blank">
+                            <a href="/categories/MySQL/" class="post-category" target="_blank">
                                     MySQL
                                 </a>
                             
-                            <a href="/categories/Java/MySQL/数据库/" class="post-category" target="_blank">
+                            <a href="/categories/MySQL/数据库/" class="post-category" target="_blank">
                                     数据库
                                 </a>
                             
@@ -1165,7 +1948,7 @@ CREATE TABLE IF NOT EXISTS user(
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="JavaWeb笔记">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="JavaWeb笔记">
                         
                         <span class="card-title">JavaWeb笔记</span>
                     </div>
@@ -1366,7 +2149,7 @@ CREATE TABLE IF NOT EXISTS user(
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">16.3k</span>
+            <span class="white-color">19.4k</span>
             
 
             <br>

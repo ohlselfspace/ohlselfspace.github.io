@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ohlselfspace.github.io/"/>
-  <updated>2020-02-16T13:54:20.259Z</updated>
+  <updated>2020-02-17T13:42:14.435Z</updated>
   <id>http://ohlselfspace.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://ohlselfspace.github.io/2020/02/16/yu-jian-mysql/"/>
     <id>http://ohlselfspace.github.io/2020/02/16/yu-jian-mysql/</id>
     <published>2020-02-16T05:33:54.000Z</published>
-    <updated>2020-02-16T13:54:20.259Z</updated>
+    <updated>2020-02-17T13:42:14.435Z</updated>
     
     <summary type="html">
     
@@ -29,17 +29,15 @@
       
         
         
-          &lt;h1 id=&quot;遇见MySQL&quot;&gt;&lt;a href=&quot;#遇见MySQL&quot; class=&quot;headerlink&quot; title=&quot;遇见MySQL&quot;&gt;&lt;/a&gt;遇见MySQL&lt;/h1&gt;&lt;h2 id=&quot;1-MySQL相关操作&quot;&gt;&lt;a href=&quot;#1-MySQL相关操作&quot;
+          &lt;h1 id=&quot;遇见MySQL&quot;&gt;&lt;a href=&quot;#遇见MySQL&quot; class=&quot;headerlink&quot; title=&quot;遇见MySQL&quot;&gt;&lt;/a&gt;遇见MySQL&lt;/h1&gt;&lt;h2 id=&quot;1-MySQL数据类型&quot;&gt;&lt;a href=&quot;#1-MySQL数据类型&quot;
         
       
     
     </summary>
     
-      <category term="Java" scheme="http://ohlselfspace.github.io/categories/Java/"/>
+      <category term="MySQL" scheme="http://ohlselfspace.github.io/categories/MySQL/"/>
     
-      <category term="MySQL" scheme="http://ohlselfspace.github.io/categories/Java/MySQL/"/>
-    
-      <category term="数据库" scheme="http://ohlselfspace.github.io/categories/Java/MySQL/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="数据库" scheme="http://ohlselfspace.github.io/categories/MySQL/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
       <category term="MySQL" scheme="http://ohlselfspace.github.io/tags/MySQL/"/>
