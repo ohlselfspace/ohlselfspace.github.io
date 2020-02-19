@@ -11,8 +11,8 @@
     <meta name="description" content="遇见MySQL1.MySQL数据类型1.1MySQL相关操作配置好系统变量后，进入cmd
 
 登录:
-mysql -uroot(用户) -p
-mysql -uroot(用户) -pxxx(密码)
+mysql -uroot（用户） -p
+mysql -uroot（用户） -pxxx（密码）
 
 
 退出:
@@ -303,7 +303,7 @@ quit
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.png')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -466,14 +466,14 @@ quit
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.8k
+                    5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    17 分
+                    23 分
                 </div>
                 
                 
@@ -492,8 +492,8 @@ quit
                 <h1 id="遇见MySQL"><a href="#遇见MySQL" class="headerlink" title="遇见MySQL"></a>遇见MySQL</h1><h2 id="1-MySQL数据类型"><a href="#1-MySQL数据类型" class="headerlink" title="1.MySQL数据类型"></a>1.MySQL数据类型</h2><h3 id="1-1MySQL相关操作"><a href="#1-1MySQL相关操作" class="headerlink" title="1.1MySQL相关操作"></a>1.1MySQL相关操作</h3><p>配置好系统变量后，进入<strong>cmd</strong></p>
 <ul>
 <li>登录:<ul>
-<li><strong>mysql -uroot(用户) -p</strong></li>
-<li><strong>mysql -uroot(用户) -pxxx(密码)</strong></li>
+<li><strong>mysql -uroot（用户） -p</strong></li>
+<li><strong>mysql -uroot（用户） -pxxx（密码）</strong></li>
 </ul>
 </li>
 <li>退出:<ul>
@@ -521,10 +521,10 @@ quit
 </ul>
 <p>常用<strong>SQL</strong>语句:</p>
 <ul>
-<li><strong>SELECT USER()</strong>:得到登录的用户</li>
-<li><strong>SELECT VERSION()</strong>:得到MySQL的版本信息</li>
-<li><strong>SELECT NOW()</strong>:得到当前的日期时间</li>
-<li><strong>SELECT DATABASE()</strong>:得到当前打开的数据库</li>
+<li><strong><code>SELECT USER()</code></strong>:得到登录的用户</li>
+<li><strong><code>SELECT VERSION()</code></strong>:得到MySQL的版本信息</li>
+<li><strong><code>SELECT NOW()</code></strong>:得到当前的日期时间</li>
+<li><strong><code>SELECT DATABASE()</code></strong>:得到当前打开的数据库</li>
 </ul>
 <blockquote>
 <p>SQL语句规范：</p>
@@ -536,30 +536,27 @@ quit
 </blockquote>
 <hr>
 <h3 id="1-2-数据库相关操作"><a href="#1-2-数据库相关操作" class="headerlink" title="1.2.数据库相关操作"></a>1.2.数据库相关操作</h3><ul>
-<li><p><strong>CREATE DATABASE|SCHEMA [IF NOT EXISTS]db_name [DEFAULT] CHARACTER SET [=] charset</strong>:创建数据库</p>
-<ul>
-<li><p>[IF NOT EXISTS]表示检查数据库名称是否存在  </p>
+<li><p><strong><code>CREATE DATABASE|SCHEMA [IF NOT EXISTS]db_name [DEFAULT] CHARACTER SET [=] charset</code></strong>:创建数据库</p>
 </li>
-<li><p>[DEFAULT] CHARACTER SET [=] charset表示指定编码方式</p>
+<li><p><code>[IF NOT EXISTS]</code>表示检查数据库名称是否存在  </p>
 </li>
-</ul>
+<li><p><code>[DEFAULT] CHARACTER SET [=] charset</code>表示指定编码方式</p>
 </li>
-<li><p><strong>SHOW DATABASES|SCHEMAS</strong>:查看当前服务器下全部数据</p>
+<li><p><strong><code>SHOW DATABASES|SCHEMAS</code></strong>:查看当前服务器下全部数据</p>
 </li>
-<li><p><strong>SHOW CREATE DATABASE db_name</strong> :查看数据库的详细信息</p>
+<li><p><strong><code>SHOW CREATE DATABASE db_name</code></strong> :查看数据库的详细信息</p>
 </li>
-<li><p><strong>ALTER DATABASE db_name [DEFAULT] CHARACTER SET [=] CHARSET</strong>:修改指定数据库的编码方式</p>
+<li><p><strong><code>ALTER DATABASE db_name [DEFAULT] CHARACTER SET [=] CHARSET</code></strong>:修改指定数据库的编码方式</p>
 </li>
-<li><p><strong>USE db_name</strong>:打开指定数据库</p>
+<li><p><strong><code>USE db_name</code></strong>:打开指定数据库</p>
 </li>
-<li><p><strong>SELECT DATABASE()|SCHEMA()</strong>:得到当前打开数据库</p>
+<li><p><strong><code>SELECT DATABASE()|SCHEMA()</code></strong>:得到当前打开数据库</p>
 </li>
-<li><p><strong>DROP DATABASE [IF EXISTS] db_name</strong>:删除指定的数据库</p>
-<ul>
-<li>[IF EXISTS]如果存在则删除</li>
-</ul>
+<li><p><strong><code>DROP DATABASE [IF EXISTS] db_name</code></strong>:删除指定的数据库</p>
 </li>
-<li><p><strong>SHOW WARNINGS</strong>:查看上一步警告</p>
+<li><p><code>[IF EXISTS]</code>如果存在则删除</p>
+</li>
+<li><p><strong><code>SHOW WARNINGS</code></strong>:查看上一步警告</p>
 </li>
 </ul>
 <hr>
@@ -605,11 +602,11 @@ CREATE TABLE IF NOT EXISTS user(
     sex ENUM('男','女','保密')
 )ENGINE=INNODB CHARSET=UTF8;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
-<li><strong>SHOW TABLES</strong>:查看当前数据库下已有数据表</li>
-<li><strong>SHOW CREATE TABLE tbl_name</strong>:查看指定数据表的详细信息</li>
-<li><strong>DESCRIBE tbl_name| DESCRIBE  tbl_name|SHOW COLUMNS FROM tbl_name</strong>:查看表结构</li>
-<li><strong>DROP TABLE [IF EXISTS] db_name</strong>:删除数据表</li>
-<li><strong>INSERT db_name(字段名称…) VALUES(对应的值…)</strong>:在数据表的指定字段插入值</li>
+<li><strong><code>SHOW TABLES</code></strong>:查看当前数据库下已有数据表</li>
+<li><strong><code>SHOW CREATE TABLE tbl_name</code></strong>:查看指定数据表的详细信息</li>
+<li><strong><code>DESCRIBE tbl_name| DESCRIBE  tbl_name|SHOW COLUMNS FROM tbl_name</code></strong>:查看表结构</li>
+<li><strong><code>DROP TABLE [IF EXISTS] db_name</code></strong>:删除数据表</li>
+<li><strong><code>INSERT db_name(字段名称...) VALUES(对应的值...)</code></strong>:在数据表的指定字段插入值</li>
 </ul>
 <hr>
 <h3 id="1-6-完整性约束条件"><a href="#1-6-完整性约束条件" class="headerlink" title="1.6.完整性约束条件"></a>1.6.完整性约束条件</h3><ul>
@@ -650,35 +647,35 @@ married BOOLEAN
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h2 id="2-MySQL表的管理"><a href="#2-MySQL表的管理" class="headerlink" title="2.MySQL表的管理"></a>2.MySQL表的管理</h2><h3 id="2-1-添加和删除字段操作"><a href="#2-1-添加和删除字段操作" class="headerlink" title="2.1.添加和删除字段操作"></a>2.1.添加和删除字段操作</h3><ul>
-<li><strong>ALTER TABLE tbl_name ADD 字段名称 字段属性[完整性约束条件][FIRST|AFTER 字段名称]</strong>: 添加字段</li>
-<li><strong>ALTER TABLE  tbl_name DROP 字段名称</strong>:删除字段</li>
+<li><strong><code>ALTER TABLE tbl_name ADD 字段名称 字段属性\[完整性约束条件][FIRST|AFTER 字段名称]</code></strong>: 添加字段</li>
+<li><strong><code>ALTER TABLE  tbl_name DROP 字段名称</code></strong>:删除字段</li>
 </ul>
 <hr>
 <h3 id="2-2-添加和删除默认值操作"><a href="#2-2-添加和删除默认值操作" class="headerlink" title="2.2.添加和删除默认值操作"></a>2.2.添加和删除默认值操作</h3><ul>
-<li><strong>ALTER TABLE tbl_name ALTER 字段名称 SET  DEFAULT 默认值</strong>:添加默认值</li>
-<li><strong>ALTER TABLE tbl_name ALTER 字段名称 DROP DEFAULT</strong>:删除默认值</li>
+<li><strong><code>ALTER TABLE tbl_name ALTER 字段名称 SET  DEFAULT 默认值</code></strong>:添加默认值</li>
+<li><strong><code>ALTER TABLE tbl_name ALTER 字段名称 DROP DEFAULT</code></strong>:删除默认值</li>
 </ul>
 <hr>
 <h3 id="2-3-MODIEY和CHANGE关键字使用"><a href="#2-3-MODIEY和CHANGE关键字使用" class="headerlink" title="2.3.MODIEY和CHANGE关键字使用"></a>2.3.MODIEY和CHANGE关键字使用</h3><ul>
-<li><strong>ALTER TABLE tbl_name MODIEY 字段名称 字段类型 [字段属性] [FIRST|AFTER 字段名称]</strong>:修改字段类型、字段属性</li>
-<li><strong>ALTER TABLE tbl_name CHANGE 原字段名称 新字段名称 字段类型 字段属性 [FIRST|AFTER 字段名称]</strong>:修改字段名称、字段类型、字段属性</li>
+<li><strong><code>ALTER TABLE tbl_name MODIEY 字段名称 字段类型 \[字段属性] [FIRST|AFTER 字段名称]</code></strong>:修改字段类型、字段属性</li>
+<li><strong><code>ALTER TABLE tbl_name CHANGE 原字段名称 新字段名称 字段类型 字段属性 [FIRST|AFTER 字段名称]</code></strong>:修改字段名称、字段类型、字段属性</li>
 </ul>
 <hr>
 <h3 id="2-4-主键和唯一索引操作"><a href="#2-4-主键和唯一索引操作" class="headerlink" title="2.4.主键和唯一索引操作"></a>2.4.主键和唯一索引操作</h3><ul>
-<li><strong>ALTER TABLE tbl_name ADD PRIMARY KEY(字段名称)</strong>:添加主键</li>
-<li><strong>ALTER TABLE tbl_name DROP PRIMARY KEY</strong>:删除主键</li>
+<li><strong><code>ALTER TABLE tbl_name ADD PRIMARY KEY(字段名称)</code></strong>:添加主键</li>
+<li><strong><code>ALTER TABLE tbl_name DROP PRIMARY KEY</code></strong>:删除主键</li>
 </ul>
 <blockquote>
 <p>如果有自增的话，要MODIEY之后才能删除主键</p>
 </blockquote>
 <ul>
-<li><strong>ALTER TABLE tbl_name ADD UNIQUE KEY|INDEX index_name(字段名称)</strong>:添加唯一</li>
-<li><strong>ALTER TABLE tbl_name DROP index_name</strong>:删除唯一</li>
+<li><strong><code>ALTER TABLE tbl_name ADD UNIQUE KEY|INDEX index_name(字段名称)</code></strong>:添加唯一</li>
+<li><strong><code>ALTER TABLE tbl_name DROP index_name</code></strong>:删除唯一</li>
 </ul>
 <hr>
 <h3 id="2-5-重命名表的操作"><a href="#2-5-重命名表的操作" class="headerlink" title="2.5.重命名表的操作"></a>2.5.重命名表的操作</h3><ul>
-<li><strong>ALTER TABLE tbl_name RENAME [TO|AS] new_tbl_name</strong>:修改数据表名称</li>
-<li><strong>RENAME TABLE tbl_name TO new_tbl_name</strong>:修改数据表名称</li>
+<li><strong><code>ALTER TABLE tbl_name RENAME [TO|AS] new_tbl_name</code></strong>:修改数据表名称</li>
+<li><strong><code>RENAME TABLE tbl_name TO new_tbl_name</code></strong>:修改数据表名称</li>
 </ul>
 <hr>
 <h3 id="2-6MyISAM存储引擎"><a href="#2-6MyISAM存储引擎" class="headerlink" title="2.6MyISAM存储引擎"></a>2.6MyISAM存储引擎</h3><p>默认<strong>MyISAM</strong>的表会在磁盘中产生3个文件：</p>
@@ -689,8 +686,8 @@ married BOOLEAN
 </ul>
 <p>可以在创建表的时候指定数据文件和索引文件的存储位置，只有<strong>MyISAM</strong>表支持</p>
 <ul>
-<li><strong>DATA DIRECTORY  [=]</strong>: 数据保存的绝对路径</li>
-<li><strong>INDEX DIRECTORY [=]</strong>:索引文件保存的绝对路径</li>
+<li><strong><code>DATA DIRECTORY  [=]</code></strong>: 数据保存的绝对路径</li>
+<li><strong><code>INDEX DIRECTORY [=]</code></strong>:索引文件保存的绝对路径</li>
 </ul>
 <p><strong>MyISAM</strong>单表最大支持的数据量为$2^{64}$次方条记录，每个表最多可以建立64个索引</p>
 <p>如果是复合索引，每个复合索引最多包含16个列，索引值最大长度是1000B</p>
@@ -723,8 +720,8 @@ married BOOLEAN
 <hr>
 <h2 id="3-MySQL数据管理"><a href="#3-MySQL数据管理" class="headerlink" title="3.MySQL数据管理"></a>3.MySQL数据管理</h2><h3 id="3-1MySQL数据操作"><a href="#3-1MySQL数据操作" class="headerlink" title="3.1MySQL数据操作"></a>3.1MySQL数据操作</h3><p>添加记录</p>
 <ul>
-<li><strong>INSERT [INTO] tbl_name[(col_name,…)] {VALUE|VALUES}(VALUES…)</strong>:添加记录</li>
-<li><strong>INSERT tbl_name VAULE(value…)</strong>:不指定字段名称添加记录</li>
+<li><strong><code>INSERT [INTO] tbl_name[(col_name,...)] {VALUE|VALUES}(VALUES...)</code></strong>:添加记录</li>
+<li><strong><code>INSERT tbl_name VAULE(value...)</code></strong>:不指定字段名称添加记录</li>
 </ul>
 <pre class="line-numbers language-mysql"><code class="language-mysql">-- 测试添加记录
 CREATE DATABASE IF NOT EXISTS king DEFAULT CHARACTER SET 'UTF8';
@@ -758,12 +755,12 @@ INSERT user(username) SELECT a FROM test;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>修改记录</p>
 <ul>
-<li><strong>UPDATE tbl_name SET字段名称=值… [WHERE 条件]</strong>:修改记录，如果不添加条件，整个表中的记录都会被更新</li>
+<li><strong><code>UPDATE tbl_name SET字段名称=值... [WHERE 条件]</code></strong>:修改记录，如果不添加条件，整个表中的记录都会被更新</li>
 </ul>
 <p>删除记录</p>
 <ul>
-<li><strong>DELETE FROM tbl_name [WHERE 条件]</strong>:如果不添加条件，表中所有记录都被删除。不会重置AUTO_INCREMENT的值，可以通过ALTER语句将其重置为1</li>
-<li><strong>TRUNCATE [TABLE] tbl_name</strong>:彻底清空数据表，会重置AUTO_INCREMENT的值</li>
+<li><strong><code>DELETE FROM tbl_name [WHERE 条件]</code></strong>:如果不添加条件，表中所有记录都被删除。不会重置AUTO_INCREMENT的值，可以通过ALTER语句将其重置为1</li>
+<li><strong><code>TRUNCATE [TABLE] tbl_name</code></strong>:彻底清空数据表，会重置AUTO_INCREMENT的值</li>
 </ul>
 <pre class="line-numbers language-mysql"><code class="language-mysql">-- 测试更新语句
 -- 修改第一个用户的信息 id=1
@@ -793,11 +790,11 @@ INSERT user VALUES(DEFAULT,'lily',26,'lily@qq.com');
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>查询记录</p>
 <ul>
-<li><strong>SELECT select_expr,… FROM tbl_name [WHERE 条件] [GROUP BY {col_name|position} HAVING 二次筛选] [ORDER BY {col_name|position|expr}] [ASC|DESC] [LIMIT 限制结果集的显示条数]</strong></li>
-<li><strong>SELECT  * FROM tbl_name</strong>:查询表中所有记录</li>
-<li><strong>SELECT 字段名称… FROM tbl_name</strong>:指定字段信息</li>
-<li><strong>SELECT 字段名称… FROM db_name.tbl_name</strong>:库名.表名</li>
-<li><strong>SELECT 字段名称 [AS] 别名名称,… FROM db_name.tbl_name</strong>:给字段起别名</li>
+<li><strong><code>SELECT select_expr,... FROM tbl_name [WHERE 条件] [GROUP BY {col_name|position} HAVING 二次筛选] [ORDER BY {col_name|position|expr}] [ASC|DESC] [LIMIT 限制结果集的显示条数]</code></strong></li>
+<li><strong><code>SELECT  * FROM tbl_name</code></strong>:查询表中所有记录</li>
+<li><strong><code>SELECT 字段名称... FROM tbl_name</code></strong>:指定字段信息</li>
+<li><strong><code>SELECT 字段名称... FROM db_name.tbl_name</code></strong>:库名.表名</li>
+<li><strong><code>SELECT 字段名称 [AS] 别名名称,... FROM db_name.tbl_name</code></strong>:给字段起别名</li>
 </ul>
 <pre class="line-numbers language-mysql"><code class="language-mysql">-- 测试查询操作
 CREATE TABLE user1(
@@ -965,15 +962,15 @@ WHERE username LIKE '张_%';<span aria-hidden="true" class="line-numbers-rows"><
 <p>分组配合GROUP _CONCAT()查看组中某个字段的详细信息</p>
 <p>配合聚合函数使用：</p>
 <ul>
-<li>COUNT():统计记录总数<ul>
-<li>COUNT(字段名称)，字段中的值为NULL，不统计进来</li>
-<li>COUNT(*)会统计NULL值</li>
+<li><code>COUNT()</code>:统计记录总数<ul>
+<li><code>COUNT(字段名称)</code>，字段中的值为NULL，不统计进来</li>
+<li><code>COUNT(*)</code>会统计NULL值</li>
 </ul>
 </li>
-<li>SUM():求和</li>
-<li>MAX():求最大值</li>
-<li>MIN():求最小值</li>
-<li>AVG():求平均值</li>
+<li><code>SUM()</code>:求和</li>
+<li><code>MAX()</code>:求最大值</li>
+<li><code>MIN()</code>:求最小值</li>
+<li><code>AVG()</code>:求平均值</li>
 </ul>
 <p>配合WITH ROLLUP关键使用，会在记录末尾添加一条记录，是上面所有记录总和</p>
 <p>HAVING字句对分组结果进行二次筛选</p>
@@ -1095,7 +1092,7 @@ HAVING avg_salary>=40000;<span aria-hidden="true" class="line-numbers-rows"><spa
 <hr>
 <h3 id="3-3ORDER-BY实现排序"><a href="#3-3ORDER-BY实现排序" class="headerlink" title="3.3ORDER BY实现排序"></a>3.3ORDER BY实现排序</h3><p><strong>ORDER BY</strong>排序：</p>
 <ul>
-<li><strong>ORDER BY字段名称 ASC|DESC</strong></li>
+<li><strong><code>ORDER BY字段名称 ASC|DESC</code></strong></li>
 </ul>
 <pre class="line-numbers language-mysql"><code class="language-mysql">-- 测试排序
 -- 按照id降序排列
@@ -1223,10 +1220,10 @@ LIMIT 0,2;<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <h3 id="3-5多表联查"><a href="#3-5多表联查" class="headerlink" title="3.5多表联查"></a>3.5多表联查</h3><p>多表查询：</p>
 <ul>
 <li>笛卡尔积的形式</li>
-<li>内连接的形式：<strong>SELECT 字段名称,… FROM tbl_name1 INNER JOIN tbl_name2 ON 链接条件</strong>，查询两个表中符合连接条件的记录</li>
+<li>内连接的形式：<strong><code>SELECT 字段名称,... FROM tbl_name1 INNER JOIN tbl_name2 ON 链接条件</code></strong>，查询两个表中符合连接条件的记录</li>
 <li>外连接的形式:<ul>
-<li>左外连接：<strong>SELECT 字段名称,… FROM tbl_name1  LEFT [OUTER] JOIN tbl_name2 ON 条件</strong>，先显示左表中的全部记录，再去右表中查询复合记录，不符合的用NULL代替</li>
-<li>右外连接：<strong>SELECT 字段名称,… FROM tbl_name1 RIGHT [OUTER] JOIN tbl_name2 ON 条件</strong>，先显示右表中的全部记录，再去左表中查询复合记录，不符合的用NULL代替</li>
+<li>左外连接：<strong><code>SELECT 字段名称,... FROM tbl_name1  LEFT [OUTER] JOIN tbl_name2 ON 条件</code></strong>，先显示左表中的全部记录，再去右表中查询复合记录，不符合的用NULL代替</li>
+<li>右外连接：<strong><code>SELECT 字段名称,... FROM tbl_name1 RIGHT [OUTER] JOIN tbl_name2 ON 条件</code></strong>，先显示右表中的全部记录，再去左表中查询复合记录，不符合的用NULL代替</li>
 </ul>
 </li>
 </ul>
@@ -1397,7 +1394,444 @@ WHERE p.price<1000
 ORDER BY p.price DESC
 LIMIT 0,2;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
-<h3 id="3-6"><a href="#3-6" class="headerlink" title="3.6"></a>3.6</h3>
+<h3 id="3-6外键约束"><a href="#3-6外键约束" class="headerlink" title="3.6外键约束"></a>3.6外键约束</h3><p>外键作用是保持数据的一致性和完整性，只有<strong>InnoDB</strong>储存引擎支持外键</p>
+<p>创建外键:</p>
+<ul>
+<li>建表时创建外键:<strong><code>[CONSTRAINT 外键名称] FOREIGN KEY(字段名称) REFERENCES 主表(字段名称)</code></strong><ul>
+<li>子表的外键字段和主表字段类型要相似。如果是数值型要求一致，并且无符号也要求一致；如果是字符类型要求一致，长度可以不同。</li>
+<li>如果外键字段没有创建索引，MySQL会自动添加索引</li>
+<li>子表的外键关联必须是父表的主键</li>
+</ul>
+</li>
+<li>动态删除外键:<strong><code>ALTER TABLE tbl_name DROP FOREIGN KEY fk_name</code></strong></li>
+<li>动态添加外键: <strong><code>ALTER TABLE tbl_name ADD [CONSTRAINT 外键名称] FOREIGN KEY (外键字段) REFERENCES 主表(主键字段)</code></strong></li>
+<li>外键约束的参照操作:<ul>
+<li><code>CASCADE</code>:从父表删除或更新，子表也跟着删除或者更新，级联的操作</li>
+<li>SET NULL`:从父表删除或者更新，并设置子表的外键列为NULL</li>
+<li><code>NO ACTION|RESTRICT</code>:拒绝对父表进行更新或者删除操作</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-mysql"><code class="language-mysql">-- 测试外键
+-- 新闻分类表 news_cate
+CREATE TABLE news_cate(
+id TINYINT UNSIGNED AUTO_INCREMENT KEY,
+cateName VARCHAR(50) NOT NULL UNIQUE,
+cateDesc VARCHAR(100) NOT NULL DEFAULT ''
+);
+
+-- 新闻表 news
+CREATE TABLE news(
+id INT UNSIGNED AUTO_INCREMENT KEY,
+title VARCHAR(100) NOT NULL UNIQUE,
+content VARCHAR(1000) NOT NULL,
+cateId TINYINT UNSIGNED NOT NULL
+);
+
+INSERT news_cate(cateName) VALUES('国内新闻'),
+('国际新闻'),
+('娱乐新闻'),
+('体育新闻');
+
+INSERT news(title,content,cateId) VALUES('a1','aaaa1',1),
+('a2','aaaa2',1),
+('a3','aaaa3',4),
+('a4','aaaa4',2),
+('a5','aaaa5',3);
+
+-- 查询news id title content
+-- news_cate cateName
+SELECT n.id,n.title,n.content,c.cateName
+FROM news AS n
+JOIN news_cate AS c
+ON n.cateId=c.id;
+
+INSERT news(title,content,cateId) VALUES('a6','aaaa6',45);
+
+-- 添加外键
+
+-- 新闻分类表 news_cate
+CREATE TABLE news_cate(
+id TINYINT UNSIGNED AUTO_INCREMENT KEY,
+cateName VARCHAR(50) NOT NULL UNIQUE,
+cateDesc VARCHAR(100) NOT NULL DEFAULT ''
+)ENGINE=INNODB;
+
+-- 新闻表 news
+CREATE TABLE news(
+id INT UNSIGNED AUTO_INCREMENT KEY,
+title VARCHAR(100) NOT NULL UNIQUE,
+content VARCHAR(1000) NOT NULL,
+cateId TINYINT UNSIGNED NOT NULL,
+FOREIGN KEY(cateId) REFERENCES news_cate(id)
+)ENGINE=INNODB;
+
+INSERT news_cate(cateName) VALUES('国内新闻'),
+('国际新闻'),
+('娱乐新闻'),
+('体育新闻');
+
+INSERT news(title,content,cateId) VALUES('a1','aaaa1',1),
+('a2','aaaa2',1),
+('a3','aaaa3',4),
+('a4','aaaa4',2),
+('a5','aaaa5',3);
+
+-- 测试非法记录
+INSERT news(title,content,cateId) VALUES('b1','bbbb1',8);
+
+-- 测试删除父表中的记录 和删除父表
+DELETE FROM news_cate WHERE id=1;
+
+UPDATE news_cate SET id=10 WHERE id=1;
+
+INSERT news_cate(cateName) VALUES('教育新闻');
+
+-- 将教育新闻 改成教育
+UPDATE news_cate SET cateName='教育' WHERE id=5;
+UPDATE news_cate SET id=50 WHERE cateName='教育';
+
+-- 添加外键名称
+
+-- 新闻分类表 news_cate
+CREATE TABLE news_cate(
+id TINYINT UNSIGNED AUTO_INCREMENT KEY,
+cateName VARCHAR(50) NOT NULL UNIQUE,
+cateDesc VARCHAR(100) NOT NULL DEFAULT ''
+)ENGINE=INNODB;
+
+-- 新闻表 news
+CREATE TABLE news(
+id INT UNSIGNED AUTO_INCREMENT KEY,
+title VARCHAR(100) NOT NULL UNIQUE,
+content VARCHAR(1000) NOT NULL,
+cateId TINYINT UNSIGNED NOT NULL,
+CONSTRAINT cateId_fk_newsCate FOREIGN KEY(cateId) REFERENCES news_cate(id)
+)ENGINE=INNODB;
+
+-- 删除外键
+ALTER TABLE news
+DROP FOREIGN KEY cateId_fk_newsCate;
+
+-- 添加外键
+ALTER TABLE news
+ADD FOREIGN KEY(cateId) REFERENCES news_cate(id);
+
+-- 删除外键
+ALTER TABLE news
+DROP FOREIGN KEY news_ibfk_1;
+
+ALTER TABLE news
+ADD CONSTRAINT cateId_fk_newsCate FOREIGN KEY(cateId) REFERENCES news_cate(id);
+
+INSERT news_cate(cateName) VALUES('国内新闻'),
+('国际新闻'),
+('娱乐新闻'),
+('体育新闻');
+
+INSERT news(title,content,cateId) VALUES('a1','aaaa1',1),
+('a2','aaaa2',1),
+('a3','aaaa3',4),
+('a4','aaaa4',2),
+('a5','aaaa5',8);
+
+ALTER TABLE news
+ADD FOREIGN KEY(cateId) REFERENCES news_cate(id);
+
+-- 指定级联操作 DELETE CASCADE UPDATE CASCADE
+ALTER TABLE news
+ADD FOREIGN KEY(cateId) REFERENCES news_cate(id)
+ON DELETE CASCADE ON UPDATE CASCADE;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="3-7子查询使用"><a href="#3-7子查询使用" class="headerlink" title="3.7子查询使用"></a>3.7子查询使用</h3><p>子查询: <strong><code>SELECT 字段名称 FROM tbl_name WHERE col_name FORM tbl_name</code></strong></p>
+<p>内层语句查询的结果可以做为外层语句查询的条件。</p>
+<p>由<strong>IN</strong>引发的子查询</p>
+<p>由比较运算符引发的子查询</p>
+<p>由<strong>EXISTS</strong>引发的子查询</p>
+<p><em><em>ANY SOME ALL </em></em></p>
+<p>联合查询:</p>
+<ul>
+<li>UNION: <strong><code>SELECT 字段名称 ,...FROM tbl_name1 UNION SELECT 字段名称...FROM tbl_name2</code></strong></li>
+<li>UNION ALL: <strong><code>SELECT 字段名称,... FROM tbl_name1 UNION ALL SELECT 字段名称... FROM tbl_name2</code></strong></li>
+</ul>
+<pre class="line-numbers language-Mysql"><code class="language-Mysql">-- 测试子查询
+-- 测试由IN引发的子查询
+
+SELECT * FROM emp
+WHERE depId IN (SELECT id FROM dep);
+
+SELECT * FROM emp
+WHERE depId NOT IN (SELECT id FROM dep);
+
+-- 学员stu
+CREATE TABLE stu(
+id TINYINT UNSIGNED AUTO_INCREMENT KEY,
+username VARCHAR(20) NOT NULL UNIQUE,
+score TINYINT UNSIGNED NOT NULL
+);
+INSERT stu(username,score) VALUES('king',95),
+('queen',75),
+('zhangsan',69),
+('lisi',78),
+('wangwu',87),
+('zhaoliu',88),
+('tianqi',98),
+('ceshi',99),
+('tiancai',50);
+
+
+-- 分数级别level
+CREATE TABLE level(
+id tinyint UNSIGNED AUTO_INCREMENT KEY,
+score TINYINT UNSIGNED COMMENT '分数'
+);
+INSERT level(score) VALUES(90),(80),(70);
+
+-- 查询出成绩优秀的学员
+
+SELECT score FROM level WHERE id=1;
+
+SELECT id,username,score FROM stu
+WHERE score>=(SELECT score FROM level WHERE id=1);
+
+-- 查询出没有得到评级的学员
+
+SELECT id,username,score FROM stu
+WHERE score<=(SELECT score FROM level WHERE id=3);
+
+-- 由EXISTS 引发的子查询
+
+SELECT * FROM emp WHERE EXISTS (SELECT depName FROM dep WHERE id=10);
+SELECT * FROM emp WHERE EXISTS (SELECT depName FROM dep WHERE id=1);
+
+-- 带有ANY SOME ALL关键字的子查询
+SELECT * FROM stu
+WHERE score>= ANY(SELECT score FROM level);
+
+SELECT * FROM stu
+WHERE score>= SOME(SELECT score FROM level);
+
+SELECT * FROM stu
+WHERE score>= ALL(SELECT score FROM level);
+
+SELECT * FROM stu
+WHERE score< ALL(SELECT score FROM level);
+
+SELECT * FROM stu
+WHERE score=ANY(SELECT score FROM level);
+
+SELECT * FROM stu
+WHERE score!=ALL(SELECT score FROM level);
+
+-- 创建一个user1表,id username
+CREATE TABLE user1(
+    id int UNSIGNED AUTO_INCREMENT KEY,
+    username VARCHAR(20)
+)SELECT id,username FROM emp;
+
+-- 将user表中的用户名写入到user1表中
+INSERT user1(username) SELECT username FROM user;
+
+-- 将stu表中的tiancai用户名添加到user2表中
+INSERT user2 SET username=(SELECT username FROM stu WHERE id=9);
+
+-- 去掉字段的重复值
+SELECT DISTINCT(username) FROM user2;
+
+-- 将user1和user2数据合并到一起
+SELECT * FROM user1
+UNION
+SELECT * FROM user2;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="3-8无限级分类数据表"><a href="#3-8无限级分类数据表" class="headerlink" title="3.8无限级分类数据表"></a>3.8无限级分类数据表</h3><pre class="line-numbers language-mysql"><code class="language-mysql">-- 测试自身连接
+CREATE TABLE cate(
+    id SMALLINT UNSIGNED AUTO_INCREMENT KEY,
+    cateName VARCHAR(100) NOT NULL UNIQUE,
+    pId SMALLINT UNSIGNED NOT NULL DEFAULT 0
+);
+INSERT cate(cateName,pId) VALUES('服装',0);
+INSERT cate(cateName,pId) VALUES('数码',0);
+INSERT cate(cateName,pId) VALUES('箱包',0);
+
+INSERT cate(cateName,pId) VALUES('男装',1);
+INSERT cate(cateName,pId) VALUES('女装',1);
+INSERT cate(cateName,pId) VALUES('内衣',1);
+
+INSERT cate(cateName,pId) VALUES('电视',2);
+INSERT cate(cateName,pId) VALUES('冰箱',2);
+INSERT cate(cateName,pId) VALUES('洗衣机',2);
+
+INSERT cate(cateName,pId) VALUES('爱马仕',3);
+INSERT cate(cateName,pId) VALUES('LV',3);
+INSERT cate(cateName,pId) VALUES('GUCCI',3);
+
+INSERT cate(cateName,pId) VALUES('夹克',4);
+INSERT cate(cateName,pId) VALUES('衬衫',4);
+INSERT cate(cateName,pId) VALUES('裤子',4);
+
+INSERT cate(cateName,pId) VALUES('液晶电视',10);
+INSERT cate(cateName,pId) VALUES('等离子电视',10);
+INSERT cate(cateName,pId) VALUES('背投电视',10);
+
+-- 查询所有的分类信息，并且得到其父分类
+SELECT s.id,s.cateName AS sCateName,p.cateName  AS pCateName
+FROM cate AS s
+LEFT JOIN cate AS p
+ON s.pId=p.id;
+
+-- 查询所有的分类及其子分类
+SELECT p.id,p.cateName  AS pCateName,s.cateName AS sCateName
+FROM cate AS s
+RIGHT JOIN cate AS p
+ON s.pId=p.id;
+
+-- 查询所有的分类并且得到子分类的数目
+SELECT p.id,p.cateName  AS pCateName,COUNT(s.cateName) AS count
+FROM cate AS s
+RIGHT JOIN cate AS p
+ON s.pId=p.id
+GROUP BY p.cateName
+ORDER BY id ASC;
+
+
+sCate 表
+id | cateName        | pId |
++----+-----------------+-----+
+|  1 | 服装            |   0 |
+|  2 | 数码            |   0 |
+|  3 | 玩具            |   0 |
+|  4 | 男装            |   1 |
+|  5 | 女装            |   1 |
+|  6 | 内衣            |   1 |
+| 10 | 电视            |   2 |
+| 11 | 冰箱            |   2 |
+| 12 | 洗衣机          |   2 |
+| 13 | 爱马仕          |   3 |
+| 14 | LV              |   3 |
+| 15 | GUCCI           |   3 |
+| 16 | 夹克            |   4 |
+| 17 | 衬衫            |   4 |
+| 18 | 裤子            |   4 |
+| 19 | 液晶电视        |  10 |
+| 20 | 等离子电视      |  10 |
+| 21 | 背投电视        |  10
+
+pCate
+id | cateName        | pId |
++----+-----------------+-----+
+|  1 | 服装            |   0 |
+|  2 | 数码            |   0 |
+|  3 | 玩具            |   0 |
+|  4 | 男装            |   1 |
+|  5 | 女装            |   1 |
+|  6 | 内衣            |   1 |
+| 10 | 电视            |   2 |
+| 11 | 冰箱            |   2 |
+| 12 | 洗衣机          |   2 |
+| 13 | 爱马仕          |   3 |
+| 14 | LV              |   3 |
+| 15 | GUCCI           |   3 |
+| 16 | 夹克            |   4 |
+| 17 | 衬衫            |   4 |
+| 18 | 裤子            |   4 |
+| 19 | 液晶电视        |  10 |
+| 20 | 等离子电视      |  10 |
+| 21 | 背投电视        |  10   
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="4-MySQL常用函数"><a href="#4-MySQL常用函数" class="headerlink" title="4.MySQL常用函数"></a>4.MySQL常用函数</h2><h3 id="4-1数学函数"><a href="#4-1数学函数" class="headerlink" title="4.1数学函数"></a>4.1数学函数</h3><ul>
+<li><code>CEIL()</code>:进1取整</li>
+<li><code>FLOOR()</code>:舍掉小数部分</li>
+<li><code>ROUND()</code>:四舍五入</li>
+<li><code>TRUNCATE()</code>:截取小数点后几位</li>
+<li><code>MOD()</code>:取余数</li>
+<li><code>ABS()</code>:取绝对值</li>
+<li><code>POWER()</code>:幂指数</li>
+<li><code>PI()</code>:圆周率</li>
+<li><code>RAND()</code>:随机数</li>
+<li><code>SIGN(X)</code>:符号函数</li>
+<li><code>EXP()</code>:计算以e为底的指数</li>
+</ul>
+<hr>
+<h3 id="4-2字符串函数"><a href="#4-2字符串函数" class="headerlink" title="4.2字符串函数"></a>4.2字符串函数</h3><pre class="line-numbers language-mysql"><code class="language-mysql">-- 测试字符串函数
+-- CHAR_LENGTH():得到字符串的字符数
+SELECT CHAR_LENGTH('abc');
+
+-- LENGTH():返回字符串的长度
+SELECT LENGTH('abc');
+
+-- CONCAT(s1,s2,....):将字符串合并成一个字符串
+
+SELECT CONCAT('a','b','c');
+-- 如果字符串中包含NULL，返回拼接结果就是NULL
+SELECT CONCAT('a','b','c',null);
+
+-- CONCAT_WS(x,s1,s2,s2....)：以指定分隔符拼接字符串
+SELECT CONCAT_WS('-','a','b','c');
+-- 如果null在拼接的内容中，则转化成空字符串
+SELECT CONCAT_WS('-','a','b','c',null);
+-- 如果分隔符为null，拼接的结果为null
+SELECT CONCAT_WS(null,'a','b','c');
+-- 将字符串转换成大写或者小写 UPPER()| UCASE() LOWER()|LCASE()
+SELECT UPPER('hello king'),UCASE('hello imooc'),LOWER('HELLO ADMIN'),LCASE('HELLO EVERYBODY');
+
+-- 字符串的反转REVERSE()
+SELECT REVERSE('abc');
+
+-- LEFT()|RIGHT():返回字符串的前几个字符或者后几个字符
+SELECT LEFT('hello',2),RIGHT('hello',2);
+
+-- LPAD()|RPAD():用字符串填充到指定长度
+SELECT LPAD('abc',10,'?');
+SELECT RPAD('abc',10,'!');
+
+-- 去掉字符串两端的空格TRIM()|LTRIM()|RTRIM():
+
+SELECT CONCAT('*',TRIM(' abc '),'*'),CONCAT('*',LTRIM(' abc '),'*'),CONCAT('*',RTRIM(' abc '),'*');
+
+-- REPEAT():重复指定的次数
+SELECT REPEAT('hello',3);
+
+-- REPLACE():字符串
+
+SELECT REPLACE('hello king','king','queen');
+
+-- 截取字符串SUBSTRING
+SELECT SUBSTRING('abcdef',1,3);
+
+-- 比较字符串
+
+SELECT STRCMP('a','b');
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="4-3日起时间函数"><a href="#4-3日起时间函数" class="headerlink" title="4.3日起时间函数"></a>4.3日起时间函数</h3><pre class="line-numbers language-mysql"><code class="language-mysql">-- 测试日期时间函数
+-- 返回当前日期
+SELECT CURDATE(),CURRENT_DATE();
+-- 返回当前时间
+SELECT CURTIME(),CURRENT_TIME();
+-- 返回当前的日期时间
+SELECT NOW(),CURRENT_TIMESTAMP(),SYSDATE();
+-- 返回日期中的月份和月份的名称
+SELECT MONTH('2017-02-19');
+SELECT MONTH(CURDATE()),MONTHNAME(CURDATE());
+-- 返回星期几
+SELECT DAYNAME(NOW());
+-- 返回一周内的第几天,0代表星期一
+SELECT DAYOFWEEK(NOW());
+SELECT WEEK(NOW());
+SELECT YEAR(NOW()),MONTH(NOW()),DAY(NOW()),HOUR(NOW()),MINUTE(NOW()),SECOND(NOW());
+
+-- DATEDIFF()计算两个日期相差的天数
+SELECT DATEDIFF('2020-03-06','2020-03-02');
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li>《MySQL必知必会》</li>
+<li><a href="https://www.imooc.com/learn/1102" target="_blank" rel="noopener">慕课网</a></li>
+</ul>
+
             </div>
             <hr />
 
@@ -1881,56 +2315,54 @@ LIMIT 0,2;<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/02/16/yu-jian-mysql/">
+                <a href="/2020/02/18/jdbc-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="遇见MySQL">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="JDBC笔记">
                         
-                        <span class="card-title">遇见MySQL</span>
+                        <span class="card-title">JDBC笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数据库探究与运用
+                            JDBC学习笔记
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-16
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-18
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/MySQL/" class="post-category" target="_blank">
-                                    MySQL
+                            <a href="/categories/Java/" class="post-category" target="_blank">
+                                    Java
                                 </a>
                             
-                            <a href="/categories/MySQL/数据库/" class="post-category" target="_blank">
-                                    数据库
+                            <a href="/categories/Java/JDBC/" class="post-category" target="_blank">
+                                    JDBC
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/MySQL/" target="_blank">
-                        <span class="chip bg-color">MySQL</span>
+                    <a href="/tags/JDBC/" target="_blank">
+                        <span class="chip bg-color">JDBC</span>
                     </a>
                     
-                    <a href="/tags/数据库/" target="_blank">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/tags/MySQL/" target="_blank">
+                        <span class="chip bg-color">MySQL</span>
                     </a>
                     
                 </div>
@@ -1948,7 +2380,7 @@ LIMIT 0,2;<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="JavaWeb笔记">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="JavaWeb笔记">
                         
                         <span class="card-title">JavaWeb笔记</span>
                     </div>
@@ -2149,7 +2581,7 @@ LIMIT 0,2;<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">19.4k</span>
+            <span class="white-color">23.2k</span>
             
 
             <br>

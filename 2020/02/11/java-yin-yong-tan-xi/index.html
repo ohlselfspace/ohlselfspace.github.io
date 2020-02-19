@@ -291,7 +291,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -470,7 +470,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Java引用探析"><a href="#Java引用探析" class="headerlink" title="Java引用探析"></a>Java引用探析</h1><p>在<strong>Java</strong>中除基本数据类型外，其他都是指向各类对象的引用。根据生命周期的长短，可将引用分为强引用，软引用，弱引用，幻象引用。不同的引用类型体现在对象不同的可达性和垃圾收集的影响。</p>
-<h2 id="强引用"><a href="#强引用" class="headerlink" title="强引用"></a>强引用</h2><p>强引用就是我们通常创建对象实例的方式。通过<strong>new</strong>关键字创建对象的引用，当<strong>Jvm</strong>内存不足时，宁愿抛出<strong>OOM(OutOfMemoryError)</strong>，也不会强制通过回收强引用对象来解决内存不足的问题。对于一个普通对象而言，如果没有其他引用关系，只要超过了引用的作用域或者显式地将相应强引用赋值为<strong>null</strong>，这种情况下，就可以被<strong>GC</strong>处理(具体情况要看垃圾回收策略)。</p>
+<h2 id="强引用"><a href="#强引用" class="headerlink" title="强引用"></a>强引用</h2><p>强引用就是我们通常创建对象实例的方式。通过<strong>new</strong>关键字创建对象的引用，当<strong>Jvm</strong>内存不足时，宁愿抛出<strong>OOM（OutOfMemoryError）</strong>，也不会强制通过回收强引用对象来解决内存不足的问题。对于一个普通对象而言，如果没有其他引用关系，只要超过了引用的作用域或者显式地将相应强引用赋值为<strong>null</strong>，这种情况下，就可以被<strong>GC</strong>处理(具体情况要看垃圾回收策略)。</p>
 <pre class="line-numbers language-java"><code class="language-java">Object obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <hr>
 <h2 id="软引用"><a href="#软引用" class="headerlink" title="软引用"></a>软引用</h2><p>软引用需要由<code>SoftReference</code>类实现，软引用相比于强引用较弱。当<strong>Jvm</strong>内存不足时，它就会试图回收软引用指向的对象。这种回收会在<strong>OOM</strong>之前发生。</p>
@@ -988,24 +988,24 @@ Object o <span class="token operator">=</span> phantomobj<span class="token punc
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/02/11/java-zhu-jie/">
+                <a href="/2020/02/12/lambda-biao-da-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Java注解">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Lambda学习笔记">
                         
-                        <span class="card-title">Java注解</span>
+                        <span class="card-title">Lambda学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            理解Java注解，更深理解框架精髓
+                            深入探究Lambda，函数式编程
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-11
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-12
                         </span>
                         <span class="publish-author">
                             
@@ -1022,8 +1022,12 @@ Object o <span class="token operator">=</span> phantomobj<span class="token punc
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/注解/" target="_blank">
-                        <span class="chip bg-color">注解</span>
+                    <a href="/tags/Lambda/" target="_blank">
+                        <span class="chip bg-color">Lambda</span>
+                    </a>
+                    
+                    <a href="/tags/函数式接口/" target="_blank">
+                        <span class="chip bg-color">函数式接口</span>
                     </a>
                     
                 </div>
@@ -1041,7 +1045,7 @@ Object o <span class="token operator">=</span> phantomobj<span class="token punc
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="SpringBoot学习笔记">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="SpringBoot学习笔记">
                         
                         <span class="card-title">SpringBoot学习笔记</span>
                     </div>
@@ -1234,7 +1238,7 @@ Object o <span class="token operator">=</span> phantomobj<span class="token punc
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">19.4k</span>
+            <span class="white-color">23.2k</span>
             
 
             <br>

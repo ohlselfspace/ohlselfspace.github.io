@@ -2,7 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://ohlselfspace.github.io/2020/02/16/yu-jian-mysql/</loc>
-    <lastmod>2020-02-17</lastmod>
+    <lastmod>2020-02-19</lastmod>
+  </url>  <url>
+    <loc>http://ohlselfspace.github.io/2020/02/06/wang-luo-bian-cheng/</loc>
+    <lastmod>2020-02-19</lastmod>
+  </url>  <url>
+    <loc>http://ohlselfspace.github.io/2020/02/10/qian-tan-java-fan-she-ji-zhi/</loc>
+    <lastmod>2020-02-19</lastmod>
+  </url>  <url>
+    <loc>http://ohlselfspace.github.io/2020/02/11/java-yin-yong-tan-xi/</loc>
+    <lastmod>2020-02-19</lastmod>
+  </url>  <url>
+    <loc>http://ohlselfspace.github.io/2020/02/02/git/</loc>
+    <lastmod>2020-02-19</lastmod>
+  </url>  <url>
+    <loc>http://ohlselfspace.github.io/2020/02/18/jdbc-bi-ji/</loc>
+    <lastmod>2020-02-19</lastmod>
   </url>  <url>
     <loc>http://ohlselfspace.github.io/2020/02/01/qian-xi-exception-he-error/</loc>
     <lastmod>2020-02-16</lastmod>
@@ -13,17 +28,8 @@
     <loc>http://ohlselfspace.github.io/2020/02/14/javaweb-bi-ji/</loc>
     <lastmod>2020-02-16</lastmod>
   </url>  <url>
-    <loc>http://ohlselfspace.github.io/2020/02/06/wang-luo-bian-cheng/</loc>
-    <lastmod>2020-02-12</lastmod>
-  </url>  <url>
     <loc>http://ohlselfspace.github.io/2020/02/02/java-bing-fa-shi-xian-he-xian-cheng-an-quan/</loc>
     <lastmod>2020-02-12</lastmod>
-  </url>  <url>
-    <loc>http://ohlselfspace.github.io/2020/02/11/java-zhu-jie/</loc>
-    <lastmod>2020-02-11</lastmod>
-  </url>  <url>
-    <loc>http://ohlselfspace.github.io/2020/02/11/java-yin-yong-tan-xi/</loc>
-    <lastmod>2020-02-11</lastmod>
   </url>  <url>
     <loc>http://ohlselfspace.github.io/2020/01/30/2019-nian-zong-jie/</loc>
     <lastmod>2020-02-11</lastmod>
@@ -34,16 +40,10 @@
     <loc>http://ohlselfspace.github.io/2020/02/10/maven-xue-xi-bi-ji/</loc>
     <lastmod>2020-02-11</lastmod>
   </url>  <url>
-    <loc>http://ohlselfspace.github.io/2020/02/10/qian-tan-java-fan-she-ji-zhi/</loc>
-    <lastmod>2020-02-10</lastmod>
-  </url>  <url>
     <loc>http://ohlselfspace.github.io/2020/02/09/leetcode-118-yang-hui-san-jiao/</loc>
     <lastmod>2020-02-09</lastmod>
   </url>  <url>
     <loc>http://ohlselfspace.github.io/2020/02/07/leetcode-53-zui-da-zi-xu-he/</loc>
     <lastmod>2020-02-07</lastmod>
-  </url>  <url>
-    <loc>http://ohlselfspace.github.io/2020/02/02/git/</loc>
-    <lastmod>2020-02-04</lastmod>
   </url>
 </urlset>

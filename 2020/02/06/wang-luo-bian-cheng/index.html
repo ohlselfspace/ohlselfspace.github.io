@@ -298,7 +298,7 @@ IP地址
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -523,10 +523,10 @@ IP地址
 <p>以下步骤在两台计算机之间使用套接字建立<strong>TCP</strong>连接时会出现：</p>
 <ul>
 <li>服务器实例化一个<strong>SeverSocket</strong>对象，通过服务器上的端口通信</li>
-<li>服务器调用<strong>ServerSocket</strong>类的<strong>accept（）</strong>方法，该方法一直监听端口，直到客服端连接上服务器指定的端口</li>
+<li>服务器调用<strong>ServerSocket</strong>类的<strong><code>accept()</code></strong>方法，该方法一直监听端口，直到客服端连接上服务器指定的端口</li>
 <li>服务器监听时，客户端实例化一个<strong>Socket</strong>对象，指定服务器名称和端口号来请求连接</li>
 <li><strong>Socket</strong>类的构造函数试图将客服端连接到指定的服务器和端口号</li>
-<li>在服务器端，<strong>accept（）</strong>方法返回服务器上一个新的<strong>Socket</strong>引用，该<strong>Socket</strong>连接到客服端的<strong>Socket</strong></li>
+<li>在服务器端，<strong><code>accept()</code></strong>方法返回服务器上一个新的<strong>Socket</strong>引用，该<strong>Socket</strong>连接到客服端的<strong>Socket</strong></li>
 </ul>
 <hr>
 <h2 id="TCP通信"><a href="#TCP通信" class="headerlink" title="TCP通信"></a>TCP通信</h2><ul>
@@ -638,16 +638,16 @@ IP地址
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h2 id="Socket类"><a href="#Socket类" class="headerlink" title="Socket类"></a>Socket类</h2><ul>
-<li><strong>public Socket(String host, int port)</strong> :创建套接字对象并将其连接到指定主机上的指定端口号。如果指定的host是null ，则相当于指定地址为回送地址。  </li>
-<li><strong>public InputStream getInputStream()</strong>：返回此套接字的输入流。</li>
-<li><strong>public OutputStream getOutputStream()</strong>:返回此套接字的输出流。</li>
-<li><strong>public void close()</strong>:关闭此套接字</li>
-<li><strong>public void shutdownOutput</strong>:禁用此套接字的输出流</li>
+<li><strong><code>public Socket(String host, int port)</code></strong> :创建套接字对象并将其连接到指定主机上的指定端口号。如果指定的host是null ，则相当于指定地址为回送地址。  </li>
+<li><strong><code>public InputStream getInputStream()</code></strong>：返回此套接字的输入流。</li>
+<li><strong><code>public OutputStream getOutputStream()</code></strong>:返回此套接字的输出流。</li>
+<li><strong><code>public void close()</code></strong>:关闭此套接字</li>
+<li><strong><code>public void shutdownOutput</code></strong>:禁用此套接字的输出流</li>
 </ul>
 <hr>
 <h2 id="ServerSocket类"><a href="#ServerSocket类" class="headerlink" title="ServerSocket类"></a>ServerSocket类</h2><ul>
-<li><strong>public ServerSocket(int port)</strong>:使用该构造方法在创建ServerSocket对象时，就可以将其绑定到一个指定的端口号上，参数port就是端口号。</li>
-<li><strong>public Socket accept()</strong>:侦听并接受连接，返回一个新的Socket对象，用于和客户端实现通信。该方法会一直阻塞直到建立连接。 </li>
+<li><strong><code>public ServerSocket(int port)</code></strong>:使用该构造方法在创建ServerSocket对象时，就可以将其绑定到一个指定的端口号上，参数port就是端口号。</li>
+<li><strong><code>public Socket accept()</code></strong>:侦听并接受连接，返回一个新的Socket对象，用于和客户端实现通信。该方法会一直阻塞直到建立连接。 </li>
 </ul>
 <hr>
 <h1 id="常用API"><a href="#常用API" class="headerlink" title="常用API"></a>常用API</h1><h2 id="InetAddress类"><a href="#InetAddress类" class="headerlink" title="InetAddress类"></a>InetAddress类</h2><p><strong>IP</strong>地址类：<strong>InetAddress</strong>类</p>
@@ -655,11 +655,11 @@ IP地址
 <p><strong>InetAddress</strong>类没有构造方法</p>
 </blockquote>
 <ul>
-<li><strong>byte[] getAddress()</strong>：返回此<strong>INetAddress</strong> 对象的原始<strong>IP</strong>地址</li>
-<li><strong>static InetAddress getByName(String host)</strong>：在给定主机名的情况下确定主机的<strong>IP</strong>地址</li>
-<li><strong>String getHostAddress()</strong>:返回<strong>IP</strong>地址字符串</li>
-<li><strong>String getHostName()</strong>：获取此<strong>IP</strong>地址的主机名</li>
-<li><strong>static InetAddress getLocalHost()</strong>：返回本地主机</li>
+<li><strong><code>byte[] getAddress()</code></strong>：返回此<strong>INetAddress</strong> 对象的原始<strong>IP</strong>地址</li>
+<li><strong><code>static InetAddress getByName(String host)</code></strong>：在给定主机名的情况下确定主机的<strong>IP</strong>地址</li>
+<li><strong><code>String getHostAddress()</code></strong>:返回<strong>IP</strong>地址字符串</li>
+<li><strong><code>String getHostName()</code></strong>：获取此<strong>IP</strong>地址的主机名</li>
+<li><strong><code>static InetAddress getLocalHost()</code></strong>：返回本地主机</li>
 </ul>
 <blockquote>
 <p>127.0.01:本机地址，用于测试</p>
@@ -667,12 +667,12 @@ IP地址
 <hr>
 <h2 id="InetSocketAddress类"><a href="#InetSocketAddress类" class="headerlink" title="InetSocketAddress类"></a>InetSocketAddress类</h2><p>端口类：<strong>InetSocketAddress</strong>类</p>
 <ul>
-<li><strong>InetSocketAddress（InetAddress addr, int port)</strong>:根据<strong>IP</strong>地址和端口号创建套接字地址</li>
-<li><strong>InetSocketAddress（int port)</strong>:创建套接字地址，其中<strong>IP</strong>地址为通配符，端口号为指定值</li>
-<li><strong>InetSocketAddress(String hostname, int port)</strong>:根据主机名和端口号创建套接字地址</li>
-<li><strong>InetAddress getAddress（）</strong>:获取<strong>InetAddress</strong></li>
-<li><strong>String getHostName()</strong>:获取<strong>hostname</strong></li>
-<li><strong>int getPort()</strong>:获取端口号</li>
+<li><strong><code>InetSocketAddress(InetAddress addr, int port)</code></strong>:根据<strong>IP</strong>地址和端口号创建套接字地址</li>
+<li><strong><code>InetSocketAddress(int port)</code></strong>:创建套接字地址，其中<strong>IP</strong>地址为通配符，端口号为指定值</li>
+<li><strong><code>InetSocketAddress(String hostname, int port)</code></strong>:根据主机名和端口号创建套接字地址</li>
+<li><strong><code>InetAddress getAddress()</code></strong>:获取<strong>InetAddress</strong></li>
+<li><strong><code>String getHostName()</code></strong>:获取<strong>hostname</strong></li>
+<li><strong><code>int getPort()</code></strong>:获取端口号</li>
 </ul>
 <hr>
 
@@ -1167,7 +1167,7 @@ IP地址
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.png" class="responsive-img" alt="LeetCode-53.最大子序和">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="LeetCode-53.最大子序和">
                         
                         <span class="card-title">LeetCode-53.最大子序和</span>
                     </div>
@@ -1220,7 +1220,7 @@ IP地址
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Git三剑客">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Git三剑客">
                         
                         <span class="card-title">Git三剑客</span>
                     </div>
@@ -1421,7 +1421,7 @@ IP地址
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">19.4k</span>
+            <span class="white-color">23.2k</span>
             
 
             <br>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ohlselfspace.github.io/"/>
-  <updated>2020-02-17T13:42:14.435Z</updated>
+  <updated>2020-02-19T07:10:15.636Z</updated>
   <id>http://ohlselfspace.github.io/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JDBC笔记</title>
+    <link href="http://ohlselfspace.github.io/2020/02/18/jdbc-bi-ji/"/>
+    <id>http://ohlselfspace.github.io/2020/02/18/jdbc-bi-ji/</id>
+    <published>2020-02-18T03:40:31.000Z</published>
+    <updated>2020-02-19T07:10:15.636Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;JDBC学习笔记&quot;&gt;&lt;a href=&quot;#JDBC学习笔记&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://ohlselfspace.github.io/categories/Java/"/>
+    
+      <category term="JDBC" scheme="http://ohlselfspace.github.io/categories/Java/JDBC/"/>
+    
+    
+      <category term="JDBC" scheme="http://ohlselfspace.github.io/tags/JDBC/"/>
+    
+      <category term="MySQL" scheme="http://ohlselfspace.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>遇见MySQL</title>
     <link href="http://ohlselfspace.github.io/2020/02/16/yu-jian-mysql/"/>
     <id>http://ohlselfspace.github.io/2020/02/16/yu-jian-mysql/</id>
     <published>2020-02-16T05:33:54.000Z</published>
-    <updated>2020-02-17T13:42:14.435Z</updated>
+    <updated>2020-02-19T08:05:09.888Z</updated>
     
     <summary type="html">
     
@@ -105,37 +135,11 @@
   </entry>
   
   <entry>
-    <title>Java注解</title>
-    <link href="http://ohlselfspace.github.io/2020/02/11/java-zhu-jie/"/>
-    <id>http://ohlselfspace.github.io/2020/02/11/java-zhu-jie/</id>
-    <published>2020-02-11T12:20:21.000Z</published>
-    <updated>2020-02-11T12:31:38.737Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Java注解&quot;&gt;&lt;a href=&quot;#Java注解&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="http://ohlselfspace.github.io/categories/Java/"/>
-    
-    
-      <category term="注解" scheme="http://ohlselfspace.github.io/tags/%E6%B3%A8%E8%A7%A3/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Java引用探析</title>
     <link href="http://ohlselfspace.github.io/2020/02/11/java-yin-yong-tan-xi/"/>
     <id>http://ohlselfspace.github.io/2020/02/11/java-yin-yong-tan-xi/</id>
     <published>2020-02-11T09:05:55.000Z</published>
-    <updated>2020-02-11T10:36:56.535Z</updated>
+    <updated>2020-02-19T07:32:37.714Z</updated>
     
     <summary type="html">
     
@@ -205,7 +209,7 @@
     <link href="http://ohlselfspace.github.io/2020/02/10/qian-tan-java-fan-she-ji-zhi/"/>
     <id>http://ohlselfspace.github.io/2020/02/10/qian-tan-java-fan-she-ji-zhi/</id>
     <published>2020-02-10T02:19:37.000Z</published>
-    <updated>2020-02-10T08:01:57.977Z</updated>
+    <updated>2020-02-19T07:51:34.061Z</updated>
     
     <summary type="html">
     
@@ -287,7 +291,7 @@
     <link href="http://ohlselfspace.github.io/2020/02/06/wang-luo-bian-cheng/"/>
     <id>http://ohlselfspace.github.io/2020/02/06/wang-luo-bian-cheng/</id>
     <published>2020-02-06T02:47:34.000Z</published>
-    <updated>2020-02-12T05:11:35.619Z</updated>
+    <updated>2020-02-19T07:56:06.602Z</updated>
     
     <summary type="html">
     
@@ -319,7 +323,7 @@
     <link href="http://ohlselfspace.github.io/2020/02/02/git/"/>
     <id>http://ohlselfspace.github.io/2020/02/02/git/</id>
     <published>2020-02-02T14:30:09.000Z</published>
-    <updated>2020-02-04T11:49:25.612Z</updated>
+    <updated>2020-02-19T07:26:56.232Z</updated>
     
     <summary type="html">
     
