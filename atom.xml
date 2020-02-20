@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ohlselfspace.github.io/"/>
-  <updated>2020-02-19T07:10:15.636Z</updated>
+  <updated>2020-02-20T13:15:36.516Z</updated>
   <id>http://ohlselfspace.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MyBatis小记</title>
+    <link href="http://ohlselfspace.github.io/2020/02/19/mybatis-xiao-ji/"/>
+    <id>http://ohlselfspace.github.io/2020/02/19/mybatis-xiao-ji/</id>
+    <published>2020-02-19T12:24:08.000Z</published>
+    <updated>2020-02-20T13:15:36.516Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;MyBatis小记&quot;&gt;&lt;a href=&quot;#MyBatis小记&quot; class=&quot;headerlink&quot; title=&quot;MyBatis小记&quot;&gt;&lt;/a&gt;&lt;strong&gt;MyBatis&lt;/strong&gt;小记&lt;/h1&gt;&lt;h2 id=&quot;1-MyBatis初见&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="MyBatis" scheme="http://ohlselfspace.github.io/categories/MyBatis/"/>
+    
+    
+      <category term="MyBatis" scheme="http://ohlselfspace.github.io/tags/MyBatis/"/>
+    
+  </entry>
   
   <entry>
     <title>JDBC笔记</title>
