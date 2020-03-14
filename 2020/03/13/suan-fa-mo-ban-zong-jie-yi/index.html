@@ -4,16 +4,16 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Maven学习笔记, JAVA MATLAB 高等代数 数学分析 PYTHON">
+    <meta name="keywords" content="算法模板总结一, JAVA MATLAB 高等代数 数学分析 PYTHON">
     <meta name="baidu-site-verification" content="C4g8dF9DLA">
     <meta name="google-site-verification" content="C4g8dF9DLA">
     <meta name="360-site-verification" content="C4g8dF9DLA">
-    <meta name="description" content="Maven学习笔记1.Maven介绍以及环境搭建Maven是基于项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建、报告和文档的软件项目管理工具。
-首先到官网下载Apache Maven 3.6.3版本
+    <meta name="description" content="
+前言学了半学期的算法分析，但是真正用到的时候才发现学的东西很多都牢固呀。。。
+比如写个N皇后问题，回溯法都忘了。（还不是因为菜呀！）
+所以，现在重新拾起算法，总结场用模板（发现一个学习算法不错的地方传送门），开始潜心修炼了。。。
 
-在本地下面解压
-
-得到">
+排序快">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +21,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Maven学习笔记 | Bouncy丶Knight</title>
+    <title>算法模板总结一 | Bouncy丶Knight</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -295,13 +295,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Maven学习笔记
+                        算法模板总结一
                     </div>
                 </div>
             </div>
@@ -412,8 +412,12 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Maven/" target="_blank">
-                            <span class="chip bg-color">Maven</span>
+                        <a href="/tags/排序/" target="_blank">
+                            <span class="chip bg-color">排序</span>
+                        </a>
+                        
+                        <a href="/tags/二分法/" target="_blank">
+                            <span class="chip bg-color">二分法</span>
                         </a>
                         
                     </div>
@@ -424,8 +428,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Maven/" class="post-category" target="_blank">
-                            Maven
+                        <a href="/categories/Algorithm/" class="post-category" target="_blank">
+                            Algorithm
                         </a>
                         
                     </div>
@@ -436,7 +440,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-10
+                    2020-03-13
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -450,14 +454,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    986
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    6 分
                 </div>
                 
                 
@@ -473,188 +477,158 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Maven学习笔记"><a href="#Maven学习笔记" class="headerlink" title="Maven学习笔记"></a>Maven学习笔记</h1><h2 id="1-Maven介绍以及环境搭建"><a href="#1-Maven介绍以及环境搭建" class="headerlink" title="1.Maven介绍以及环境搭建"></a>1.Maven介绍以及环境搭建</h2><p><strong>Maven</strong>是基于项目对象模型(<strong>POM</strong>)，可以通过一小段描述信息来管理项目的构建、报告和文档的软件项目管理工具。</p>
-<p>首先到<a href="http://Maven.apache.org/" target="_blank" rel="noopener">官网</a>下载<strong>Apache Maven 3.6.3</strong>版本</p>
-<p><img src="0.png" alt></p>
-<p>在本地下面解压</p>
-<p><img src="1.png" alt></p>
-<p>得到四个文件夹：</p>
-<ul>
-<li><strong>bin</strong>目录包含<strong>Maven</strong>的运行脚本</li>
-<li><strong>boot</strong>目录包含一个类加载器的框架</li>
-<li><strong>conf</strong>是配置文件目录</li>
-<li><strong>lib</strong>是<strong>Maven</strong>依赖的类库</li>
-</ul>
-<p>接下来配置环境变量，在系统变量中设置变量名和变量值，变量值为<strong>Maven</strong>安装目录</p>
-<p><img src="2.png" alt></p>
-<p>接下来在环境变量<strong>path</strong>中添加以下信息</p>
-<p><img src="3.png" alt></p>
-<p>验证<strong>Maven</strong>是否安装成功，打开cmd命令窗口：输入<strong>mvn -v</strong>。如果得到以下配置信息，则说明安装成功。</p>
-<p><img src="4.png" alt></p>
+                <hr>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>学了半学期的算法分析，但是真正用到的时候才发现学的东西很多都牢固呀。。。</p>
+<p>比如写个<strong>N</strong>皇后问题，回溯法都忘了。（还不是因为菜呀！）</p>
+<p>所以，现在重新拾起算法，总结场用模板（发现一个学习算法不错的地方<a href="https://www.acwing.com/about/" target="_blank" rel="noopener">传送门</a>），开始潜心修炼了。。。</p>
 <hr>
-<h2 id="2-Maven结构以及案例"><a href="#2-Maven结构以及案例" class="headerlink" title="2.Maven结构以及案例"></a>2.Maven结构以及案例</h2><p><strong>Maven</strong>默认的文件结构为：</p>
-<p><img src="5.png" alt></p>
-<p>按照文件结构创建<strong>HelloWorld</strong>类，以及<strong>HelloWorldTest</strong>测试类</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>model<span class="token punctuation">;</span>
+<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>快速排序作为经典的排序算法，基本思想源于分治法，其平均时间复杂度可以达到$O(nlogn)$，最坏时间复杂度为$O(n^2)$。</p>
+<p>算法步骤：</p>
+<ul>
+<li>首先对于数组<strong>q[0~n-1]</strong>，分别设置指针<strong>i,j</strong>。其中指针<strong>i</strong>指向数组下标-1的位置，指针<strong>j</strong>指向数组下标n的位置。</li>
+<li>选定一个数<strong>temp</strong>作为标准，当<strong>i</strong>向右移，<strong>j</strong>向左移的过程中，指针<strong>i</strong>停留在大于等于<strong>temp</strong>的位置，指针<strong>j</strong>停留在小于等于<strong>temp</strong>的位置，这样就可以保证指针<strong>i</strong>左边的元素都是小于<strong>temp</strong>的，指针<strong>j</strong>右边的元素都是大于<strong>temp</strong>的。然后当<strong>i&lt;j</strong>时，交换<strong>q[i]和去q[j]</strong>。</li>
+<li>递归调用左右区间</li>
+</ul>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">quick_sort</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span>q <span class="token punctuation">,</span> <span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>l <span class="token operator">>=</span> r<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//递归调用时边界条件</span>
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span><span class="token punctuation">{</span>
-    <span class="token keyword">public</span> String <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token string">"HelloWorld"</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> temp <span class="token operator">=</span> q<span class="token punctuation">[</span>l <span class="token operator">+</span> r <span class="token operator">>></span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> i <span class="token operator">=</span> l <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> j <span class="token operator">=</span> r <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//选取中间的数防止边界溢出和加深递归栈的深度</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>i <span class="token operator">&lt;</span> j<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">do</span> i<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token keyword">while</span><span class="token punctuation">(</span>q<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> temp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">do</span> j<span class="token operator">--</span><span class="token punctuation">;</span> <span class="token keyword">while</span><span class="token punctuation">(</span>q<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> temp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>i <span class="token operator">&lt;</span> j<span class="token punctuation">)</span> <span class="token function">swap</span><span class="token punctuation">(</span>q<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> q<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>model<span class="token punctuation">;</span>
 
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>junit<span class="token punctuation">.</span>*<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>junit<span class="token punctuation">.</span>Assert<span class="token punctuation">.</span>*<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//递归调用</span>
+    <span class="token function">quick_sort</span><span class="token punctuation">(</span>q<span class="token punctuation">,</span> l<span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">quick_sort</span><span class="token punctuation">(</span>q<span class="token punctuation">,</span> j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>tips:</p>
+<p>注意上面递归调用时，存在两种调用情况容易发生错误：</p>
+<ul>
+<li><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*
+    这里temp不能取q[r]，会发生死循环
+    样例：1 2
+    当i到达下标1的时候，j也在下标1。此时进行递归调用
+    quick_sort(q, l, j) ——>依旧调用的是[0,1]区间发生死循环
+*/</span>
+<span class="token function">quick_sort</span><span class="token punctuation">(</span>q<span class="token punctuation">,</span> l<span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">quick_sort</span><span class="token punctuation">(</span>q<span class="token punctuation">,</span> j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorldTest</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//使用junit框架测试</span>
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        Assert<span class="token punctuation">.</span><span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token string">"HelloWorld"</span><span class="token punctuation">,</span><span class="token keyword">new</span> <span class="token class-name">HelloWorld</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/*
+    这里temp不能取q[l]，情况如下文相同
+*/</span>
+<span class="token function">quick_sort</span><span class="token punctuation">(</span>q<span class="token punctuation">,</span> l<span class="token punctuation">,</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">quick_sort</span><span class="token punctuation">(</span>q<span class="token punctuation">,</span> i<span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//为了避免以上情况发生，所以取temp为q[l + r >> 1]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>归并排序的思想基于分治法，时间复杂度$O(nlogn)$。</p>
+<p>算法步骤：</p>
+<ul>
+<li>首先确定分界点<strong>mid=（r+l）/2</strong>，把区间划分为左右两个区间。</li>
+<li>对左右两个区间分别递归进行划分，划分的左右两个区间的元素一定有序。</li>
+<li>合并，采用双指针算法对左右区间进行扫描，比较两个指针指向的元素，把较小的元素加入辅助数组。直到其中一个区间被扫描完毕，然后把另一个区间加到辅助数组的末尾即可。</li>
+</ul>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">int</span> temp<span class="token punctuation">[</span>r <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//辅助数组</span>
+<span class="token keyword">void</span> <span class="token function">merge_sort</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span>q<span class="token punctuation">,</span> <span class="token keyword">int</span> l <span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>l <span class="token operator">>=</span> r<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//划分</span>
+    <span class="token keyword">int</span> mid <span class="token operator">=</span> r <span class="token operator">+</span> l <span class="token operator">>></span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token function">merge_sort</span><span class="token punctuation">(</span>q<span class="token punctuation">,</span> l <span class="token punctuation">,</span> mid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">merge_sort</span><span class="token punctuation">(</span>q<span class="token punctuation">,</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//合并</span>
+    <span class="token keyword">int</span> k<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> i <span class="token operator">=</span> l<span class="token punctuation">,</span> j <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> mid <span class="token operator">&amp;&amp;</span> j <span class="token operator">&lt;=</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>q<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> q<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> temp<span class="token punctuation">[</span>k <span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> q<span class="token punctuation">[</span>i <span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span> temp<span class="token punctuation">[</span>k <span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> q<span class="token punctuation">[</span>j <span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>配置<strong>Maven01</strong>目录下配置<strong>pom.xml</strong>文件</p>
-<pre class="line-numbers language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> mid <span class="token punctuation">)</span> temp<span class="token punctuation">[</span>k <span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> q<span class="token punctuation">[</span>i <span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>j <span class="token operator">&lt;=</span> r<span class="token punctuation">)</span> temp<span class="token punctuation">[</span>k <span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> q<span class="token punctuation">[</span>j <span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://Maven.apache.org/POM/4.0.0<span class="token punctuation">"</span></span>
-<span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
-<span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://Maven.apache.org/POM/4.0.0
-http://Maven.apache.org/Maven-v4_0_0.xsd<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>modelVersion</span><span class="token punctuation">></span></span>4.0.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>modelVersion</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">//把辅助的值赋值给原数组q</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> l<span class="token punctuation">,</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> r<span class="token punctuation">;</span> i <span class="token operator">++</span> <span class="token punctuation">,</span> j <span class="token operator">++</span><span class="token punctuation">)</span> q<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h1 id="二分法"><a href="#二分法" class="headerlink" title="二分法"></a>二分法</h1><h2 id="整数二分"><a href="#整数二分" class="headerlink" title="整数二分"></a>整数二分</h2><p>二分的本质是根据具体的问题将区间<strong>[l,r]</strong>分为两半，其中左边部分不满足某种性质，而右边部分满足某种性质，所以通过二分能够找到两个区间的分界点。通常情况下，整数二分将区间划分为左边部分是<strong>[l,mid]</strong>，右边部分是<strong>[mid+1,r]</strong>进行递归处理。</p>
+<p><strong>算法模板1（找到左边部分的边界）：</strong></p>
+<ul>
+<li>首先让<strong>mid=（l+r+1）/2</strong>，检查<strong>mid</strong>是否满足左边部分的性质。</li>
+<li>如果为真，那么说明左边部分的边界一定在<strong>mid</strong>右边（包括<strong>mid</strong>），此时更新<strong>l=mid</strong>。反之，如果为假的话，说明<strong>mid</strong>不满足左边部分的性质，此时左边部分的边界一定在<strong>mid</strong>左边（不包括<strong>mid</strong>），此时更新<strong>r=mid-1</strong>。</li>
+<li>重复更新<strong>mid</strong>，直到<strong>l&gt;=r</strong>跳出循环，此时左边部分的边界在<strong>l</strong>。</li>
+</ul>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*
+    在寻找左边部分的边界时，需要注意：如果mid=(l+r)/2,当l=r-1时，r与l相邻，
+    此时如果满足性质的话，mid=l,l=mid -->此时就会陷入死循环
+    所以应该上取整，取mid=(r+l+1)/2
+*/</span>
+<span class="token keyword">int</span> <span class="token function">binary1</span><span class="token punctuation">(</span><span class="token keyword">int</span> l <span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>l <span class="token operator">&lt;</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> mid <span class="token operator">=</span> l <span class="token operator">+</span> r <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">>></span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">check</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span><span class="token punctuation">)</span> l <span class="token operator">=</span> mid<span class="token punctuation">;</span>
+        <span class="token keyword">else</span> r <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> l<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>算法模板2（找到右边部分的边界）：</strong></p>
+<ul>
+<li>首先让<strong>mid=（l+r）/2</strong>，检查<strong>mid</strong>是否满足右边部分的性质。</li>
+<li>如果为真，那么说明右边部分的边界一定在<strong>mid</strong>左边（包括<strong>mid</strong>），此时更新<strong>r=mid</strong>。反之，如果为假的话，说明<strong>mid</strong>不满足右边部分的性质，此时右边部分的边界一定在<strong>mid</strong>右边（不包括<strong>mid</strong>），此时更新<strong>l=mid+1</strong>。</li>
+<li>重复更新<strong>mid</strong>，知道<strong>l&gt;=r</strong>跳出循环，此时右边部分的边界在<strong>l</strong>。</li>
+</ul>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">binary2</span><span class="token punctuation">(</span><span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>l <span class="token operator">&lt;</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> mid <span class="token operator">=</span> l <span class="token operator">+</span> r <span class="token operator">>></span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">check</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span><span class="token punctuation">)</span> r <span class="token operator">=</span> mid<span class="token punctuation">;</span>
+        <span class="token keyword">else</span> l <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> l<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>tips:</p>
+<p>整数二分的关键在于区间边界的处理。</p>
+</blockquote>
+<h3 id="案例-数的范围"><a href="#案例-数的范围" class="headerlink" title="案例 数的范围"></a>案例 数的范围</h3><p>给定一个按照升序排序的长度为<strong>n</strong>的整数数组，进行查询，返回查询元素的起始位置和终止位置。</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//核心逻辑</span>
 
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>com-model<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>0.0.1SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">//起始位置-->寻找右边部分的边界(右边边界的性质是大于等于x)</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>l <span class="token operator">&lt;</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> mid <span class="token operator">=</span> l <span class="token operator">+</span> r <span class="token operator">>></span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>q<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">>=</span> x<span class="token punctuation">)</span> r <span class="token operator">=</span> mid<span class="token punctuation">;</span>
+    <span class="token keyword">else</span> l <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>junit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>junit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>4.10<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>打开<strong>cmd</strong>命令窗口，<strong>cd</strong>到<strong>Maven01</strong>目录下，输入命令：<strong>mvn compile</strong></p>
-<p><img src="6.png" alt></p>
-<p>下面测试一下，输入<strong>mvn test</strong></p>
-<p><img src="7.png" alt></p>
-<p>输入<strong>mvn package</strong>，此时在<strong>Maven01</strong>目录下生成一个<strong>target</strong>文件夹</p>
-<p><img src="8.png" alt></p>
-<p><strong>常用命令总结</strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">命令</th>
-<th align="center">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">mvn eclipse:eclipse</td>
-<td align="center">生成eclipse项目结构</td>
-</tr>
-<tr>
-<td align="center">mvn idea:idea</td>
-<td align="center">生成idea项目结构</td>
-</tr>
-<tr>
-<td align="center">mvn compile</td>
-<td align="center">编译源代码</td>
-</tr>
-<tr>
-<td align="center">mvn test</td>
-<td align="center">运行测试代码</td>
-</tr>
-<tr>
-<td align="center">mvn package</td>
-<td align="center">打包项目</td>
-</tr>
-<tr>
-<td align="center">mvn clean</td>
-<td align="center">清除项目</td>
-</tr>
-<tr>
-<td align="center">mvn -e</td>
-<td align="center">查看错误详细信息</td>
-</tr>
-<tr>
-<td align="center">mvn install</td>
-<td align="center">安装jar包到本地仓库中</td>
-</tr>
-</tbody></table>
+<span class="token comment" spellcheck="true">//x不存在时，二分的位置为从左往右第一个大于等于x的数</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>q<span class="token punctuation">[</span>l<span class="token punctuation">]</span> <span class="token operator">!=</span> x<span class="token punctuation">)</span> <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"no exist!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">else</span><span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"起始边界：%d"</span><span class="token punctuation">,</span>l<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//终止位置-->寻找左边部分的边界(左边边界的性质是小于等于x)</span>
+    <span class="token keyword">int</span> l <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> r <span class="token operator">=</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>l <span class="token operator">&lt;</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> mid <span class="token operator">=</span> l <span class="token operator">+</span> r <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">>></span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>q<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> x<span class="token punctuation">)</span> l <span class="token operator">=</span> mid<span class="token punctuation">;</span>
+        <span class="token keyword">else</span> r <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"终止边界：%d"</span><span class="token punctuation">,</span>l<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
-<h2 id="3-Maven自动创建目录骨架"><a href="#3-Maven自动创建目录骨架" class="headerlink" title="3.Maven自动创建目录骨架"></a>3.Maven自动创建目录骨架</h2><p><strong>Archetype</strong>是<strong>Maven</strong>项目的模板工具包</p>
-<p><strong>Maven Archetype</strong>由下面几个模板组成：</p>
-<ul>
-<li>maven-archetype-plugin:Archetype插件</li>
-<li>archetype-packaging:用于描述archetype的生命周期与构建的项目软件包</li>
-<li>archetype-models:用于描述类与引用</li>
-<li>archetype-common:核心类</li>
-<li>archetype-testing:用于测试Maven Archetype的内部组件</li>
-</ul>
-<p>使用<strong>Maven archetype:generate</strong>来创建项目骨架</p>
-<pre class="line-numbers language-cmd"><code class="language-cmd">mvn archetype:generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>依次创建项目的<strong>groupId,artifaceId,version,package</strong></p>
-<pre class="line-numbers language-cdm"><code class="language-cdm">Confirm properties configuration:
-groupId: code.Maven02
-artifactId: Maven02-service
-version: 1.0.0
-package: code.Maven02.service<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>创建目录的两种方式</strong>:</p>
-<ul>
-<li><p>archetype:generate 按照提示进行选择</p>
-</li>
-<li><p>archetype:generate -DgroupId=组织名,公司网址的反写+项目名</p>
-<p>​                                    -DartifactId=项目名-模块名</p>
-<p>​                                    -Dversion=版本号</p>
-<p>​                                    -Dpackage=代码所存在的包名</p>
-</li>
-</ul>
-<hr>
-<h2 id="4-Maven中的坐标和仓库"><a href="#4-Maven中的坐标和仓库" class="headerlink" title="4.Maven中的坐标和仓库"></a>4.Maven中的坐标和仓库</h2><p><strong>Maven</strong>中任何构件都是由坐标标识</p>
-<p>仓库：</p>
-<ul>
-<li>本地仓库</li>
-<li>远程仓库</li>
-</ul>
-<p>本地仓库位置：C:\Users\logic.m2\repository     logic为本机用户名</p>
-<p>更改本地仓库默认位置：</p>
-<p>在新建一个<strong>repo</strong>文件夹，在D:\maven\apache-maven-3.6.3\conf下修改<strong>settings.xml</strong></p>
-<p><img src="9.png" alt></p>
-<hr>
-<h2 id="5-IDEA中创建Maven项目"><a href="#5-IDEA中创建Maven项目" class="headerlink" title="5.IDEA中创建Maven项目"></a>5.IDEA中创建Maven项目</h2><p>首先打开<strong>IDEA</strong>，点击<strong>setting</strong>，修改<strong>Maven</strong>仓库和配置信息</p>
-<p><img src="10.png" alt></p>
-<p>新建项目，打开<strong>Maven</strong>窗口配置信息</p>
-<p><img src="11.png" alt></p>
-<p><img src="12.png" alt></p>
-<p>第一次创建<strong>Maven</strong>项目要配置相关信息，所以要等待一会。</p>
-<hr>
-<h2 id="6-Maven的生命周期"><a href="#6-Maven的生命周期" class="headerlink" title="6.Maven的生命周期"></a>6.Maven的生命周期</h2><p>完整的项目构建过程包括：</p>
-<p>清理，编译，测试，打包，集成测试，验证，部署</p>
-<p><strong>Maven</strong>生命周期：</p>
-<ul>
-<li><p><strong>clean</strong> 清理项目</p>
-<ul>
-<li><strong>pre-clean</strong> 执行清理前的工作</li>
-<li><strong>clean</strong>清理上一次构建生成的所有文件</li>
-</ul>
-</li>
-<li><p><strong>default</strong>(最核心)构建项目</p>
-<ul>
-<li><em><em>compile  test  package  install  </em></em></li>
-</ul>
-</li>
-<li><p><strong>site</strong> 生成项目站点</p>
-<ul>
-<li><strong>pre-site</strong> 在生成项目站点前要完成的工作</li>
-<li><strong>site</strong> 生成项目的站点文档</li>
-<li><strong>post-site</strong> 在生成项目站点后要完成的工作</li>
-<li><strong>site-deploy</strong> 发布生成的站点到服务器</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="7-pom-xml解析"><a href="#7-pom-xml解析" class="headerlink" title="7.pom.xml解析"></a>7.pom.xml解析</h2><p><img src="13.png" alt></p>
+<h2 id="小数二分"><a href="#小数二分" class="headerlink" title="小数二分"></a>小数二分</h2><p>小数二分问题比较简单，没有处理边界的问题。</p>
+<p>算法模板：</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">double</span> <span class="token function">binary3</span><span class="token punctuation">(</span><span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">double</span> eps <span class="token operator">=</span> <span class="token number">1e-6</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>r <span class="token operator">-</span> l <span class="token operator">></span> eps<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">double</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>l <span class="token operator">+</span> r<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">check</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span><span class="token punctuation">)</span> r <span class="token operator">=</span> mid<span class="token punctuation">;</span>
+        <span class="token keyword">else</span> l <span class="token operator">=</span> mid<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> l<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 
             </div>
@@ -814,9 +788,9 @@ package: code.Maven02.service<span aria-hidden="true" class="line-numbers-rows">
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Maven学习笔记》
+                    《算法模板总结一》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/10/maven-xue-xi-bi-ji/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/03/13/suan-fa-mo-ban-zong-jie-yi/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Bouncy丶Knight
             </a> 采用
@@ -857,7 +831,7 @@ package: code.Maven02.service<span aria-hidden="true" class="line-numbers-rows">
         repo: 'ohlselfspace.github.io',
         owner: 'ohlselfspace',
         admin: "ohlselfspace",
-        id: '2020/02/10/maven-xue-xi-bi-ji/',
+        id: '2020/03/13/suan-fa-mo-ban-zong-jie-yi/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1140,46 +1114,52 @@ package: code.Maven02.service<span aria-hidden="true" class="line-numbers-rows">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/02/11/springboot-xue-xi-bi-ji/">
+                <a href="/2020/03/13/suan-fa-mo-ban-zong-jie-yi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.png" class="responsive-img" alt="SpringBoot学习笔记">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="算法模板总结一">
                         
-                        <span class="card-title">SpringBoot学习笔记</span>
+                        <span class="card-title">算法模板总结一</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SpringBoot学习笔记
+                            基础算法模板总结一
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category" target="_blank">
-                                    Java
+                            <a href="/categories/Algorithm/" class="post-category" target="_blank">
+                                    Algorithm
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SpringBoot/" target="_blank">
-                        <span class="chip bg-color">SpringBoot</span>
+                    <a href="/tags/排序/" target="_blank">
+                        <span class="chip bg-color">排序</span>
+                    </a>
+                    
+                    <a href="/tags/二分法/" target="_blank">
+                        <span class="chip bg-color">二分法</span>
                     </a>
                     
                 </div>
@@ -1193,31 +1173,31 @@ package: code.Maven02.service<span aria-hidden="true" class="line-numbers-rows">
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/10/qian-tan-java-fan-she-ji-zhi/">
+                <a href="/2020/02/19/mybatis-xiao-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.png" class="responsive-img" alt="浅谈Java反射机制">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="MyBatis小记">
                         
-                        <span class="card-title">浅谈Java反射机制</span>
+                        <span class="card-title">MyBatis小记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            浅谈Java反射机制，
+                            MyBatis小记
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-10
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category" target="_blank">
-                                    Java
+                            <a href="/categories/MyBatis/" class="post-category" target="_blank">
+                                    MyBatis
                                 </a>
                             
                             
@@ -1227,8 +1207,8 @@ package: code.Maven02.service<span aria-hidden="true" class="line-numbers-rows">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/反射/" target="_blank">
-                        <span class="chip bg-color">反射</span>
+                    <a href="/tags/MyBatis/" target="_blank">
+                        <span class="chip bg-color">MyBatis</span>
                     </a>
                     
                 </div>
