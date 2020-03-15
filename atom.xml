@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ohlselfspace.github.io/"/>
-  <updated>2020-03-15T11:41:26.447Z</updated>
+  <updated>2020-03-15T14:42:06.977Z</updated>
   <id>http://ohlselfspace.github.io/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>离散化</title>
+    <link href="http://ohlselfspace.github.io/2020/03/15/chi-san-hua/"/>
+    <id>http://ohlselfspace.github.io/2020/03/15/chi-san-hua/</id>
+    <published>2020-03-15T12:19:29.000Z</published>
+    <updated>2020-03-15T14:42:06.977Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;离散化&quot;&gt;&lt;a href=&quot;#离散化&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://ohlselfspace.github.io/categories/Algorithm/"/>
+    
+    
+      <category term="离散化" scheme="http://ohlselfspace.github.io/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>位运算</title>
+    <link href="http://ohlselfspace.github.io/2020/03/15/wei-yun-suan/"/>
+    <id>http://ohlselfspace.github.io/2020/03/15/wei-yun-suan/</id>
+    <published>2020-03-15T11:53:13.000Z</published>
+    <updated>2020-03-15T12:18:19.387Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;位运算&quot;&gt;&lt;a href=&quot;#位运算&quot; class=&quot;headerlink&quot; title=&quot;位运算&quot;&gt;&lt;/a&gt;位运算&lt;/h1&gt;&lt;p&gt;位运算常用的两种操作：&lt;/p&gt;
+&lt;h2 id=&quot;求n的二进制第k位数字&quot;&gt;&lt;a href=&quot;#求n的二进制第k位数字&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://ohlselfspace.github.io/categories/Algorithm/"/>
+    
+    
+      <category term="位运算" scheme="http://ohlselfspace.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
   
   <entry>
     <title>双指针</title>
@@ -513,66 +566,6 @@
       <category term="线程" scheme="http://ohlselfspace.github.io/tags/%E7%BA%BF%E7%A8%8B/"/>
     
       <category term="同步" scheme="http://ohlselfspace.github.io/tags/%E5%90%8C%E6%AD%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>浅析Exception和Error</title>
-    <link href="http://ohlselfspace.github.io/2020/02/01/qian-xi-exception-he-error/"/>
-    <id>http://ohlselfspace.github.io/2020/02/01/qian-xi-exception-he-error/</id>
-    <published>2020-02-01T03:33:27.000Z</published>
-    <updated>2020-02-16T05:39:27.892Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;JAVA异常层次结构&quot;&gt;&lt;a href=&quot;#JAVA异常层次结构&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="http://ohlselfspace.github.io/categories/Java/"/>
-    
-    
-      <category term="JAVA异常" scheme="http://ohlselfspace.github.io/tags/JAVA%E5%BC%82%E5%B8%B8/"/>
-    
-      <category term="捕获异常" scheme="http://ohlselfspace.github.io/tags/%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/"/>
-    
-      <category term="Throwable" scheme="http://ohlselfspace.github.io/tags/Throwable/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2019年总结</title>
-    <link href="http://ohlselfspace.github.io/2020/01/30/2019-nian-zong-jie/"/>
-    <id>http://ohlselfspace.github.io/2020/01/30/2019-nian-zong-jie/</id>
-    <published>2020-01-30T09:59:28.000Z</published>
-    <updated>2020-02-11T09:25:33.335Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;middle&quot;&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://ohlselfspace.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="爱情" scheme="http://ohlselfspace.github.io/tags/%E7%88%B1%E6%83%85/"/>
-    
-      <category term="考研" scheme="http://ohlselfspace.github.io/tags/%E8%80%83%E7%A0%94/"/>
-    
-      <category term="总结" scheme="http://ohlselfspace.github.io/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
