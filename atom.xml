@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ohlselfspace.github.io/"/>
-  <updated>2020-03-15T06:06:01.463Z</updated>
+  <updated>2020-03-15T08:42:19.350Z</updated>
   <id>http://ohlselfspace.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>算法模板二</title>
-    <link href="http://ohlselfspace.github.io/2020/03/15/suan-fa-mo-ban-zong-jie-er/"/>
-    <id>http://ohlselfspace.github.io/2020/03/15/suan-fa-mo-ban-zong-jie-er/</id>
+    <title>前缀和与差分</title>
+    <link href="http://ohlselfspace.github.io/2020/03/15/qian-zhui-he-yu-chai-fen/"/>
+    <id>http://ohlselfspace.github.io/2020/03/15/qian-zhui-he-yu-chai-fen/</id>
+    <published>2020-03-15T06:11:33.000Z</published>
+    <updated>2020-03-15T08:42:19.350Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;前缀和&quot;&gt;&lt;a href=&quot;#前缀和&quot; class=&quot;headerlink&quot; title=&quot;前缀和&quot;&gt;&lt;/a&gt;前缀和&lt;/h1&gt;&lt;h2 id=&quot;一维前缀和&quot;&gt;&lt;a href=&quot;#一维前缀和&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://ohlselfspace.github.io/categories/Algorithm/"/>
+    
+    
+      <category term="前缀和" scheme="http://ohlselfspace.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/"/>
+    
+      <category term="差分" scheme="http://ohlselfspace.github.io/tags/%E5%B7%AE%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高精度</title>
+    <link href="http://ohlselfspace.github.io/2020/03/15/gao-jing-du/"/>
+    <id>http://ohlselfspace.github.io/2020/03/15/gao-jing-du/</id>
     <published>2020-03-15T01:11:25.000Z</published>
-    <updated>2020-03-15T06:06:01.463Z</updated>
+    <updated>2020-03-15T06:09:41.896Z</updated>
     
     <summary type="html">
     
@@ -43,11 +71,11 @@
   </entry>
   
   <entry>
-    <title>算法模板总结一</title>
-    <link href="http://ohlselfspace.github.io/2020/03/13/suan-fa-mo-ban-zong-jie-yi/"/>
-    <id>http://ohlselfspace.github.io/2020/03/13/suan-fa-mo-ban-zong-jie-yi/</id>
+    <title>排序与二分</title>
+    <link href="http://ohlselfspace.github.io/2020/03/13/pai-xu-yu-er-fen/"/>
+    <id>http://ohlselfspace.github.io/2020/03/13/pai-xu-yu-er-fen/</id>
     <published>2020-03-13T13:27:30.000Z</published>
-    <updated>2020-03-14T15:27:10.416Z</updated>
+    <updated>2020-03-15T06:10:34.919Z</updated>
     
     <summary type="html">
     
