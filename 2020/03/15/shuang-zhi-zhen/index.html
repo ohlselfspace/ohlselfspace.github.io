@@ -4,11 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="浅谈Java反射机制, JAVA MATLAB 高等代数 数学分析 PYTHON">
+    <meta name="keywords" content="双指针, JAVA MATLAB 高等代数 数学分析 PYTHON">
     <meta name="baidu-site-verification" content="C4g8dF9DLA">
     <meta name="google-site-verification" content="C4g8dF9DLA">
     <meta name="360-site-verification" content="C4g8dF9DLA">
-    <meta name="description" content="反射反射是指能够分析类能力的程序，就是把java类中的各种成分映射成java对象。反射被称为框架设计的灵魂，对于一个任意的类，能够知道这个类的所有Field，Method，Constructor。对于一个实例对象也是如此，动态获取信息以及动">
+    <meta name="description" content="双指针算法对于某个特定的问题，我们可能需要两次循环才能完成该项问题，其朴素算法的核心思想为：
+for(int i = 0; i &amp;lt; n; i++ )
+    for(int j = 0; j &amp;lt; n; j ++ )
+      ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>浅谈Java反射机制 | Bouncy丶Knight</title>
+    <title>双指针 | Bouncy丶Knight</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -290,13 +293,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.png')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        浅谈Java反射机制
+                        双指针
                     </div>
                 </div>
             </div>
@@ -407,8 +410,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/反射/" target="_blank">
-                            <span class="chip bg-color">反射</span>
+                        <a href="/tags/双指针/" target="_blank">
+                            <span class="chip bg-color">双指针</span>
                         </a>
                         
                     </div>
@@ -419,8 +422,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Java/" class="post-category" target="_blank">
-                            Java
+                        <a href="/categories/Algorithm/" class="post-category" target="_blank">
+                            Algorithm
                         </a>
                         
                     </div>
@@ -431,7 +434,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-10
+                    2020-03-15
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -445,7 +448,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    990
+                    732
                 </div>
                 
 
@@ -468,113 +471,80 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h1><p>反射是指能够分析类能力的程序，就是把<strong>java</strong>类中的各种成分映射成<strong>java</strong>对象。反射被称为框架设计的灵魂，对于一个任意的类，能够知道这个类的所有<strong>Field，Method，Constructor</strong>。对于一个实例对象也是如此，动态获取信息以及动态调用对象的方法。</p>
+                <h1 id="双指针算法"><a href="#双指针算法" class="headerlink" title="双指针算法"></a>双指针算法</h1><p>对于某个特定的问题，我们可能需要两次循环才能完成该项问题，其朴素算法的核心思想为：</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> j <span class="token operator">++</span> <span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">//具体逻辑</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>时间复杂度为$O(n^2)$。</p>
+<p>而双指针算法的思想在于通过一遍遍历就能找到问题的解。时间复杂度为$O(n)$。核心思想为：</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i <span class="token operator">++</span> <span class="token punctuation">)</span>
+   <span class="token punctuation">{</span> 
+    <span class="token keyword">while</span><span class="token punctuation">(</span> j <span class="token operator">&lt;</span> i <span class="token operator">&amp;&amp;</span> <span class="token function">check</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">)</span> j <span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//具体逻辑</span>
+   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="案例：输出单词"><a href="#案例：输出单词" class="headerlink" title="案例：输出单词"></a>案例：输出单词</h2><p>给定一个字符串，输出每个单词，每个单词用空格分隔。</p>
+<p>算法分析：</p>
+<p>通过双指针算法，定义指针$i,j$，其中指针$i$扫描字符串，指针$j$每次从$i$开始向后扫描，当指针$j$没有到达最后一个位置而且不为空格时候向后移动指针。当指针$j$停下的时候，此时$j$的位置在空格或者在末尾。此时指针$i$和指针$j$中间的子字符串就是单词。</p>
+<p>时间复杂度为$O(n)$</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string.h></span></span>
+
+using namespace std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">char</span> str<span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token function">gets</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token function">strlen</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i <span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> j <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>j <span class="token operator">&lt;</span> n <span class="token operator">&amp;&amp;</span> str<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">' '</span><span class="token punctuation">)</span> j <span class="token operator">++</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> j<span class="token punctuation">;</span> k <span class="token operator">++</span> <span class="token punctuation">)</span> cout <span class="token operator">&lt;&lt;</span> str<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+        i <span class="token operator">=</span> j<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="案例：最长连续不重复子序列"><a href="#案例：最长连续不重复子序列" class="headerlink" title="案例：最长连续不重复子序列"></a>案例：最长连续不重复子序列</h2><p>给定一个长度为$n$的整数序列，输入找出最长连续不重复子序列，输出它的长度。</p>
+<p>算法分析：</p>
+<p>首先定义两个指针$i,j$，指针$i$向后扫描整个序列，指针$j$用来检查区间$[j,i]$之间是否满足连续不重复子序列。</p>
+<p>因此，问题可以转化为使区间$[j,i]$长度最大即可。</p>
+<p>指针$i,j$都具有单调性，由反证法，不妨假设当前$[j,i]$区间是目前最大的，当指针$i$向后扫描时，若指针$j$可以向左移动。那么对于上一个区间而言指针$j$应该在更左边的位置，矛盾。所以指针$i,j$都具有单调性。</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;string.h></span></span>
+
+using namespace std<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">100010</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> n<span class="token punctuation">;</span>
+<span class="token keyword">int</span> a<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> s<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//s[N]为辅助数组，用来记录指针i遍历的情况</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span> cin <span class="token operator">>></span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i <span class="token operator">++</span> <span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>    
+
+        s<span class="token punctuation">[</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//当出现重复元素时</span>
+            s<span class="token punctuation">[</span>a<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">--</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//清除辅助数组的记录，指针j后移，每次循环判断区间内是否有重复元素</span>
+            j <span class="token operator">++</span> <span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        res <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> i <span class="token operator">-</span> j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>常见问题分类：</p>
 <ul>
-<li>在运行时分析类的能力</li>
-<li>在运行是查看对象</li>
-</ul>
-<hr>
-<h2 id="获取Class类"><a href="#获取Class类" class="headerlink" title="获取Class类"></a>获取Class类</h2><p>任何一个类都是<strong>Class</strong>类的实例对象，这个实例对象有三种表示方式：</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
-    第一种表达方式， 类名 对象 = 类名.class
-    任何一个类都有一个隐含的静态成员变量class
-*/</span>
-Class <span class="token class-name">c1</span> <span class="token operator">=</span> Employee<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//已经定义了一个Employee类</span>
-
-<span class="token comment" spellcheck="true">/*
-    第二种方式， 通过该类的对象调用getClass方法
-    那么首先需要创建一个Employee的实例对象
-*/</span>
-Employee e <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-Class <span class="token class-name">c2</span> <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">/*
-    c1,c2表示Employee类的类类型（class type）
-*/</span>
-<span class="token comment" spellcheck="true">/*
-    第三种方式， Class c3 = Class.forName(String className)
-    此参数字符串必须是真实路径，就是带包名的类路径，包名.类名
-    Employee类code包下,需要注意的是该方法有异常ClassNotFoundException抛出，
-    需要声明该异常
-*/</span>
-<span class="token keyword">class</span> <span class="token class-name">c3</span> <span class="token operator">=</span> Class<span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"code.Employee"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">/*
-    常用方法newInstance(),可以动态创建一个类的实例
-    查看源码发现newInstance()自Java9被标记不推荐使用
-    改为使用c1.getDeclaredConstructor().newInstance()，同样需要抛出异常
-*/</span>
-e<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>注意：</p>
-<ul>
-<li><strong>c1,c2,c3</strong>的内存地址是相同的，一个类只产生一个<strong>class</strong>对象，由<strong>jvm</strong>自动创建。</li>
-<li><strong><code>Class.forName(String className)</code></strong>代表了动态加载类。编译时刻加载类是静态加载类，例如<strong>new</strong>实例对象，而运行时刻加载类是动态加载类。</li>
-</ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//动态加载类，在运行时刻加载</span>
-Class <span class="token class-name">c</span> <span class="token operator">=</span> Class<span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span>args<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">/*
-    这里有个设计技巧，可以实现一个公共接口People，这样就不用关心args[0]传入的
-    具体类实现
-*/</span>
-People a <span class="token operator">=</span> <span class="token punctuation">(</span>People<span class="token punctuation">)</span>c<span class="token punctuation">.</span>getDeclaredConstructor<span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</blockquote>
-<hr>
-<h2 id="获取Method信息"><a href="#获取Method信息" class="headerlink" title="获取Method信息"></a>获取Method信息</h2><ul>
-<li><strong>Class</strong>类的<code>getMethods()</code>方法获取所有的<strong>public</strong>函数，包括父类继承的。返回<strong>Method[]</strong></li>
-<li><strong>Class</strong>类的<code>getDeclaredMethods()</code>获取所有该类声明的方法，不管访问权限</li>
-<li><strong>Class</strong>类的<code>getName()</code>方法得到用于描述构造器，方法和域名的的字符串</li>
-<li><strong>Method</strong>类的<code>getReturnType()</code>得到方法的返回值类型</li>
-<li><strong>Method</strong>类的<code>getName()</code>得到方法的名称</li>
-<li><strong>Method</strong>类的<code>getParameterType()</code>得到参数列表的类型的类类型</li>
-</ul>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//得到一个Class类</span>
-Class <span class="token class-name">c</span> <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-Method<span class="token punctuation">[</span><span class="token punctuation">]</span> m <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">getMethods</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-Class <span class="token class-name">returnType</span> <span class="token operator">=</span> m<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">getReturnType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-String a <span class="token operator">=</span> returnType<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="获取Field信息"><a href="#获取Field信息" class="headerlink" title="获取Field信息"></a>获取Field信息</h2><ul>
-<li><strong>Class</strong>类的<code>getFields()</code>方法获取的是所有的<strong>public</strong>的成员变量的信息。返回<strong>Field[]</strong></li>
-<li><strong>Class</strong>类的<code>getDeclaredFields()</code>方法获取的是该类自己声明的成员变量的信息</li>
-<li><strong>Class</strong>类的<code>getConstructors()</code>方法获取的是所有<strong>public</strong>的构造函数</li>
-<li><strong>Class</strong>类的<code>getDeclaredConstructors()</code>方法获取的是所有的构造函数</li>
-<li><strong>Field</strong>类的<code>getType()</code>方法得到变量的类型的类类型</li>
-<li><strong>Field</strong>类<code>getName()</code>方法得到成员变量的名称</li>
-</ul>
-<pre class="line-numbers language-java"><code class="language-java">Class <span class="token class-name">c</span> <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-Field<span class="token punctuation">[</span><span class="token punctuation">]</span> f <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">getFields</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//得到成员变量的类型的类类型</span>
-Class <span class="token class-name">filedType</span> <span class="token operator">=</span> f<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-String typeName <span class="token operator">=</span> filedType<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//得到成员变量的名称</span>
-String fieldName <span class="token operator">=</span> f<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>变</p>
-<hr>
-<h2 id="Method的反射操作"><a href="#Method的反射操作" class="headerlink" title="Method的反射操作"></a>Method的反射操作</h2><p>方法的反射操作：<code>method.invoke</code>（对象，参数列表）</p>
-<pre class="line-numbers language-java"><code class="language-java">Class <span class="token class-name">c</span> <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-Method m <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">getMethod</span><span class="token punctuation">(</span><span class="token string">"setAge"</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//方法如果没有返回值返回null，有返回值的返回具体的返回值</span>
-Object o <span class="token operator">=</span> m<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="泛型的本质（通过反射越过泛型检查）"><a href="#泛型的本质（通过反射越过泛型检查）" class="headerlink" title="泛型的本质（通过反射越过泛型检查）"></a>泛型的本质（通过反射越过泛型检查）</h2><p>首先看如下例子：</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
-    list1.add(20)是错误的，因为集合的泛型是防止错误输入的，是在编译时有效，绕过编译就无效了    
-*/</span>
-ArrayList list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-ArrayList<span class="token operator">&lt;</span>String<span class="token operator">></span> list1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//c1 == c2是true，这说明反射的操作是编译之后的操作</span>
-Class <span class="token class-name">c1</span> <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-Class <span class="token class-name">c2</span> <span class="token operator">=</span> list1<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>因此我们可以通过方法的反射来操作，绕过编译</p>
-<hr>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
-<li><strong>Java核心技术</strong></li>
-<li><a href="https://blog.csdn.net/sinat_38259539/article/details/71799078" target="_blank" rel="noopener">敬业的小码哥的博客</a></li>
-<li><a href="http://www.imooc.com/learn/199" target="_blank" rel="noopener">慕课网</a></li>
+<li>对于一个序列，用两个指针维护一个区间</li>
+<li>对于两个序列，维护某种次序，比如归并排序中合并两个有序序列的操作。</li>
 </ul>
 
             </div>
@@ -734,9 +704,9 @@ Class <span class="token class-name">c2</span> <span class="token operator">=</s
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《浅谈Java反射机制》
+                    《双指针》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/10/qian-tan-java-fan-she-ji-zhi/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/03/15/shuang-zhi-zhen/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Bouncy丶Knight
             </a> 采用
@@ -777,7 +747,7 @@ Class <span class="token class-name">c2</span> <span class="token operator">=</s
         repo: 'ohlselfspace.github.io',
         owner: 'ohlselfspace',
         admin: "ohlselfspace",
-        id: '2020/02/10/qian-tan-java-fan-she-ji-zhi/',
+        id: '2020/03/15/shuang-zhi-zhen/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1060,46 +1030,48 @@ Class <span class="token class-name">c2</span> <span class="token operator">=</s
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/02/10/maven-xue-xi-bi-ji/">
+                <a href="/2020/03/15/shuang-zhi-zhen/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Maven学习笔记">
+                        <img src="/medias/featureimages/5.png" class="responsive-img" alt="双指针">
                         
-                        <span class="card-title">Maven学习笔记</span>
+                        <span class="card-title">双指针</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            项目管理利器-Maven学习笔记
+                            双指针算法总结
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Maven/" class="post-category" target="_blank">
-                                    Maven
+                            <a href="/categories/Algorithm/" class="post-category" target="_blank">
+                                    Algorithm
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Maven/" target="_blank">
-                        <span class="chip bg-color">Maven</span>
+                    <a href="/tags/双指针/" target="_blank">
+                        <span class="chip bg-color">双指针</span>
                     </a>
                     
                 </div>
@@ -1113,31 +1085,31 @@ Class <span class="token class-name">c2</span> <span class="token operator">=</s
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/09/leetcode-118-yang-hui-san-jiao/">
+                <a href="/2020/03/15/qian-zhui-he-yu-chai-fen/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Leetcode-118.杨辉三角">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="前缀和与差分">
                         
-                        <span class="card-title">Leetcode-118.杨辉三角</span>
+                        <span class="card-title">前缀和与差分</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Leetcode-118.杨辉三角方法总结
+                            前缀和与差分问题
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-09
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/算法/" class="post-category" target="_blank">
-                                    算法
+                            <a href="/categories/Algorithm/" class="post-category" target="_blank">
+                                    Algorithm
                                 </a>
                             
                             
@@ -1147,12 +1119,12 @@ Class <span class="token class-name">c2</span> <span class="token operator">=</s
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/动态规划/" target="_blank">
-                        <span class="chip bg-color">动态规划</span>
+                    <a href="/tags/前缀和/" target="_blank">
+                        <span class="chip bg-color">前缀和</span>
                     </a>
                     
-                    <a href="/tags/递归/" target="_blank">
-                        <span class="chip bg-color">递归</span>
+                    <a href="/tags/差分/" target="_blank">
+                        <span class="chip bg-color">差分</span>
                     </a>
                     
                 </div>

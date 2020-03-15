@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ohlselfspace.github.io/"/>
-  <updated>2020-03-15T08:42:19.350Z</updated>
+  <updated>2020-03-15T11:41:26.447Z</updated>
   <id>http://ohlselfspace.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>双指针</title>
+    <link href="http://ohlselfspace.github.io/2020/03/15/shuang-zhi-zhen/"/>
+    <id>http://ohlselfspace.github.io/2020/03/15/shuang-zhi-zhen/</id>
+    <published>2020-03-15T09:17:30.000Z</published>
+    <updated>2020-03-15T11:41:26.447Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;双指针算法&quot;&gt;&lt;a href=&quot;#双指针算法&quot; class=&quot;headerlink&quot; title=&quot;双指针算法&quot;&gt;&lt;/a&gt;双指针算法&lt;/h1&gt;&lt;p&gt;对于某个特定的问题，我们可能需要两次循环才能完成该项问题，其朴素算法的核心思想为：&lt;/p&gt;
+&lt;pre
+        
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://ohlselfspace.github.io/categories/Algorithm/"/>
+    
+    
+      <category term="双指针" scheme="http://ohlselfspace.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    
+  </entry>
   
   <entry>
     <title>前缀和与差分</title>
