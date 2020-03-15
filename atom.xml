@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ohlselfspace.github.io/"/>
-  <updated>2020-03-14T15:27:10.416Z</updated>
+  <updated>2020-03-15T06:06:01.463Z</updated>
   <id>http://ohlselfspace.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法模板二</title>
+    <link href="http://ohlselfspace.github.io/2020/03/15/suan-fa-mo-ban-zong-jie-er/"/>
+    <id>http://ohlselfspace.github.io/2020/03/15/suan-fa-mo-ban-zong-jie-er/</id>
+    <published>2020-03-15T01:11:25.000Z</published>
+    <updated>2020-03-15T06:06:01.463Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;高精度问题&quot;&gt;&lt;a href=&quot;#高精度问题&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://ohlselfspace.github.io/categories/Algorithm/"/>
+    
+    
+      <category term="高精度" scheme="http://ohlselfspace.github.io/tags/%E9%AB%98%E7%B2%BE%E5%BA%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>算法模板总结一</title>
