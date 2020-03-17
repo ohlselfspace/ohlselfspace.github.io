@@ -45,8 +45,8 @@
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
-<link rel="stylesheet" href="/blog/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/blog/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 <body>
 
@@ -54,7 +54,7 @@
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="/blog/" class="waves-effect waves-light">
+                <a href="/" class="waves-effect waves-light">
                     
                     <img src="/medias/logo.jpg" class="logo-img" alt="LOGO">
                     
@@ -285,7 +285,7 @@
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
-                location.href = '/blog/';
+                location.href = '/';
             }
         }
     })();
@@ -411,11 +411,11 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/blog/tags/动态规划/" target="_blank">
+                        <a href="/tags/动态规划/" target="_blank">
                             <span class="chip bg-color">动态规划</span>
                         </a>
                         
-                        <a href="/blog/tags/贪心算法/" target="_blank">
+                        <a href="/tags/贪心算法/" target="_blank">
                             <span class="chip bg-color">贪心算法</span>
                         </a>
                         
@@ -427,7 +427,7 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/blog/categories/算法/" class="post-category" target="_blank">
+                        <a href="/categories/算法/" class="post-category" target="_blank">
                             算法
                         </a>
                         
@@ -703,7 +703,7 @@
                   property="dct:title" rel="dct:type">
                     《LeetCode-53.最大子序和》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/blog/2020/02/07/leetcode-53-zui-da-zi-xu-he/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/07/leetcode-53-zui-da-zi-xu-he/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Bouncy丶Knight
             </a> 采用
@@ -1009,7 +1009,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/blog/2020/02/09/leetcode-118-yang-hui-san-jiao/">
+                <a href="/2020/02/09/leetcode-118-yang-hui-san-jiao/">
                     <div class="card-image">
                         
                         
@@ -1032,7 +1032,7 @@
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/blog/categories/算法/" class="post-category" target="_blank">
+                            <a href="/categories/算法/" class="post-category" target="_blank">
                                     算法
                                 </a>
                             
@@ -1043,11 +1043,11 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/blog/tags/动态规划/" target="_blank">
+                    <a href="/tags/动态规划/" target="_blank">
                         <span class="chip bg-color">动态规划</span>
                     </a>
                     
-                    <a href="/blog/tags/递归/" target="_blank">
+                    <a href="/tags/递归/" target="_blank">
                         <span class="chip bg-color">递归</span>
                     </a>
                     
@@ -1062,7 +1062,7 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/blog/2020/02/06/wang-luo-bian-cheng/">
+                <a href="/2020/02/06/wang-luo-bian-cheng/">
                     <div class="card-image">
                         
                         
@@ -1085,7 +1085,7 @@
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/blog/categories/Java/" class="post-category" target="_blank">
+                            <a href="/categories/Java/" class="post-category" target="_blank">
                                     Java
                                 </a>
                             
@@ -1096,19 +1096,19 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/blog/tags/套接字/" target="_blank">
+                    <a href="/tags/套接字/" target="_blank">
                         <span class="chip bg-color">套接字</span>
                     </a>
                     
-                    <a href="/blog/tags/C-S/" target="_blank">
+                    <a href="/tags/C-S/" target="_blank">
                         <span class="chip bg-color">C/S</span>
                     </a>
                     
-                    <a href="/blog/tags/TCP-IP/" target="_blank">
+                    <a href="/tags/TCP-IP/" target="_blank">
                         <span class="chip bg-color">TCP/IP</span>
                     </a>
                     
-                    <a href="/blog/tags/UDP/" target="_blank">
+                    <a href="/tags/UDP/" target="_blank">
                         <span class="chip bg-color">UDP</span>
                     </a>
                     
@@ -1316,7 +1316,7 @@
 
 
 
-    <a href="/blog/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fa fa-rss"></i>
     </a>
 </div>
@@ -1397,7 +1397,7 @@
 <script src="/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
-    searchFunc("/blog/" + "search.xml", 'searchInput', 'searchResult');
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
 });
 </script>
     <!-- 回到顶部按钮 -->
@@ -1453,6 +1453,6 @@ WIDGET = {FID: '9mHTjxjnzO'}
 
 
 
-<script src="/blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/blog/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
 
 </html>
