@@ -4,16 +4,19 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Maven学习笔记, JAVA MATLAB 高等代数 数学分析 PYTHON">
+    <meta name="keywords" content="栈与队列, JAVA MATLAB 高等代数 数学分析 PYTHON">
     <meta name="baidu-site-verification" content="C4g8dF9DLA">
     <meta name="google-site-verification" content="C4g8dF9DLA">
     <meta name="360-site-verification" content="C4g8dF9DLA">
-    <meta name="description" content="Maven学习笔记1.Maven介绍以及环境搭建Maven是基于项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建、报告和文档的软件项目管理工具。
-首先到官网下载Apache Maven 3.6.3版本
+    <meta name="description" content="栈与队列栈栈的逻辑是先进后出，栈实现可以用链表或者数组。
+这里采用数组来表示栈。
+#include &amp;lt;iostream&gt;
 
-在本地下面解压
+using namespace std;
 
-得到">
+const int N = 100010;
+
+int stk[N]">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +24,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Maven学习笔记 | Bouncy丶Knight</title>
+    <title>栈与队列 | Bouncy丶Knight</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -295,13 +298,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Maven学习笔记
+                        栈与队列
                     </div>
                 </div>
             </div>
@@ -412,8 +415,12 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Maven/" target="_blank">
-                            <span class="chip bg-color">Maven</span>
+                        <a href="/tags/栈/" target="_blank">
+                            <span class="chip bg-color">栈</span>
+                        </a>
+                        
+                        <a href="/tags/队列/" target="_blank">
+                            <span class="chip bg-color">队列</span>
                         </a>
                         
                     </div>
@@ -424,8 +431,12 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Maven/" class="post-category" target="_blank">
-                            Maven
+                        <a href="/categories/数据结构/" class="post-category" target="_blank">
+                            数据结构
+                        </a>
+                        
+                        <a href="/categories/数据结构/ALgorithm/" class="post-category" target="_blank">
+                            ALgorithm
                         </a>
                         
                     </div>
@@ -436,7 +447,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-10
+                    2020-03-17
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -450,7 +461,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    986
+                    905
                 </div>
                 
 
@@ -473,190 +484,161 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Maven学习笔记"><a href="#Maven学习笔记" class="headerlink" title="Maven学习笔记"></a>Maven学习笔记</h1><h2 id="1-Maven介绍以及环境搭建"><a href="#1-Maven介绍以及环境搭建" class="headerlink" title="1.Maven介绍以及环境搭建"></a>1.Maven介绍以及环境搭建</h2><p><strong>Maven</strong>是基于项目对象模型(<strong>POM</strong>)，可以通过一小段描述信息来管理项目的构建、报告和文档的软件项目管理工具。</p>
-<p>首先到<a href="http://Maven.apache.org/" target="_blank" rel="noopener">官网</a>下载<strong>Apache Maven 3.6.3</strong>版本</p>
-<p><img src="0.png" alt></p>
-<p>在本地下面解压</p>
-<p><img src="1.png" alt></p>
-<p>得到四个文件夹：</p>
-<ul>
-<li><strong>bin</strong>目录包含<strong>Maven</strong>的运行脚本</li>
-<li><strong>boot</strong>目录包含一个类加载器的框架</li>
-<li><strong>conf</strong>是配置文件目录</li>
-<li><strong>lib</strong>是<strong>Maven</strong>依赖的类库</li>
-</ul>
-<p>接下来配置环境变量，在系统变量中设置变量名和变量值，变量值为<strong>Maven</strong>安装目录</p>
-<p><img src="2.png" alt></p>
-<p>接下来在环境变量<strong>path</strong>中添加以下信息</p>
-<p><img src="3.png" alt></p>
-<p>验证<strong>Maven</strong>是否安装成功，打开cmd命令窗口：输入<strong>mvn -v</strong>。如果得到以下配置信息，则说明安装成功。</p>
-<p><img src="4.png" alt></p>
-<hr>
-<h2 id="2-Maven结构以及案例"><a href="#2-Maven结构以及案例" class="headerlink" title="2.Maven结构以及案例"></a>2.Maven结构以及案例</h2><p><strong>Maven</strong>默认的文件结构为：</p>
-<p><img src="5.png" alt></p>
-<p>按照文件结构创建<strong>HelloWorld</strong>类，以及<strong>HelloWorldTest</strong>测试类</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>model<span class="token punctuation">;</span>
+                <h1 id="栈与队列"><a href="#栈与队列" class="headerlink" title="栈与队列"></a>栈与队列</h1><h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><p>栈的逻辑是先进后出，栈实现可以用链表或者数组。</p>
+<p>这里采用数组来表示栈。</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span><span class="token punctuation">{</span>
-    <span class="token keyword">public</span> String <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token string">"HelloWorld"</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+using namespace std<span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">100010</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> stk<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> tt<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//插入,从数组下标为1开始储存</span>
+stk<span class="token punctuation">[</span> <span class="token operator">++</span> tt<span class="token punctuation">]</span> <span class="token operator">=</span> x<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//弹出</span>
+tt <span class="token operator">--</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//判断栈是否为空</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>tt <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> not empty
+    <span class="token keyword">else</span> empty
+
+<span class="token comment" spellcheck="true">//栈顶</span>
+st<span class="token punctuation">[</span>tt<span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="队列和循环队列"><a href="#队列和循环队列" class="headerlink" title="队列和循环队列"></a>队列和循环队列</h2><p>队列的逻辑为先进先出，同样队列也可以用链表或者数组表示。</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//队列数组表示 hh表示队头，tt表示队尾</span>
+<span class="token comment" spellcheck="true">//队尾插入元素，对头输出元素</span>
+<span class="token keyword">int</span> q<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> hh<span class="token punctuation">,</span> tt <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//插入,从数组下标为0开始存储元素</span>
+q<span class="token punctuation">[</span> <span class="token operator">++</span> tt<span class="token punctuation">]</span> <span class="token operator">=</span> x<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//弹出</span>
+h <span class="token operator">++</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 判断队列是否为空</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>hh <span class="token operator">&lt;=</span> tt<span class="token punctuation">)</span> not empty
+    <span class="token keyword">else</span> empty
+
+<span class="token comment" spellcheck="true">// 取出对头元素</span>
+q<span class="token punctuation">[</span>hh<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+
+<span class="token comment" spellcheck="true">//循环队列</span>
+<span class="token comment" spellcheck="true">//hh表示对头，tt表示队尾的后一个位置</span>
+<span class="token keyword">int</span> q<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> hh <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> tt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//向队尾插入一个数</span>
+q<span class="token punctuation">[</span>tt <span class="token operator">++</span> <span class="token punctuation">]</span> <span class="token operator">=</span> x<span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>tt <span class="token operator">==</span> N<span class="token punctuation">)</span> tt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//当数组最后一位有元素时，为防止假溢出</span>
+
+<span class="token comment" spellcheck="true">//从对头弹出一个数</span>
+hh <span class="token operator">++</span> <span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>hh <span class="token operator">==</span> N<span class="token punctuation">)</span> hh <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//同样为防止假溢出</span>
+
+<span class="token comment" spellcheck="true">//对头的值</span>
+qq<span class="token punctuation">[</span>hh<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//判断队列是否为空</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>hh <span class="token operator">!=</span> tt<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="单调栈"><a href="#单调栈" class="headerlink" title="单调栈"></a>单调栈</h2><p>常见模型：找到每个数左边离它最近的比它大/小的数</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//代码模板</span>
+<span class="token keyword">int</span> tt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>tt <span class="token operator">&amp;&amp;</span> <span class="token function">check</span><span class="token punctuation">(</span>stk<span class="token punctuation">[</span>kk<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span> tt <span class="token operator">--</span><span class="token punctuation">;</span>
+    stk<span class="token punctuation">[</span> <span class="token operator">++</span> tt<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>model<span class="token punctuation">;</span>
+<p>给定一个长度为N的整数数列，输出每个数左边第一个比它小的数，如果不存在就输出-1。</p>
+<p>算法分析：</p>
+<ul>
+<li>首先第一个数左边不会有比它小的数，直接进栈。</li>
+<li>后面的数$x$依次如果前面有$\geq x$的数存在，则依次弹出栈中的元素，知道栈中弹出一个比$x$小的数，或者栈中元素为空为止。</li>
+<li>核心思想就是当$x_i\geq x_j,i&lt;j$，此时$x&gt;x_j$显然$x_i$不可能为离$x$左边最近且比$x$小的数。因此，只需要在往栈中依次添加元素时判断，如果栈不为空，或者栈顶元素$\geq x$则依此弹出栈元素。</li>
+</ul>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>junit<span class="token punctuation">.</span>*<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>junit<span class="token punctuation">.</span>Assert<span class="token punctuation">.</span>*<span class="token punctuation">;</span>
+using namespace std<span class="token punctuation">;</span>
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorldTest</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//使用junit框架测试</span>
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        Assert<span class="token punctuation">.</span><span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token string">"HelloWorld"</span><span class="token punctuation">,</span><span class="token keyword">new</span> <span class="token class-name">HelloWorld</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">100010</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> n<span class="token punctuation">;</span>
+<span class="token keyword">int</span> stk<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> tt<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> x<span class="token punctuation">;</span>
+        cin <span class="token operator">>></span> x<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>tt <span class="token operator">&amp;&amp;</span> stk<span class="token punctuation">[</span>tt<span class="token punctuation">]</span> <span class="token operator">>=</span> x<span class="token punctuation">)</span> tt <span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>tt<span class="token punctuation">)</span> cout <span class="token operator">&lt;&lt;</span> stk<span class="token punctuation">[</span>tt<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token string">' '</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span> cout <span class="token operator">&lt;&lt;</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token string">' '</span><span class="token punctuation">;</span>
+
+        stk<span class="token punctuation">[</span> <span class="token operator">++</span> tt<span class="token punctuation">]</span> <span class="token operator">=</span> x<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>配置<strong>Maven01</strong>目录下配置<strong>pom.xml</strong>文件</p>
-<pre class="line-numbers language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://Maven.apache.org/POM/4.0.0<span class="token punctuation">"</span></span>
-<span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
-<span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://Maven.apache.org/POM/4.0.0
-http://Maven.apache.org/Maven-v4_0_0.xsd<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>modelVersion</span><span class="token punctuation">></span></span>4.0.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>modelVersion</span><span class="token punctuation">></span></span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="单调队列"><a href="#单调队列" class="headerlink" title="单调队列"></a>单调队列</h2><p>常见题型：找出滑动窗口中的最大值或最小值。</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//算法模板</span>
+<span class="token keyword">int</span> hh <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> tt <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i <span class="token operator">++</span> <span class="token punctuation">)</span>
+<span class="token punctuation">{</span>    
+    <span class="token keyword">while</span><span class="token punctuation">(</span>hh <span class="token operator">&lt;=</span> tt <span class="token operator">&amp;&amp;</span> <span class="token function">check_out</span><span class="token punctuation">(</span>q<span class="token punctuation">[</span>hh<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> h<span class="token operator">++</span> <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//判断对头是否滑出窗口</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>hh <span class="token operator">&lt;=</span> tt <span class="token operator">&amp;&amp;</span> <span class="token function">check</span><span class="token punctuation">(</span>q<span class="token punctuation">[</span>tt<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span> tt <span class="token operator">--</span><span class="token punctuation">;</span>
+    q<span class="token punctuation">[</span> <span class="token operator">++</span> tt<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>给定一个大小长度的数组，给定窗口的大小，输出滑动窗口中的最大值和最小值。</p>
+<p>算法分析：</p>
+<ul>
+<li><pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<p>using namespace std;</p>
+<p>const int N = 1000010;</p>
+<p>int a[N], q[N];<br>int n, k;</p>
+<p>int main(){<br>    cin &gt;&gt; n &gt;&gt; k;<br>    for(int i = 0; i &lt; n; i ++ ) cin &gt;&gt; a[i];</p>
+<pre><code>//最小值
+int hh = 0, tt = -1;
+for(int i = 0; i &lt; n; i ++ )
+{
+    //判断对头是否滑出窗口
+    if(hh &lt;= tt &amp;&amp; i - k + 1&gt; q[hh]) hh ++;
+    while(hh &lt;= tt &amp;&amp; a[q[tt]] &gt;= a[i]) tt --;
+    q[ ++ tt] = i;
+    if(i &gt;= k - 1) cout&lt;&lt; a[q[hh]]; //满足滑动窗口k大小时才输出
 
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>com-model<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>0.0.1SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+}
+cout &lt;&lt; endl;
 
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>junit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>junit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>4.10<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>打开<strong>cmd</strong>命令窗口，<strong>cd</strong>到<strong>Maven01</strong>目录下，输入命令：<strong>mvn compile</strong></p>
-<p><img src="6.png" alt></p>
-<p>下面测试一下，输入<strong>mvn test</strong></p>
-<p><img src="7.png" alt></p>
-<p>输入<strong>mvn package</strong>，此时在<strong>Maven01</strong>目录下生成一个<strong>target</strong>文件夹</p>
-<p><img src="8.png" alt></p>
-<p><strong>常用命令总结</strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">命令</th>
-<th align="center">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">mvn eclipse:eclipse</td>
-<td align="center">生成eclipse项目结构</td>
-</tr>
-<tr>
-<td align="center">mvn idea:idea</td>
-<td align="center">生成idea项目结构</td>
-</tr>
-<tr>
-<td align="center">mvn compile</td>
-<td align="center">编译源代码</td>
-</tr>
-<tr>
-<td align="center">mvn test</td>
-<td align="center">运行测试代码</td>
-</tr>
-<tr>
-<td align="center">mvn package</td>
-<td align="center">打包项目</td>
-</tr>
-<tr>
-<td align="center">mvn clean</td>
-<td align="center">清除项目</td>
-</tr>
-<tr>
-<td align="center">mvn -e</td>
-<td align="center">查看错误详细信息</td>
-</tr>
-<tr>
-<td align="center">mvn install</td>
-<td align="center">安装jar包到本地仓库中</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="3-Maven自动创建目录骨架"><a href="#3-Maven自动创建目录骨架" class="headerlink" title="3.Maven自动创建目录骨架"></a>3.Maven自动创建目录骨架</h2><p><strong>Archetype</strong>是<strong>Maven</strong>项目的模板工具包</p>
-<p><strong>Maven Archetype</strong>由下面几个模板组成：</p>
-<ul>
-<li>maven-archetype-plugin:Archetype插件</li>
-<li>archetype-packaging:用于描述archetype的生命周期与构建的项目软件包</li>
-<li>archetype-models:用于描述类与引用</li>
-<li>archetype-common:核心类</li>
-<li>archetype-testing:用于测试Maven Archetype的内部组件</li>
-</ul>
-<p>使用<strong>Maven archetype:generate</strong>来创建项目骨架</p>
-<pre class="line-numbers language-cmd"><code class="language-cmd">mvn archetype:generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>依次创建项目的<strong>groupId,artifaceId,version,package</strong></p>
-<pre class="line-numbers language-cdm"><code class="language-cdm">Confirm properties configuration:
-groupId: code.Maven02
-artifactId: Maven02-service
-version: 1.0.0
-package: code.Maven02.service<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>创建目录的两种方式</strong>:</p>
-<ul>
-<li><p>archetype:generate 按照提示进行选择</p>
-</li>
-<li><p>archetype:generate -DgroupId=组织名,公司网址的反写+项目名</p>
-<p>​                                    -DartifactId=项目名-模块名</p>
-<p>​                                    -Dversion=版本号</p>
-<p>​                                    -Dpackage=代码所存在的包名</p>
-</li>
-</ul>
-<hr>
-<h2 id="4-Maven中的坐标和仓库"><a href="#4-Maven中的坐标和仓库" class="headerlink" title="4.Maven中的坐标和仓库"></a>4.Maven中的坐标和仓库</h2><p><strong>Maven</strong>中任何构件都是由坐标标识</p>
-<p>仓库：</p>
-<ul>
-<li>本地仓库</li>
-<li>远程仓库</li>
-</ul>
-<p>本地仓库位置：C:\Users\logic.m2\repository     logic为本机用户名</p>
-<p>更改本地仓库默认位置：</p>
-<p>在新建一个<strong>repo</strong>文件夹，在D:\maven\apache-maven-3.6.3\conf下修改<strong>settings.xml</strong></p>
-<p><img src="9.png" alt></p>
-<hr>
-<h2 id="5-IDEA中创建Maven项目"><a href="#5-IDEA中创建Maven项目" class="headerlink" title="5.IDEA中创建Maven项目"></a>5.IDEA中创建Maven项目</h2><p>首先打开<strong>IDEA</strong>，点击<strong>setting</strong>，修改<strong>Maven</strong>仓库和配置信息</p>
-<p><img src="10.png" alt></p>
-<p>新建项目，打开<strong>Maven</strong>窗口配置信息</p>
-<p><img src="11.png" alt></p>
-<p><img src="12.png" alt></p>
-<p>第一次创建<strong>Maven</strong>项目要配置相关信息，所以要等待一会。</p>
-<hr>
-<h2 id="6-Maven的生命周期"><a href="#6-Maven的生命周期" class="headerlink" title="6.Maven的生命周期"></a>6.Maven的生命周期</h2><p>完整的项目构建过程包括：</p>
-<p>清理，编译，测试，打包，集成测试，验证，部署</p>
-<p><strong>Maven</strong>生命周期：</p>
-<ul>
-<li><p><strong>clean</strong> 清理项目</p>
-<ul>
-<li><strong>pre-clean</strong> 执行清理前的工作</li>
-<li><strong>clean</strong>清理上一次构建生成的所有文件</li>
-</ul>
-</li>
-<li><p><strong>default</strong>(最核心)构建项目</p>
-<ul>
-<li><em><em>compile  test  package  install  </em></em></li>
-</ul>
-</li>
-<li><p><strong>site</strong> 生成项目站点</p>
-<ul>
-<li><strong>pre-site</strong> 在生成项目站点前要完成的工作</li>
-<li><strong>site</strong> 生成项目的站点文档</li>
-<li><strong>post-site</strong> 在生成项目站点后要完成的工作</li>
-<li><strong>site-deploy</strong> 发布生成的站点到服务器</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="7-pom-xml解析"><a href="#7-pom-xml解析" class="headerlink" title="7.pom.xml解析"></a>7.pom.xml解析</h2><p><img src="13.png" alt></p>
-<hr>
+//最大值
+hh = 0, tt = -1;
+for(int i = 0; i &lt; n; i ++ )
+{
+    //判断对头是否滑出窗口
+    if(hh &lt;= tt &amp;&amp; i - k + 1&gt; q[hh]) hh ++;
+    while(hh &lt;= tt &amp;&amp; a[q[tt]] &lt;= a[i]) tt --;
+    q[ ++ tt] = i;
+    if(i &gt;= k - 1) cout&lt;&lt; a[q[hh]];
 
+}
+cout &lt;&lt; endl;
+return 0;</code></pre><p>}</p>
+<pre><code>
+
+
+
+</code></pre>
             </div>
             <hr />
 
@@ -814,9 +796,9 @@ package: code.Maven02.service<span aria-hidden="true" class="line-numbers-rows">
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Maven学习笔记》
+                    《栈与队列》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/10/maven-xue-xi-bi-ji/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/03/17/zhan-yu-dui-lie/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Bouncy丶Knight
             </a> 采用
@@ -1118,46 +1100,56 @@ package: code.Maven02.service<span aria-hidden="true" class="line-numbers-rows">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/02/11/springboot-xue-xi-bi-ji/">
+                <a href="/2020/03/17/zhan-yu-dui-lie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="SpringBoot学习笔记">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="栈与队列">
                         
-                        <span class="card-title">SpringBoot学习笔记</span>
+                        <span class="card-title">栈与队列</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SpringBoot学习笔记
+                            栈与队列问题
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category" target="_blank">
-                                    Java
+                            <a href="/categories/数据结构/" class="post-category" target="_blank">
+                                    数据结构
+                                </a>
+                            
+                            <a href="/categories/数据结构/ALgorithm/" class="post-category" target="_blank">
+                                    ALgorithm
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SpringBoot/" target="_blank">
-                        <span class="chip bg-color">SpringBoot</span>
+                    <a href="/tags/栈/" target="_blank">
+                        <span class="chip bg-color">栈</span>
+                    </a>
+                    
+                    <a href="/tags/队列/" target="_blank">
+                        <span class="chip bg-color">队列</span>
                     </a>
                     
                 </div>
@@ -1171,31 +1163,35 @@ package: code.Maven02.service<span aria-hidden="true" class="line-numbers-rows">
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/10/qian-tan-java-fan-she-ji-zhi/">
+                <a href="/2020/03/16/lian-biao-yu-lin-jie-biao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="浅谈Java反射机制">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="链表与邻接表">
                         
-                        <span class="card-title">浅谈Java反射机制</span>
+                        <span class="card-title">链表与邻接表</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            浅谈Java反射机制，
+                            链表与邻接表问题总结
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-10
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category" target="_blank">
-                                    Java
+                            <a href="/categories/数据结构/" class="post-category" target="_blank">
+                                    数据结构
+                                </a>
+                            
+                            <a href="/categories/数据结构/Algorithm/" class="post-category" target="_blank">
+                                    Algorithm
                                 </a>
                             
                             
@@ -1205,8 +1201,12 @@ package: code.Maven02.service<span aria-hidden="true" class="line-numbers-rows">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/反射/" target="_blank">
-                        <span class="chip bg-color">反射</span>
+                    <a href="/tags/链表/" target="_blank">
+                        <span class="chip bg-color">链表</span>
+                    </a>
+                    
+                    <a href="/tags/模拟/" target="_blank">
+                        <span class="chip bg-color">模拟</span>
                     </a>
                     
                 </div>
